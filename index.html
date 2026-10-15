@@ -2,550 +2,893 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<meta name="description" content="KX Metaal: engineering, machinebouw en metaalbewerking voor zakelijke klanten in Nederland. Neem contact op om uw technische project te bespreken.">
-<title>KX Metaal | Engineering, Machinebouw & Metaalbewerking</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="KX Metaal: metaalbewerking, constructiewerk, engineering en machinebouw voor zakelijke klanten. Bespreek uw technische project met ons.">
+  <meta name="robots" content="index,follow">
+  <title>KX Metaal | Metaalbewerking, Engineering & Machinebouw</title>
 
-<style>
-:root {
-  --ink:#202b35;
-  --muted:#667581;
-  --steel:#718492;
-  --line:#e4e9ed;
-  --light:#f5f7f8;
-  --white:#fff;
-  --dark:#18232c;
-  --radius:14px;
-  --shadow:0 15px 45px #202b3510;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.7;background:#fff}
-a{color:inherit;text-decoration:none}
-button,input,textarea,select{font:inherit}
-button,a{touch-action:manipulation}
-img{width:100%;display:block;object-fit:cover}
-.container{width:min(1160px,91%);margin:auto}
-section{padding:86px 0}
-h1,h2,h3{line-height:1.2;letter-spacing:-.5px}
-h1{font-size:clamp(2.8rem,5.4vw,5rem);letter-spacing:-2px}
-h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:18px}
-h3{font-size:1.2rem}
-p{color:var(--muted)}
-.eyebrow{font-size:.76rem;letter-spacing:2px;font-weight:800;color:var(--steel);text-transform:uppercase;margin-bottom:14px}
-.lead{max-width:720px}
-.heading{margin-bottom:38px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 21px;border-radius:5px;background:var(--ink);color:#fff;border:1px solid var(--ink);font-weight:700;cursor:pointer;transition:.2s}
-.btn:hover{background:#465764;transform:translateY(-2px)}
-.btn.light{background:white;color:var(--ink);border-color:#d4dce1}
-.btn.light:hover{background:var(--light)}
-.btn.small{padding:9px 13px;font-size:.88rem}
-header{position:sticky;top:0;z-index:100;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
-.logo-mark{background:var(--ink);color:white;font-size:1.5rem;font-weight:900;padding:7px 12px;letter-spacing:-1px}
-.logo strong{display:block;letter-spacing:2px}
-.logo small{display:block;color:var(--muted);font-size:.65rem;letter-spacing:1.1px}
-.navlinks{display:flex;align-items:center;gap:21px}
-.navlinks>a:not(.btn){font-size:.88rem;font-weight:700}
-.navlinks>a:hover{color:var(--steel)}
-.lang{display:flex;gap:3px;border:1px solid var(--line);padding:3px;border-radius:6px}
-.lang button{border:0;background:white;padding:6px 9px;cursor:pointer;border-radius:4px;font-weight:700;font-size:.8rem}
-.lang button.active{background:var(--ink);color:white}
-.menu{display:none;background:white;border:1px solid var(--line);padding:7px 12px;font-size:1.3rem;cursor:pointer}
-.hero{padding:0;display:grid;grid-template-columns:1fr 1fr;min-height:560px}
-.hero-copy{padding:85px max(4.5vw,calc((100vw - 1160px)/2));padding-right:35px;display:flex;align-items:flex-start;justify-content:center;flex-direction:column}
-.hero-copy p:not(.eyebrow){margin:22px 0;max-width:520px}
-.hero h1 span{color:#81919d}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.hero-photo{position:relative;min-height:500px;background:#dce2e6}
-.hero-photo img{height:100%;position:absolute;inset:0}
-.photo-label{position:absolute;bottom:25px;left:25px;right:25px;background:#ffffffef;padding:18px 22px;border-left:3px solid var(--steel)}
-.photo-label strong{display:block}
-.photo-label span{color:var(--muted);font-size:.9rem}
-.benefits{background:var(--dark);color:white;padding:22px 0}
-.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.benefit{display:flex;align-items:center;gap:12px}
-.benefit i{font-style:normal;font-size:1.5rem;color:#c3d0d8}
-.benefit strong{display:block;font-size:.9rem}
-.benefit small{color:#bdc8cf;font-size:.77rem}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:white;transition:.25s}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.card img{height:205px;background:var(--light)}
-.card-content{padding:23px}
-.card-content h3{margin:8px 0 10px}
-.card-content p{font-size:.92rem}
-.number{font-size:.75rem;letter-spacing:1.5px;font-weight:800;color:var(--steel)}
-.card-link{display:inline-block;margin-top:16px;font-size:.9rem;font-weight:700}
-.card-link:hover{text-decoration:underline}
-.soft{background:var(--light)}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
-.feature-image{height:410px;border-radius:var(--radius);overflow:hidden}
-.feature-image img{height:100%}
-.checks{list-style:none;margin:22px 0}
-.checks li{padding:7px 0;color:var(--muted)}
-.checks li:before{content:"✓";color:var(--steel);font-weight:bold;margin-right:12px}
-.machine-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
-.machine{background:white;border:1px solid var(--line);padding:19px;border-radius:9px}
-.machine b{display:block;margin-bottom:4px}
-.machine p{font-size:.88rem}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{background:var(--light);padding:23px;border-top:2px solid #aab8c2}
-.step small{font-weight:800;color:var(--steel)}
-.step h3{margin:12px 0 8px}
-.step p{font-size:.9rem}
-.project-card img{height:230px}
-.notice{background:#edf1f3;border-left:3px solid #82939f;padding:15px 18px;margin-top:25px;font-size:.87rem;color:#52616c}
-.dark-cta{background:var(--dark);color:white;padding:60px 0}
-.cta{display:flex;align-items:center;justify-content:space-between;gap:30px}
-.cta h2{margin-bottom:10px}
-.cta p{color:#c6cfd5;max-width:650px}
-.faq{max-width:850px}
-.faq-item{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;display:flex;justify-content:space-between;gap:15px;text-align:left;background:none;border:0;padding:21px 0;cursor:pointer;font-weight:700;color:var(--ink)}
-.faq-q span{font-size:1.2rem}
-.faq-a{display:none;padding:0 20px 20px 0}
-.faq-item.open .faq-a{display:block}
-.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
-.detail{border-bottom:1px solid var(--line);padding:17px 0}
-.detail b{display:block}
-.detail span{color:var(--muted);font-size:.92rem}
-.formbox{padding:30px;background:white;border:1px solid var(--line);border-radius:var(--radius)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}
-.field.full{grid-column:1/-1}
-.field label{font-size:.87rem;font-weight:700}
-.field input,.field textarea,.field select{padding:12px;border:1px solid #d9e0e5;border-radius:5px;background:white;width:100%;color:var(--ink)}
-.field textarea{min-height:130px;resize:vertical}
-.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid #a8b7c2}
-.form-note{font-size:.8rem;margin:10px 0}
-.status{font-size:.9rem;margin-top:14px;overflow-wrap:anywhere}
-footer{background:#121b22;color:white;padding:48px 0 20px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
-footer h3{margin-bottom:15px}
-footer p,footer a{color:#c0cbd2;font-size:.9rem}
-.footer-links{display:grid;gap:8px}
-.footer-bottom{border-top:1px solid #35414a;margin-top:35px;padding-top:20px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(15px);transition:.6s}
-.reveal.visible{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
-@media(max-width:1000px){
- .navlinks{gap:12px}.navlinks>a:not(.btn){font-size:.8rem}
- .hero-copy{padding:65px 5%}
-}
-@media(max-width:850px){
- .menu{display:block}
- .navlinks{display:none;position:absolute;top:81px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:22px 5%;align-items:flex-start;flex-direction:column}
- .navlinks.open{display:flex}
- .navlinks>a:not(.btn){font-size:.95rem}
- .hero{grid-template-columns:1fr}
- .hero-copy{padding:70px 5%}
- .hero-photo{min-height:360px}
- .benefit-grid{grid-template-columns:repeat(2,1fr)}
- .grid3{grid-template-columns:repeat(2,1fr)}
- .two-col,.contact-grid{grid-template-columns:1fr;gap:30px}
- .steps{grid-template-columns:repeat(2,1fr)}
- .cta{align-items:flex-start;flex-direction:column}
-}
-@media(max-width:550px){
- section{padding:60px 0}
- .grid3,.steps,.machine-list,.footer-grid{grid-template-columns:1fr}
- .benefit-grid{gap:15px 8px}
- .benefit{align-items:flex-start;gap:7px}
- .benefit strong{font-size:.8rem}
- .benefit small{font-size:.7rem}
- .form-grid{grid-template-columns:1fr;gap:0}
- .field.full{grid-column:auto}
- .formbox{padding:20px}
- .feature-image{height:300px}
- .hero h1{font-size:2.8rem}
-}
-</style>
-</head>
-<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<header>
- <div class="container nav">
-  <a class="logo" href="#home" aria-label="KX Metaal home">
-   <div class="logo-mark">KX</div>
-   <div><strong>KX METAAL</strong><small data-nl="ENGINEERING · MACHINEBOUW · METAAL" data-en="ENGINEERING · MACHINERY · METALWORK">ENGINEERING · MACHINEBOUW · METAAL</small></div>
-  </a>
-  <button class="menu" id="menu" aria-label="Menu" aria-expanded="false">☰</button>
-  <nav class="navlinks" id="navlinks">
-   <a href="#home" data-nl="Home" data-en="Home">Home</a>
-   <a href="#diensten" data-nl="Diensten" data-en="Services">Diensten</a>
-   <a href="#mogelijkheden" data-nl="Mogelijkheden" data-en="Capabilities">Mogelijkheden</a>
-   <a href="#projecten" data-nl="Projecten" data-en="Projects">Projecten</a>
-   <a href="#over" data-nl="Over ons" data-en="About us">Over ons</a>
-   <a href="#contact" data-nl="Contact" data-en="Contact">Contact</a>
-   <div class="lang" aria-label="Select language">
-    <button class="active" type="button" data-lang="nl">NL</button>
-    <button type="button" data-lang="en">EN</button>
-   </div>
-   <a class="btn small" href="#contact" data-nl="Offerte aanvragen ↗" data-en="Request a quote ↗">Offerte aanvragen ↗</a>
-  </nav>
- </div>
-</header>
-
-<main>
-<section class="hero" id="home">
- <div class="hero-copy">
-  <p class="eyebrow" data-nl="Techniek voor bedrijven in Nederland" data-en="Engineering for businesses in the Netherlands">Techniek voor bedrijven in Nederland</p>
-  <h1 data-nl="Van idee tot techniek. <span>Van ontwerp tot realisatie.</span>" data-en="From idea to engineering. <span>From design to reality.</span>">Van idee tot techniek. <span>Van ontwerp tot realisatie.</span></h1>
-  <p data-nl="KX Metaal voor technische projecten, machinebouw, engineering en metaalbewerking. Bespreek uw wensen en ontdek welke mogelijkheden er zijn." data-en="KX Metaal for technical projects, machinery, engineering and metalworking. Discuss your requirements and explore the possibilities.">KX Metaal voor technische projecten, machinebouw, engineering en metaalbewerking. Bespreek uw wensen en ontdek welke mogelijkheden er zijn.</p>
-  <div class="actions">
-   <a class="btn" href="#diensten" data-nl="Ontdek onze diensten ↗" data-en="Explore our services ↗">Ontdek onze diensten ↗</a>
-   <a class="btn light" href="#contact" data-nl="Bespreek uw project" data-en="Discuss your project">Bespreek uw project</a>
-  </div>
- </div>
- <div class="hero-photo">
-  <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=85" alt="Metaalbewerking in een industriële werkplaats">
-  <div class="photo-label"><strong data-nl="Techniek die werkt." data-en="Engineering that works.">Techniek die werkt.</strong><span data-nl="Een praktische aanpak voor technische vraagstukken." data-en="A practical approach to technical challenges.">Een praktische aanpak voor technische vraagstukken.</span></div>
- </div>
-</section>
-
-<div class="benefits">
- <div class="container benefit-grid">
-  <div class="benefit"><i>⚙</i><div><strong data-nl="Engineering" data-en="Engineering">Engineering</strong><small data-nl="Van idee naar ontwerp" data-en="From idea to design">Van idee naar ontwerp</small></div></div>
-  <div class="benefit"><i>⌁</i><div><strong data-nl="Machinebouw" data-en="Machine building">Machinebouw</strong><small data-nl="Technische oplossingen" data-en="Technical solutions">Technische oplossingen</small></div></div>
-  <div class="benefit"><i>▤</i><div><strong data-nl="Metaalbewerking" data-en="Metalworking">Metaalbewerking</strong><small data-nl="Onderdelen en constructies" data-en="Parts and structures">Onderdelen en constructies</small></div></div>
-  <div class="benefit"><i>◇</i><div><strong data-nl="Maatwerk" data-en="Custom solutions">Maatwerk</strong><small data-nl="Afgestemd op uw project" data-en="Tailored to your project">Afgestemd op uw project</small></div></div>
- </div>
-</div>
-
-<section id="diensten">
- <div class="container">
-  <div class="heading reveal">
-   <p class="eyebrow" data-nl="Wat wij doen" data-en="What we do">Wat wij doen</p>
-   <h2 data-nl="Technische kennis, veelzijdige mogelijkheden." data-en="Technical expertise, versatile capabilities.">Technische kennis, veelzijdige mogelijkheden.</h2>
-   <p class="lead" data-nl="Van het eerste ontwerp tot de uitvoering: bekijk de verschillende disciplines die bij een technisch project kunnen komen kijken." data-en="From initial design to implementation: explore the different disciplines involved in a technical project.">Van het eerste ontwerp tot de uitvoering: bekijk de verschillende disciplines die bij een technisch project kunnen komen kijken.</p>
-  </div>
-  <div class="grid3">
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Technisch ontwerp"><div class="card-content"><span class="number">01 / ENGINEERING</span><h3 data-nl="Engineering en ontwerp" data-en="Engineering and design">Engineering en ontwerp</h3><p data-nl="Technische vraagstukken vertalen naar een praktisch ontwerp en een plan voor de uitvoering." data-en="Turning technical challenges into practical designs and implementation plans.">Technische vraagstukken vertalen naar een praktisch ontwerp en een plan voor de uitvoering.</p><a class="card-link" href="#contact" data-nl="Bespreek uw idee ↗" data-en="Discuss your idea ↗">Bespreek uw idee ↗</a></div></article>
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=800&q=80" alt="Industriële machinebouw"><div class="card-content"><span class="number">02 / MACHINEBOUW</span><h3 data-nl="Machinebouw" data-en="Machine building">Machinebouw</h3><p data-nl="Technische machines en samenstellingen, afgestemd op de toepassing en de vraag van de klant." data-en="Technical machinery and assemblies tailored to the application and customer requirements.">Technische machines en samenstellingen, afgestemd op de toepassing en de vraag van de klant.</p><a class="card-link" href="#contact" data-nl="Bespreek uw project ↗" data-en="Discuss your project ↗">Bespreek uw project ↗</a></div></article>
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80" alt="Laswerk"><div class="card-content"><span class="number">03 / LASSEN</span><h3 data-nl="Las- en constructiewerk" data-en="Welding and fabrication">Las- en constructiewerk</h3><p data-nl="Metalen onderdelen verbinden en constructies vervaardigen volgens de afgesproken toepassing." data-en="Joining metal components and fabricating structures for the intended application.">Metalen onderdelen verbinden en constructies vervaardigen volgens de afgesproken toepassing.</p><a class="card-link" href="#contact" data-nl="Informeer naar de mogelijkheden ↗" data-en="Ask about the possibilities ↗">Informeer naar de mogelijkheden ↗</a></div></article>
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=800&q=80" alt="Metaalonderdelen"><div class="card-content"><span class="number">04 / PLAATWERK</span><h3 data-nl="Plaatwerk en onderdelen" data-en="Sheet metal and components">Plaatwerk en onderdelen</h3><p data-nl="Metalen onderdelen en plaatwerk voor machines, constructies en technische toepassingen." data-en="Metal components and sheet work for machinery, structures and technical applications.">Metalen onderdelen en plaatwerk voor machines, constructies en technische toepassingen.</p><a class="card-link" href="#contact" data-nl="Bespreek uw aanvraag ↗" data-en="Discuss your request ↗">Bespreek uw aanvraag ↗</a></div></article>
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80" alt="Industriële onderdelen"><div class="card-content"><span class="number">05 / INDUSTRIE</span><h3 data-nl="Industriële oplossingen" data-en="Industrial solutions">Industriële oplossingen</h3><p data-nl="Meedenken over technische onderdelen, samenstellingen en oplossingen voor productiebedrijven." data-en="Support with technical components, assemblies and solutions for manufacturing businesses.">Meedenken over technische onderdelen, samenstellingen en oplossingen voor productiebedrijven.</p><a class="card-link" href="#contact" data-nl="Neem contact op ↗" data-en="Get in touch ↗">Neem contact op ↗</a></div></article>
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80" alt="Technische productie"><div class="card-content"><span class="number">06 / MAATWERK</span><h3 data-nl="Technisch maatwerk" data-en="Custom engineering">Technisch maatwerk</h3><p data-nl="Een aanpak die begint bij uw specifieke vraag en wordt afgestemd op de gewenste oplossing." data-en="An approach that starts with your specific needs and focuses on the right solution.">Een aanpak die begint bij uw specifieke vraag en wordt afgestemd op de gewenste oplossing.</p><a class="card-link" href="#contact" data-nl="Leg uw vraag voor ↗" data-en="Tell us about your needs ↗">Leg uw vraag voor ↗</a></div></article>
-  </div>
- </div>
-</section>
-
-<section id="mogelijkheden" class="soft">
- <div class="container two-col">
-  <div class="feature-image reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1100&q=85" alt="Technische werkzaamheden in een werkplaats"></div>
-  <div class="reveal">
-   <p class="eyebrow" data-nl="Technische mogelijkheden" data-en="Technical capabilities">Technische mogelijkheden</p>
-   <h2 data-nl="De juiste aanpak begint met de juiste vraag." data-en="The right approach starts with the right question.">De juiste aanpak begint met de juiste vraag.</h2>
-   <p data-nl="Elk project stelt andere eisen aan ontwerp, materialen, productie en uitvoering. Bespreek de toepassing en de gewenste resultaten om samen de mogelijkheden te onderzoeken." data-en="Every project has different requirements for design, materials, production and implementation. Discuss the application and desired result to explore the options together.">Elk project stelt andere eisen aan ontwerp, materialen, productie en uitvoering. Bespreek de toepassing en de gewenste resultaten om samen de mogelijkheden te onderzoeken.</p>
-   <ul class="checks">
-    <li data-nl="Engineering en technisch ontwerp" data-en="Engineering and technical design">Engineering en technisch ontwerp</li>
-    <li data-nl="Machinebouw en technische samenstellingen" data-en="Machine building and technical assemblies">Machinebouw en technische samenstellingen</li>
-    <li data-nl="Metaalbewerking en constructiewerk" data-en="Metalworking and fabrication">Metaalbewerking en constructiewerk</li>
-    <li data-nl="Staal, RVS en aluminium — afhankelijk van de opdracht" data-en="Steel, stainless steel and aluminium — depending on the project">Staal, RVS en aluminium — afhankelijk van de opdracht</li>
-    <li data-nl="Maatwerk voor zakelijke toepassingen" data-en="Custom solutions for business applications">Maatwerk voor zakelijke toepassingen</li>
-   </ul>
-   <a class="btn" href="#contact" data-nl="Bespreek de mogelijkheden ↗" data-en="Discuss the possibilities ↗">Bespreek de mogelijkheden ↗</a>
-  </div>
- </div>
- <div class="container">
-  <div class="machine-list">
-   <div class="machine"><b data-nl="Ontwerp en engineering" data-en="Design and engineering">Ontwerp en engineering</b><p data-nl="Technische eisen, tekeningen en maakbaarheid bespreken." data-en="Discuss technical requirements, drawings and manufacturability.">Technische eisen, tekeningen en maakbaarheid bespreken.</p></div>
-   <div class="machine"><b data-nl="Machinebouw" data-en="Machine building">Machinebouw</b><p data-nl="De gewenste functie, onderdelen en samenstelling bepalen." data-en="Define the required function, components and assembly.">De gewenste functie, onderdelen en samenstelling bepalen.</p></div>
-   <div class="machine"><b data-nl="Materialen" data-en="Materials">Materialen</b><p data-nl="Materiaalkeuze afstemmen op gebruik en projectvereisten." data-en="Select materials according to use and project requirements.">Materiaalkeuze afstemmen op gebruik en projectvereisten.</p></div>
-   <div class="machine"><b data-nl="Productie en uitvoering" data-en="Production and implementation">Productie en uitvoering</b><p data-nl="Werkzaamheden en planning vooraf duidelijk afstemmen." data-en="Agree on the work and schedule in advance.">Werkzaamheden en planning vooraf duidelijk afstemmen.</p></div>
-  </div>
-  <p class="notice" data-nl="De genoemde mogelijkheden zijn een algemeen overzicht. Specifieke machines, materialen, afmetingen, certificeringen en productiecapaciteiten moeten door KX Metaal worden bevestigd voordat ze als concrete bedrijfsclaims worden gepubliceerd." data-en="These capabilities are a general overview. Specific machines, materials, dimensions, certifications and production capacities must be confirmed by KX Metaal before being presented as actual company capabilities.">De genoemde mogelijkheden zijn een algemeen overzicht. Specifieke machines, materialen, afmetingen, certificeringen en productiecapaciteiten moeten door KX Metaal worden bevestigd voordat ze als concrete bedrijfsclaims worden gepubliceerd.</p>
- </div>
-</section>
-
-<section id="werkwijze">
- <div class="container">
-  <div class="heading reveal"><p class="eyebrow" data-nl="Onze werkwijze" data-en="Our approach">Onze werkwijze</p><h2 data-nl="Van eerste vraag naar een concrete oplossing." data-en="From the first question to a practical solution.">Van eerste vraag naar een concrete oplossing.</h2><p class="lead" data-nl="Heldere communicatie helpt om technische projecten goed voor te bereiden." data-en="Clear communication helps prepare technical projects effectively.">Heldere communicatie helpt om technische projecten goed voor te bereiden.</p></div>
-  <div class="steps">
-   <article class="step reveal"><small>01 / INTAKE</small><h3 data-nl="De aanvraag" data-en="The enquiry">De aanvraag</h3><p data-nl="U legt uit wat u nodig heeft en wat het onderdeel of de machine moet doen." data-en="You explain what you need and what the component or machine must do.">U legt uit wat u nodig heeft en wat het onderdeel of de machine moet doen.</p></article>
-   <article class="step reveal"><small>02 / OVERLEG</small><h3 data-nl="Technisch overleg" data-en="Technical discussion">Technisch overleg</h3><p data-nl="Wensen, materialen, tekeningen en praktische mogelijkheden worden besproken." data-en="Requirements, materials, drawings and practical options are discussed.">Wensen, materialen, tekeningen en praktische mogelijkheden worden besproken.</p></article>
-   <article class="step reveal"><small>03 / VOORSTEL</small><h3 data-nl="Plan en offerte" data-en="Plan and quotation">Plan en offerte</h3><p data-nl="De scope, prijs en planning worden afgestemd voordat een opdracht start." data-en="The scope, price and schedule are agreed before work begins.">De scope, prijs en planning worden afgestemd voordat een opdracht start.</p></article>
-   <article class="step reveal"><small>04 / UITVOERING</small><h3 data-nl="Realisatie" data-en="Implementation">Realisatie</h3><p data-nl="Na akkoord wordt de opdracht uitgevoerd volgens de gemaakte afspraken." data-en="Once approved, the work is carried out according to the agreed terms.">Na akkoord wordt de opdracht uitgevoerd volgens de gemaakte afspraken.</p></article>
-  </div>
- </div>
-</section>
-
-<section class="soft" id="projecten">
- <div class="container">
-  <div class="heading reveal"><p class="eyebrow" data-nl="Projecten en toepassingen" data-en="Projects and applications">Projecten en toepassingen</p><h2 data-nl="Techniek in beeld." data-en="Engineering in focus.">Techniek in beeld.</h2><p class="lead" data-nl="Dit overzicht gebruikt voorlopig voorbeeldbeelden. Vervang deze later door foto's en beschrijvingen van echte KX Metaal-projecten." data-en="This section currently uses illustrative images. Replace them with photographs and descriptions of actual KX Metaal projects later.">Dit overzicht gebruikt voorlopig voorbeeldbeelden. Vervang deze later door foto's en beschrijvingen van echte KX Metaal-projecten.</p></div>
-  <div class="grid3">
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=850&q=80" alt="Voorbeeld van metaalbewerking"><div class="card-content"><span class="number">VOORBEELD 01</span><h3 data-nl="Metaalbewerking" data-en="Metalworking">Metaalbewerking</h3><p data-nl="Voorbeeld van werkzaamheden in een metaalwerkplaats." data-en="Illustrative image of work in a metalworking shop.">Voorbeeld van werkzaamheden in een metaalwerkplaats.</p></div></article>
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=850&q=80" alt="Voorbeeld van lassen"><div class="card-content"><span class="number">VOORBEELD 02</span><h3 data-nl="Laswerk en constructie" data-en="Welding and fabrication">Laswerk en constructie</h3><p data-nl="Voorbeeld van het verbinden van metalen onderdelen." data-en="Illustrative image of joining metal components.">Voorbeeld van het verbinden van metalen onderdelen.</p></div></article>
-   <article class="card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=850&q=80" alt="Voorbeeld van machinebouw"><div class="card-content"><span class="number">VOORBEELD 03</span><h3 data-nl="Machinebouw" data-en="Machine building">Machinebouw</h3><p data-nl="Voorbeeld van industriële techniek en machines." data-en="Illustrative image of industrial machinery and engineering.">Voorbeeld van industriële techniek en machines.</p></div></article>
-  </div>
-  <div class="notice" data-nl="Deze afbeeldingen zijn niet bevestigd als projecten van KX Metaal. Gebruik ze alleen tijdelijk en vervang ze door eigen beeldmateriaal voordat de website definitief wordt gepubliceerd." data-en="These images have not been verified as KX Metaal projects. Use them temporarily and replace them with original company photos before final publication.">Deze afbeeldingen zijn niet bevestigd als projecten van KX Metaal. Gebruik ze alleen tijdelijk en vervang ze door eigen beeldmateriaal voordat de website definitief wordt gepubliceerd.</div>
- </div>
-</section>
-
-<section id="over">
- <div class="container two-col">
-  <div class="reveal">
-   <p class="eyebrow" data-nl="Over KX Metaal" data-en="About KX Metaal">Over KX Metaal</p>
-   <h2 data-nl="Een technische partner voor zakelijke vraagstukken." data-en="A technical partner for business challenges.">Een technische partner voor zakelijke vraagstukken.</h2>
-   <p data-nl="KX Metaal richt zich op technische oplossingen voor bedrijven. De juiste aanpak begint met luisteren naar de klant, begrijpen wat de toepassing vraagt en samen de mogelijkheden onderzoeken." data-en="KX Metaal focuses on technical solutions for businesses. The right approach starts by listening to the customer, understanding the application and exploring the options together.">KX Metaal richt zich op technische oplossingen voor bedrijven. De juiste aanpak begint met luisteren naar de klant, begrijpen wat de toepassing vraagt en samen de mogelijkheden onderzoeken.</p>
-   <ul class="checks">
-    <li data-nl="Aandacht voor de technische vraag" data-en="Focus on the technical requirement">Aandacht voor de technische vraag</li>
-    <li data-nl="Overleg over de praktische uitvoering" data-en="Discussion of practical implementation">Overleg over de praktische uitvoering</li>
-    <li data-nl="Heldere afspraken over opdracht en planning" data-en="Clear agreements on scope and schedule">Heldere afspraken over opdracht en planning</li>
-   </ul>
-   <a class="btn" href="#contact" data-nl="Neem contact op ↗" data-en="Get in touch ↗">Neem contact op ↗</a>
-  </div>
-  <div class="feature-image reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1100&q=85" alt="Technische werkzaamheden"></div>
- </div>
-</section>
-
-<section class="dark-cta">
- <div class="container cta">
-  <div><p class="eyebrow" style="color:#c4d0d7" data-nl="Een technisch vraagstuk?" data-en="A technical challenge?">Een technisch vraagstuk?</p><h2 data-nl="Laten we uw project bespreken." data-en="Let's discuss your project.">Laten we uw project bespreken.</h2><p data-nl="Vertel wat u wilt ontwikkelen, maken of verbeteren. Dan kan KX Metaal met u bespreken wat de volgende stap kan zijn." data-en="Tell us what you want to develop, manufacture or improve. KX Metaal can then discuss possible next steps with you.">Vertel wat u wilt ontwikkelen, maken of verbeteren. Dan kan KX Metaal met u bespreken wat de volgende stap kan zijn.</p></div>
-  <a class="btn light" href="#contact" data-nl="Bespreek uw aanvraag ↗" data-en="Discuss your enquiry ↗">Bespreek uw aanvraag ↗</a>
- </div>
-</section>
-
-<section id="brochure">
- <div class="container two-col">
-  <div>
-   <p class="eyebrow" data-nl="Bedrijfsinformatie" data-en="Company information">Bedrijfsinformatie</p>
-   <h2 data-nl="Een brochure om te bewaren." data-en="A brochure to keep.">Een brochure om te bewaren.</h2>
-   <p data-nl="Gebruik de knop om een printvriendelijke bedrijfsbrochure te openen. Vanuit het afdrukvenster kun je deze als PDF opslaan. Controleer de inhoud en vul ontbrekende bedrijfsgegevens aan voordat je de brochure naar klanten stuurt." data-en="Use the button to open a print-friendly company brochure. From the print dialogue, you can save it as a PDF. Review the content and add missing company details before sending it to customers.">Gebruik de knop om een printvriendelijke bedrijfsbrochure te openen. Vanuit het afdrukvenster kun je deze als PDF opslaan. Controleer de inhoud en vul ontbrekende bedrijfsgegevens aan voordat je de brochure naar klanten stuurt.</p>
-  </div>
-  <div class="card-content" style="background:var(--light);border-radius:12px;padding:30px">
-   <h3 data-nl="KX Metaal — bedrijfsbrochure" data-en="KX Metaal — company brochure">KX Metaal — bedrijfsbrochure</h3>
-   <p style="margin:12px 0 22px" data-nl="Een beknopt overzicht van de diensten, werkwijze en contactmogelijkheden." data-en="A brief overview of services, approach and contact options.">Een beknopt overzicht van de diensten, werkwijze en contactmogelijkheden.</p>
-   <button class="btn" id="brochureBtn" data-nl="Open brochure / opslaan als PDF ↗" data-en="Open brochure / save as PDF ↗">Open brochure / opslaan als PDF ↗</button>
-  </div>
- </div>
-</section>
-
-<section class="soft" id="faq">
- <div class="container">
-  <div class="heading"><p class="eyebrow" data-nl="Veelgestelde vragen" data-en="Frequently asked questions">Veelgestelde vragen</p><h2 data-nl="Veelgestelde vragen over KX Metaal." data-en="Frequently asked questions about KX Metaal.">Veelgestelde vragen over KX Metaal.</h2></div>
-  <div class="faq">
-   <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-nl="Welke diensten kan ik aanvragen?" data-en="Which services can I enquire about?">Welke diensten kan ik aanvragen?</span><span>+</span></button><div class="faq-a" data-nl="U kunt informeren naar engineering, machinebouw, metaalbewerking, constructiewerk en maatwerk. De precieze mogelijkheden worden per opdracht afgestemd." data-en="You can enquire about engineering, machine building, metalworking, fabrication and custom solutions. Specific capabilities are confirmed for each project.">U kunt informeren naar engineering, machinebouw, metaalbewerking, constructiewerk en maatwerk. De precieze mogelijkheden worden per opdracht afgestemd.</div></div>
-   <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-nl="Kan ik een offerte aanvragen?" data-en="Can I request a quotation?">Kan ik een offerte aanvragen?</span><span>+</span></button><div class="faq-a" data-nl="Ja. Gebruik het contactformulier om uw project te beschrijven. Vermeld indien mogelijk de toepassing, afmetingen, materialen en gewenste planning." data-en="Yes. Use the contact form to describe your project. If possible, include the application, dimensions, materials and desired schedule.">Ja. Gebruik het contactformulier om uw project te beschrijven. Vermeld indien mogelijk de toepassing, afmetingen, materialen en gewenste planning.</div></div>
-   <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-nl="Kan ik tekeningen of foto's aanleveren?" data-en="Can I provide drawings or photographs?">Kan ik tekeningen of foto's aanleveren?</span><span>+</span></button><div class="faq-a" data-nl="Beschrijf in het formulier dat u tekeningen of foto's heeft. U kunt deze vervolgens via e-mail delen. Een rechtstreekse upload is nog niet ingesteld." data-en="Mention in the form that you have drawings or photos. You can then share them by email. Direct file upload is not currently enabled.">Beschrijf in het formulier dat u tekeningen of foto's heeft. U kunt deze vervolgens via e-mail delen. Een rechtstreekse upload is nog niet ingesteld.</div></div>
-   <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-nl="Werkt KX Metaal voor bedrijven in Nederland?" data-en="Does KX Metaal work with businesses in the Netherlands?">Werkt KX Metaal voor bedrijven in Nederland?</span><span>+</span></button><div class="faq-a" data-nl="Deze website is gericht op zakelijke klanten in Nederland. De regio waarin een specifieke opdracht kan worden uitgevoerd, moet vooraf worden besproken." data-en="This website is aimed at business customers in the Netherlands. The area in which a specific project can be carried out should be discussed in advance.">Deze website is gericht op zakelijke klanten in Nederland. De regio waarin een specifieke opdracht kan worden uitgevoerd, moet vooraf worden besproken.</div></div>
-  </div>
- </div>
-</section>
-
-<section id="contact">
- <div class="container">
-  <div class="heading"><p class="eyebrow" data-nl="Contact en offerte" data-en="Contact and quotations">Contact en offerte</p><h2 data-nl="Vertel ons over uw project." data-en="Tell us about your project.">Vertel ons over uw project.</h2><p class="lead" data-nl="Beschrijf uw technische vraag. Uw bericht kan vervolgens in uw e-mailprogramma worden klaargezet." data-en="Describe your technical requirements. Your message can then be prepared in your email application.">Beschrijf uw technische vraag. Uw bericht kan vervolgens in uw e-mailprogramma worden klaargezet.</p></div>
-  <div class="contact-grid">
-   <div>
-    <h3 style="font-size:1.5rem;margin-bottom:12px">KX Metaal</h3>
-    <p data-nl="Engineering, machinebouw en metaalbewerking voor zakelijke klanten." data-en="Engineering, machine building and metalworking for business customers.">Engineering, machinebouw en metaalbewerking voor zakelijke klanten.</p>
-    <div class="detail"><b data-nl="E-mail" data-en="Email">E-mail</b><span data-nl="Vul het officiële e-mailadres in" data-en="Add the official email address">Vul het officiële e-mailadres in</span></div>
-    <div class="detail"><b data-nl="Telefoon" data-en="Phone">Telefoon</b><span data-nl="Vul het zakelijke telefoonnummer in" data-en="Add the business phone number">Vul het zakelijke telefoonnummer in</span></div>
-    <div class="detail"><b data-nl="Adres" data-en="Address">Adres</b><span data-nl="Controleer het officiële bedrijfsadres" data-en="Confirm the official business address">Controleer het officiële bedrijfsadres</span></div>
-    <p class="notice" data-nl="Vervang de tijdelijke contactgegevens hieronder door de juiste bedrijfsgegevens voordat de website online gaat." data-en="Replace the temporary contact details with the correct business information before publishing the website.">Vervang de tijdelijke contactgegevens hieronder door de juiste bedrijfsgegevens voordat de website online gaat.</p>
-   </div>
-   <form class="formbox" id="quoteForm">
-    <h3 style="font-size:1.4rem;margin-bottom:22px" data-nl="Offerteaanvraag" data-en="Quotation request">Offerteaanvraag</h3>
-    <div class="form-grid">
-     <div class="field"><label for="name" data-nl="Naam *" data-en="Name *">Naam *</label><input id="name" name="name" required autocomplete="name"></div>
-     <div class="field"><label for="company" data-nl="Bedrijf" data-en="Company">Bedrijf</label><input id="company" name="company" autocomplete="organization"></div>
-     <div class="field"><label for="email" data-nl="E-mailadres *" data-en="Email address *">E-mailadres *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
-     <div class="field"><label for="phone" data-nl="Telefoonnummer" data-en="Phone number">Telefoonnummer</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-     <div class="field full"><label for="service" data-nl="Onderwerp *" data-en="Subject *">Onderwerp *</label><select id="service" name="service" required><option value="" data-nl="Kies een onderwerp" data-en="Choose a subject">Kies een onderwerp</option><option data-nl="Engineering en ontwerp" data-en="Engineering and design">Engineering en ontwerp</option><option data-nl="Machinebouw" data-en="Machine building">Machinebouw</option><option data-nl="Las- en constructiewerk" data-en="Welding and fabrication">Las- en constructiewerk</option><option data-nl="Plaatwerk en onderdelen" data-en="Sheet metal and components">Plaatwerk en onderdelen</option><option data-nl="Anders / meerdere diensten" data-en="Other / multiple services">Anders / meerdere diensten</option></select></div>
-     <div class="field full"><label for="message" data-nl="Omschrijving *" data-en="Description *">Omschrijving *</label><textarea id="message" name="message" required placeholder="Beschrijf uw project..."></textarea></div>
-    </div>
-    <p class="form-note" data-nl="Door op de knop te klikken wordt een conceptbericht in uw e-mailprogramma geopend. Het formulier verstuurt zelf geen gegevens naar een server." data-en="Clicking the button opens a draft message in your email application. The form itself does not send data to a server.">Door op de knop te klikken wordt een conceptbericht in uw e-mailprogramma geopend. Het formulier verstuurt zelf geen gegevens naar een server.</p>
-    <button class="btn" type="submit" data-nl="Open aanvraag in e-mail ↗" data-en="Open enquiry in email ↗">Open aanvraag in e-mail ↗</button>
-    <p class="status" id="formStatus" role="status" aria-live="polite"></p>
-   </form>
-  </div>
- </div>
-</section>
-</main>
-
-<footer>
- <div class="container">
-  <div class="footer-grid">
-   <div><a href="#home" class="logo"><div class="logo-mark" style="background:white;color:#202b35">KX</div><div><strong>KX METAAL</strong><small style="color:#c0cbd2">ENGINEERING · MACHINEBOUW</small></div></a><p style="margin-top:18px" data-nl="Technische oplossingen voor zakelijke vraagstukken." data-en="Technical solutions for business challenges.">Technische oplossingen voor zakelijke vraagstukken.</p></div>
-   <div><h3 data-nl="Navigatie" data-en="Navigation">Navigatie</h3><div class="footer-links"><a href="#diensten" data-nl="Diensten" data-en="Services">Diensten</a><a href="#mogelijkheden" data-nl="Mogelijkheden" data-en="Capabilities">Mogelijkheden</a><a href="#projecten" data-nl="Projecten" data-en="Projects">Projecten</a><a href="#over" data-nl="Over ons" data-en="About us">Over ons</a></div></div>
-   <div><h3 data-nl="Contact" data-en="Contact">Contact</h3><div class="footer-links"><a href="#contact" data-nl="Offerte aanvragen" data-en="Request a quote">Offerte aanvragen</a><a href="#faq" data-nl="Veelgestelde vragen" data-en="FAQ">Veelgestelde vragen</a><a href="#brochure" data-nl="Bedrijfsbrochure" data-en="Company brochure">Bedrijfsbrochure</a></div></div>
-  </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> KX Metaal</p><a href="#home" data-nl="Terug naar boven ↑" data-en="Back to top ↑">Terug naar boven ↑</a></div>
- </div>
-</footer>
-
-<script>
-let currentLang = "nl";
-
-function setLanguage(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang;
-
-  document.querySelectorAll("[data-nl][data-en]").forEach(el => {
-    if (el.tagName === "OPTION") {
-      el.textContent = el.dataset[lang];
-    } else {
-      el.innerHTML = el.dataset[lang];
+  <style>
+    :root {
+      --ink: #202522;
+      --muted: #68716b;
+      --line: #e4e8e4;
+      --paper: #ffffff;
+      --soft: #f5f7f5;
+      --accent: #b83a2f;
+      --accent-dark: #922b23;
+      --max: 1200px;
+      --radius: 7px;
+      --shadow: 0 16px 50px rgba(25, 35, 28, .07);
     }
-  });
 
-  document.querySelectorAll("[data-lang]").forEach(button => {
-    button.classList.toggle("active", button.dataset.lang === lang);
-    button.setAttribute("aria-pressed", String(button.dataset.lang === lang));
-  });
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    body, input, textarea, select, button { font-family: "DM Sans", Arial, sans-serif; }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    h1, h2, h3, h4 { font-family: "Manrope", sans-serif; line-height: 1.2; letter-spacing: -.035em; }
+    h1 { font-size: clamp(2.8rem, 6vw, 5.7rem); margin: 18px 0 24px; font-weight: 700; }
+    h2 { font-size: clamp(2rem, 4vw, 3.3rem); margin: 10px 0 20px; font-weight: 700; }
+    h3 { font-size: 1.2rem; margin: 0 0 10px; }
+    p { margin: 0 0 16px; }
+    .container { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .section { padding: 104px 0; }
+    .section-soft { background: var(--soft); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--accent); font-weight: 700; font-size: .76rem; letter-spacing: .13em; text-transform: uppercase; }
+    .eyebrow:before { content: ""; width: 25px; height: 2px; background: currentColor; }
+    .lead { color: var(--muted); font-size: 1.1rem; max-width: 650px; }
+    .muted { color: var(--muted); }
+    .section-head { max-width: 760px; margin-bottom: 45px; }
+    .section-head p { color: var(--muted); max-width: 650px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 49px; padding: 13px 21px; border: 1px solid var(--ink);
+      border-radius: 3px; font-weight: 700; font-size: .9rem; transition: .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-dark { background: var(--ink); color: #fff; }
+    .btn-dark:hover { background: #343d37; }
+    .btn-red { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn-red:hover { background: var(--accent-dark); }
+    .btn-light { background: white; border-color: var(--line); }
+    .btn-light:hover { border-color: var(--ink); }
+    .btn-arrow { font-size: 1.15rem; }
+    .topbar { background: var(--ink); color: #e8ece9; font-size: .78rem; }
+    .topbar-inner { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; }
+    .topbar-right { display: flex; gap: 22px; }
+    .header {
+      position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+    .brand-mark {
+      width: 43px; height: 43px; display: grid; place-items: center; background: var(--ink);
+      color: #fff; font-family: "Manrope"; font-weight: 800; font-size: 1rem; letter-spacing: -.08em;
+    }
+    .brand-name { font-family: "Manrope"; font-weight: 800; letter-spacing: .04em; font-size: 1.04rem; line-height: 1.15; }
+    .brand-sub { display: block; margin-top: 4px; color: var(--muted); font-size: .65rem; letter-spacing: .15em; font-weight: 600; }
+    .nav-links { display: flex; align-items: center; gap: 25px; }
+    .nav-links a { color: #434b45; font-size: .84rem; font-weight: 600; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .lang-button { border: 1px solid var(--line); background: white; padding: 9px 11px; border-radius: 3px; font-size: .78rem; font-weight: 700; }
+    .menu-button { display: none; background: white; border: 1px solid var(--line); padding: 9px 12px; border-radius: 3px; }
+    .hero { padding: 66px 0 76px; }
+    .hero-grid { display: grid; grid-template-columns: 1.04fr .96fr; align-items: center; gap: 55px; }
+    .hero-copy { padding: 18px 0; }
+    .hero h1 span { color: var(--accent); }
+    .hero-copy .lead { margin-bottom: 30px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 34px; color: var(--muted); font-size: .82rem; }
+    .note-dot { width: 8px; height: 8px; border-radius: 50%; background: #65926e; }
+    .hero-visual { position: relative; min-width: 0; }
+    .hero-image { height: 540px; border-radius: 4px; background: #d8ddd9; }
+    .image-label {
+      position: absolute; left: -24px; bottom: 28px; max-width: 255px; padding: 22px 24px;
+      background: white; box-shadow: var(--shadow); border-left: 3px solid var(--accent);
+    }
+    .image-label strong { display: block; font-family: "Manrope"; font-size: 1.05rem; margin-bottom: 4px; }
+    .image-label span { color: var(--muted); font-size: .82rem; }
+    .trust-strip { border-block: 1px solid var(--line); }
+    .trust-inner { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .trust-item { padding: 24px 20px; border-right: 1px solid var(--line); }
+    .trust-item:first-child { padding-left: 0; }
+    .trust-item:last-child { border: 0; }
+    .trust-item strong { display: block; font-family: "Manrope"; font-size: .97rem; }
+    .trust-item span { color: var(--muted); font-size: .8rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card { border: 1px solid var(--line); background: #fff; transition: .25s; }
+    .service-card:hover { border-color: #bbc4bc; transform: translateY(-4px); box-shadow: var(--shadow); }
+    .service-image { height: 205px; background: #dfe3df; }
+    .service-body { padding: 25px; }
+    .service-number { color: var(--accent); font-weight: 700; font-size: .76rem; letter-spacing: .08em; margin-bottom: 14px; }
+    .service-body p { color: var(--muted); font-size: .9rem; }
+    .text-link { display: inline-flex; gap: 9px; align-items: center; font-weight: 700; font-size: .86rem; }
+    .text-link:hover { color: var(--accent); }
+    .capability-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 40px; }
+    .capability { padding: 23px 0; border-bottom: 1px solid var(--line); display: flex; align-items: flex-start; gap: 15px; }
+    .check { color: var(--accent); font-size: 1.1rem; font-weight: 800; }
+    .capability p { color: var(--muted); font-size: .86rem; margin: 5px 0 0; }
+    .split-image { min-height: 510px; height: 100%; background: #d7dcd7; }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .process-card { border-top: 2px solid var(--line); padding-top: 22px; }
+    .process-card .num { color: var(--accent); font-size: .8rem; font-weight: 800; letter-spacing: .1em; margin-bottom: 28px; }
+    .process-card p { color: var(--muted); font-size: .9rem; }
+    .project-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 27px; }
+    .filter-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-btn { background: white; border: 1px solid var(--line); padding: 9px 15px; border-radius: 3px; font-size: .81rem; font-weight: 600; }
+    .filter-btn.active, .filter-btn:hover { background: var(--ink); color: white; border-color: var(--ink); }
+    .project-search { padding: 10px 12px; border: 1px solid var(--line); border-radius: 3px; width: 225px; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 23px; }
+    .project-card { cursor: pointer; min-width: 0; }
+    .project-card[hidden] { display: none; }
+    .project-photo { height: 255px; overflow: hidden; background: #e2e5e2; }
+    .project-photo img { height: 100%; transition: transform .45s; }
+    .project-card:hover .project-photo img { transform: scale(1.04); }
+    .project-meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; color: var(--muted); font-size: .75rem; margin: 16px 0 7px; }
+    .project-card h3 { margin: 0; font-size: 1.15rem; }
+    .project-card p { color: var(--muted); font-size: .86rem; margin-top: 9px; }
+    .project-empty { display: none; padding: 30px 0; color: var(--muted); }
+    .cta-band { background: var(--ink); color: #fff; padding: 65px 0; }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
+    .cta-band h2 { font-size: clamp(1.9rem, 4vw, 3rem); margin: 8px 0 12px; }
+    .cta-band p { color: #c2cac4; margin: 0; max-width: 610px; }
+    .cta-band .eyebrow { color: #e7a49d; }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 65px; align-items: center; }
+    .about-photo { height: 480px; background: #d8ddd9; }
+    .about-points { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; }
+    .about-point { border-top: 1px solid var(--line); padding-top: 16px; }
+    .about-point strong { display: block; margin-bottom: 5px; }
+    .about-point span { color: var(--muted); font-size: .86rem; }
+    .brochure-box { border: 1px solid var(--line); background: white; padding: 32px; display: flex; justify-content: space-between; align-items: center; gap: 28px; }
+    .brochure-box p { color: var(--muted); margin-bottom: 0; }
+    .faq-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 70px; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-question { width: 100%; display: flex; justify-content: space-between; gap: 20px; padding: 21px 0; background: transparent; border: 0; text-align: left; font-weight: 700; }
+    .faq-question span:last-child { color: var(--accent); font-size: 1.25rem; }
+    .faq-answer { display: none; color: var(--muted); font-size: .92rem; padding: 0 25px 22px 0; }
+    .faq-item.open .faq-answer { display: block; }
+    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .news-card { border: 1px solid var(--line); padding: 25px; }
+    .news-date { color: var(--accent); font-size: .76rem; font-weight: 700; margin-bottom: 13px; }
+    .news-card p { color: var(--muted); font-size: .88rem; }
+    .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 65px; align-items: start; }
+    .contact-details { margin-top: 28px; }
+    .contact-row { padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .contact-row span { display: block; color: var(--muted); font-size: .8rem; margin-bottom: 3px; }
+    .form-card { border: 1px solid var(--line); padding: 32px; background: white; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-weight: 700; font-size: .82rem; }
+    .field input, .field textarea, .field select { width: 100%; border: 1px solid #dce1dc; background: #fff; padding: 12px 13px; border-radius: 3px; outline: none; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(184,58,47,.08); }
+    .field textarea { min-height: 130px; resize: vertical; }
+    .form-note { color: var(--muted); font-size: .78rem; margin: 14px 0 20px; }
+    .form-status { display: none; background: #f1f6f1; border: 1px solid #d6e5d7; padding: 14px; margin-top: 16px; font-size: .88rem; }
+    .footer { background: #1c211e; color: #f4f6f4; padding: 60px 0 25px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 38px; }
+    .footer p, .footer a, .footer span { color: #b9c2bb; font-size: .86rem; }
+    .footer h3 { font-size: .95rem; margin-bottom: 18px; }
+    .footer-links { display: grid; gap: 10px; }
+    .footer a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid #3b433d; margin-top: 45px; padding-top: 20px; display: flex; justify-content: space-between; gap: 20px; color: #b9c2bb; font-size: .77rem; }
+    .admin-panel { display: none; background: #f6f7f6; border: 1px dashed #a9b3ab; padding: 28px; margin-top: 25px; }
+    .admin-panel.show { display: block; }
+    .admin-list { display: grid; gap: 8px; margin-top: 16px; }
+    .admin-item { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px; background: white; border: 1px solid var(--line); }
+    .small-btn { border: 1px solid var(--line); background: white; padding: 7px 10px; font-size: .8rem; }
+    .cookie-notice { display: none; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(15,20,17,.72); padding: 24px; overflow: auto; }
+    .modal.open { display: grid; place-items: center; }
+    .modal-content { position: relative; width: min(760px,100%); background: white; padding: 30px; }
+    .modal-close { position: absolute; right: 15px; top: 12px; background: white; border: 1px solid var(--line); padding: 6px 11px; font-size: 1.2rem; }
+    .modal img { max-height: 380px; margin-bottom: 22px; }
+    .admin-hint { font-size: .82rem; color: var(--muted); margin-top: 10px; }
 
-  document.getElementById("name").placeholder = lang === "nl" ? "Uw naam" : "Your name";
-  document.getElementById("company").placeholder = lang === "nl" ? "Bedrijfsnaam" : "Company name";
-  document.getElementById("email").placeholder = lang === "nl" ? "naam@bedrijf.nl" : "name@company.com";
-  document.getElementById("phone").placeholder = lang === "nl" ? "Uw telefoonnummer" : "Your phone number";
-  document.getElementById("message").placeholder = lang === "nl"
-    ? "Beschrijf uw project..."
-    : "Describe your project...";
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media (max-width: 1050px) {
+      .nav-links { gap: 15px; }
+      .nav-links a { font-size: .78rem; }
+      .nav-actions .btn { display: none; }
+      .hero-grid { gap: 30px; }
+      .hero-image { height: 470px; }
+      .service-grid, .project-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-card:last-child { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 32px, var(--max)); }
+      .section { padding: 70px 0; }
+      .topbar-right { display: none; }
+      .nav { min-height: 70px; }
+      .menu-button { display: block; }
+      .nav-links {
+        display: none; position: absolute; top: 70px; left: 0; right: 0; padding: 18px 24px 24px;
+        background: white; border-bottom: 1px solid var(--line); align-items: stretch; flex-direction: column; gap: 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .92rem; }
+      .nav-actions { gap: 7px; }
+      .hero { padding: 35px 0 55px; }
+      .hero-grid, .two-col, .about-grid, .faq-grid, .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+      .hero-image { height: 340px; }
+      .image-label { left: 12px; bottom: 12px; }
+      .trust-inner { grid-template-columns: 1fr 1fr; }
+      .trust-item { padding: 18px 12px; border-bottom: 1px solid var(--line); }
+      .trust-item:first-child { padding-left: 12px; }
+      .trust-item:nth-child(2) { border-right: 0; }
+      .trust-item:nth-child(3) { padding-left: 12px; border-bottom: 0; }
+      .trust-item:nth-child(4) { border-bottom: 0; border-right: 0; }
+      .service-grid, .project-grid, .news-grid { grid-template-columns: 1fr; }
+      .service-image { height: 220px; }
+      .project-photo { height: 250px; }
+      .capability-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
+      .cta-inner { align-items: flex-start; flex-direction: column; }
+      .about-photo { height: 320px; }
+      .about-points { gap: 16px; }
+      .brochure-box { align-items: flex-start; flex-direction: column; padding: 24px; }
+      .form-card { padding: 22px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; }
+      .project-toolbar { align-items: stretch; }
+      .project-search { width: 100%; }
+    }
+    @media (max-width: 430px) {
+      .brand-sub { letter-spacing: .08em; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { width: 100%; }
+      .process-grid, .footer-grid { grid-template-columns: 1fr; }
+      .about-points { grid-template-columns: 1fr; }
+    }
+  </style>
 
-  document.title = lang === "nl"
-    ? "KX Metaal | Engineering, Machinebouw & Metaalbewerking"
-    : "KX Metaal | Engineering, Machinery & Metalworking";
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KX Metaal",
+    "description": "Metaalbewerking, constructiewerk, engineering en machinebouw voor zakelijke klanten.",
+    "areaServed": "Nederland"
+  }
+  </script>
+</head>
 
-  try { localStorage.setItem("kx-language", lang); } catch(e) {}
-}
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span data-nl="Technische oplossingen voor zakelijke projecten" data-en="Technical solutions for business projects">Technische oplossingen voor zakelijke projecten</span>
+      <div class="topbar-right">
+        <span data-nl="Werkgebied: Nederland" data-en="Service area: The Netherlands">Werkgebied: Nederland</span>
+        <span data-nl="Nederlands · English" data-en="Dutch · English">Nederlands · English</span>
+      </div>
+    </div>
+  </div>
 
-document.querySelectorAll("[data-lang]").forEach(button => {
-  button.addEventListener("click", () => setLanguage(button.dataset.lang));
-});
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="brand" aria-label="KX Metaal home">
+        <span class="brand-mark">KX</span>
+        <span><span class="brand-name">KX METAAL</span><span class="brand-sub" data-nl="TECHNIEK & MAATWERK" data-en="ENGINEERING & CUSTOM WORK">TECHNIEK & MAATWERK</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Hoofdnavigatie">
+        <a href="#diensten" data-nl="Diensten" data-en="Services">Diensten</a>
+        <a href="#mogelijkheden" data-nl="Mogelijkheden" data-en="Capabilities">Mogelijkheden</a>
+        <a href="#projecten" data-nl="Projecten" data-en="Projects">Projecten</a>
+        <a href="#over" data-nl="Over ons" data-en="About us">Over ons</a>
+        <a href="#contact" data-nl="Contact" data-en="Contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-button" id="langToggle" type="button" aria-label="Change language">EN</button>
+        <a class="btn btn-dark" href="#offerte" data-nl="Project bespreken ↗" data-en="Discuss a project ↗">Project bespreken ↗</a>
+        <button class="menu-button" id="menuToggle" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
 
-const menu = document.getElementById("menu");
-const navlinks = document.getElementById("navlinks");
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow" data-nl="Metaal. Techniek. Maatwerk." data-en="Metal. Engineering. Custom work.">Metaal. Techniek. Maatwerk.</span>
+          <h1 data-nl="Techniek die <span>verder</span> gaat." data-en="Engineering that goes <span>further</span>.">Techniek die <span>verder</span> gaat.</h1>
+          <p class="lead" data-nl="Van metaalbewerking en constructiewerk tot technische oplossingen op maat. KX Metaal denkt mee over de praktische uitvoering van uw project." data-en="From metal fabrication and structural work to custom technical solutions. KX Metaal works with you on the practical execution of your project.">Van metaalbewerking en constructiewerk tot technische oplossingen op maat. KX Metaal denkt mee over de praktische uitvoering van uw project.</p>
+          <div class="hero-actions">
+            <a class="btn btn-red" href="#offerte"><span data-nl="Bespreek uw project" data-en="Discuss your project">Bespreek uw project</span><span class="btn-arrow">↗</span></a>
+            <a class="btn btn-light" href="#diensten" data-nl="Ontdek onze diensten" data-en="Explore our services">Ontdek onze diensten</a>
+          </div>
+          <div class="hero-note"><span class="note-dot"></span><span data-nl="Voor bedrijven en technische projecten in Nederland" data-en="For businesses and technical projects in the Netherlands">Voor bedrijven en technische projecten in Nederland</span></div>
+        </div>
+        <div class="hero-visual reveal">
+          <!-- Vervang deze voorbeeldfoto later door een echte foto van KX Metaal. -->
+          <img class="hero-image" src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1400&q=85" alt="Industriële metaalbewerking in een werkplaats">
+          <div class="image-label">
+            <strong data-nl="Van idee naar uitvoering" data-en="From concept to execution">Van idee naar uitvoering</strong>
+            <span data-nl="Technisch meedenken. Praktisch realiseren." data-en="Technical thinking. Practical execution.">Technisch meedenken. Praktisch realiseren.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-menu.addEventListener("click", () => {
-  const open = navlinks.classList.toggle("open");
-  menu.setAttribute("aria-expanded", String(open));
-  menu.textContent = open ? "×" : "☰";
-});
+    <div class="trust-strip">
+      <div class="container trust-inner">
+        <div class="trust-item"><strong data-nl="Maatwerk" data-en="Custom work">Maatwerk</strong><span data-nl="Afgestemd op uw project" data-en="Tailored to your project">Afgestemd op uw project</span></div>
+        <div class="trust-item"><strong data-nl="Technisch inzicht" data-en="Technical insight">Technisch inzicht</strong><span data-nl="Praktisch en oplossingsgericht" data-en="Practical and solution-focused">Praktisch en oplossingsgericht</span></div>
+        <div class="trust-item"><strong data-nl="Zakelijke projecten" data-en="Business projects">Zakelijke projecten</strong><span data-nl="Voor professionele opdrachtgevers" data-en="For professional clients">Voor professionele opdrachtgevers</span></div>
+        <div class="trust-item"><strong data-nl="Nederland" data-en="The Netherlands">Nederland</strong><span data-nl="Landelijk werkgebied" data-en="Nationwide service area">Landelijk werkgebied</span></div>
+      </div>
+    </div>
 
-navlinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navlinks.classList.remove("open");
-    menu.setAttribute("aria-expanded", "false");
-    menu.textContent = "☰";
-  });
-});
+    <section class="section" id="diensten">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-nl="Wat we doen" data-en="What we do">Wat we doen</span>
+          <h2 data-nl="Technische kennis, praktisch toegepast." data-en="Technical expertise, applied in practice.">Technische kennis, praktisch toegepast.</h2>
+          <p data-nl="Ieder project vraagt om een eigen aanpak. Bekijk de belangrijkste werkgebieden en bespreek samen met ons wat uw project nodig heeft." data-en="Every project calls for its own approach. Explore our main areas of work and discuss your project's needs with us.">Ieder project vraagt om een eigen aanpak. Bekijk de belangrijkste werkgebieden en bespreek samen met ons wat uw project nodig heeft.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <img class="service-image" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80" alt="Metaalbewerking in een werkplaats" loading="lazy">
+            <div class="service-body"><div class="service-number">01 / <span data-nl="METAAL" data-en="METAL">METAAL</span></div>
+              <h3 data-nl="Metaalbewerking" data-en="Metal fabrication">Metaalbewerking</h3>
+              <p data-nl="Metaalwerk voor uiteenlopende toepassingen. We bespreken materiaal, uitvoering en gewenste afwerking per opdracht." data-en="Metalwork for a range of applications. We discuss material, execution and finish for each assignment.">Metaalwerk voor uiteenlopende toepassingen. We bespreken materiaal, uitvoering en gewenste afwerking per opdracht.</p>
+              <a class="text-link" href="#offerte"><span data-nl="Bespreek uw vraag" data-en="Discuss your requirements">Bespreek uw vraag</span> <span>↗</span></a>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img class="service-image" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80" alt="Technisch werk aan industriële apparatuur" loading="lazy">
+            <div class="service-body"><div class="service-number">02 / <span data-nl="CONSTRUCTIE" data-en="STRUCTURES">CONSTRUCTIE</span></div>
+              <h3 data-nl="Constructiewerk" data-en="Structural work">Constructiewerk</h3>
+              <p data-nl="Constructies en onderdelen afgestemd op de functie, de beschikbare ruimte en de eisen van uw project." data-en="Structures and components tailored to their function, available space and project requirements.">Constructies en onderdelen afgestemd op de functie, de beschikbare ruimte en de eisen van uw project.</p>
+              <a class="text-link" href="#offerte"><span data-nl="Bespreek uw vraag" data-en="Discuss your requirements">Bespreek uw vraag</span> <span>↗</span></a>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img class="service-image" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80" alt="Technische machine en engineering" loading="lazy">
+            <div class="service-body"><div class="service-number">03 / <span data-nl="TECHNIEK" data-en="ENGINEERING">TECHNIEK</span></div>
+              <h3 data-nl="Engineering & machinebouw" data-en="Engineering & machine building">Engineering & machinebouw</h3>
+              <p data-nl="Technische vraagstukken, onderdelen en machines. De mogelijkheden worden per project en op basis van de benodigde specificaties beoordeeld." data-en="Technical challenges, components and machinery. Feasibility is assessed for each project based on the required specifications.">Technische vraagstukken, onderdelen en machines. De mogelijkheden worden per project en op basis van de benodigde specificaties beoordeeld.</p>
+              <a class="text-link" href="#offerte"><span data-nl="Bespreek uw vraag" data-en="Discuss your requirements">Bespreek uw vraag</span> <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-document.querySelectorAll(".faq-q").forEach(button => {
-  button.addEventListener("click", () => {
-    const item = button.closest(".faq-item");
-    const open = !item.classList.contains("open");
+    <section class="section section-soft" id="mogelijkheden">
+      <div class="container two-col">
+        <div class="reveal">
+          <span class="eyebrow" data-nl="Onze mogelijkheden" data-en="Our capabilities">Onze mogelijkheden</span>
+          <h2 data-nl="Eén aanspreekpunt voor uw technische vraag." data-en="One point of contact for your technical needs.">Eén aanspreekpunt voor uw technische vraag.</h2>
+          <p class="lead" data-nl="Van een eerste idee tot een concreet onderdeel: een duidelijke omschrijving van uw wensen helpt om snel te bepalen wat mogelijk is." data-en="From an initial idea to a finished component: a clear description of your requirements helps establish what is feasible.">Van een eerste idee tot een concreet onderdeel: een duidelijke omschrijving van uw wensen helpt om snel te bepalen wat mogelijk is.</p>
+          <p class="muted" data-nl="Heeft u een tekening, voorbeeld of bestaand onderdeel? Deel de informatie bij uw aanvraag. Zo kunnen we de vraag gerichter beoordelen." data-en="Do you have a drawing, example or existing component? Include the information with your enquiry so we can assess your requirements more effectively.">Heeft u een tekening, voorbeeld of bestaand onderdeel? Deel de informatie bij uw aanvraag. Zo kunnen we de vraag gerichter beoordelen.</p>
+          <a class="btn btn-dark" href="#offerte" data-nl="Project aanvragen ↗" data-en="Submit a project enquiry ↗">Project aanvragen ↗</a>
+        </div>
+        <div class="capability-grid reveal">
+          <div class="capability"><span class="check">↗</span><div><strong data-nl="Lassen" data-en="Welding">Lassen</strong><p data-nl="Bespreek materiaal en gewenste lasverbinding." data-en="Discuss materials and required welds.">Bespreek materiaal en gewenste lasverbinding.</p></div></div>
+          <div class="capability"><span class="check">↗</span><div><strong data-nl="Plaatwerk" data-en="Sheet metal">Plaatwerk</strong><p data-nl="Werk op basis van uw afmetingen en toepassing." data-en="Work based on your dimensions and application.">Werk op basis van uw afmetingen en toepassing.</p></div></div>
+          <div class="capability"><span class="check">↗</span><div><strong data-nl="RVS en aluminium" data-en="Stainless steel and aluminium">RVS en aluminium</strong><p data-nl="Materiaalkeuze passend bij de toepassing bespreken." data-en="Discuss material choices suitable for the application.">Materiaalkeuze passend bij de toepassing bespreken.</p></div></div>
+          <div class="capability"><span class="check">↗</span><div><strong data-nl="Machineonderdelen" data-en="Machine components">Machineonderdelen</strong><p data-nl="Onderdelen en maatwerk voor technische toepassingen." data-en="Components and custom work for technical applications.">Onderdelen en maatwerk voor technische toepassingen.</p></div></div>
+          <div class="capability"><span class="check">↗</span><div><strong data-nl="Constructies" data-en="Structures">Constructies</strong><p data-nl="Praktische oplossingen op basis van uw project." data-en="Practical solutions based on your project.">Praktische oplossingen op basis van uw project.</p></div></div>
+          <div class="capability"><span class="check">↗</span><div><strong data-nl="Technisch maatwerk" data-en="Technical custom work">Technisch maatwerk</strong><p data-nl="Bespreek ook afwijkende of samengestelde aanvragen." data-en="Discuss unusual or combined requirements too.">Bespreek ook afwijkende of samengestelde aanvragen.</p></div></div>
+        </div>
+      </div>
+    </section>
 
-    document.querySelectorAll(".faq-item").forEach(other => {
-      other.classList.remove("open");
-      other.querySelector(".faq-q").setAttribute("aria-expanded", "false");
+    <section class="section">
+      <div class="container two-col">
+        <img class="split-image reveal" src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=1200&q=85" alt="Technische werkzaamheden in een industriële omgeving" loading="lazy">
+        <div class="reveal">
+          <span class="eyebrow" data-nl="Van aanvraag tot uitvoering" data-en="From enquiry to execution">Van aanvraag tot uitvoering</span>
+          <h2 data-nl="Een duidelijke aanpak, vanaf het begin." data-en="A clear approach, from the start.">Een duidelijke aanpak, vanaf het begin.</h2>
+          <p class="muted" data-nl="Een goede samenwerking begint met duidelijke afspraken. Daarom brengen we uw vraag, de toepassing en de verwachtingen eerst in kaart." data-en="A successful collaboration starts with clear agreements. We begin by understanding your needs, application and expectations.">Een goede samenwerking begint met duidelijke afspraken. Daarom brengen we uw vraag, de toepassing en de verwachtingen eerst in kaart.</p>
+          <div class="process-grid" style="grid-template-columns:1fr 1fr; margin-top:28px;">
+            <div class="process-card"><div class="num">01</div><h3 data-nl="Kennismaken" data-en="Initial discussion">Kennismaken</h3><p data-nl="We bespreken uw vraag en het gewenste resultaat." data-en="We discuss your requirements and desired outcome.">We bespreken uw vraag en het gewenste resultaat.</p></div>
+            <div class="process-card"><div class="num">02</div><h3 data-nl="Beoordelen" data-en="Assess">Beoordelen</h3><p data-nl="We bekijken de technische eisen en mogelijkheden." data-en="We review technical requirements and feasibility.">We bekijken de technische eisen en mogelijkheden.</p></div>
+            <div class="process-card"><div class="num">03</div><h3 data-nl="Afstemmen" data-en="Agree">Afstemmen</h3><p data-nl="We bespreken de aanpak en afspraken." data-en="We agree on the approach and expectations.">We bespreken de aanpak en afspraken.</p></div>
+            <div class="process-card"><div class="num">04</div><h3 data-nl="Uitvoeren" data-en="Execute">Uitvoeren</h3><p data-nl="Na akkoord werken we volgens de gemaakte afspraken." data-en="After approval, work proceeds according to the agreed plan.">Na akkoord werken we volgens de gemaakte afspraken.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="projecten">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-nl="Projecten" data-en="Projects">Projecten</span>
+          <h2 data-nl="Werk dat voor zichzelf spreekt." data-en="Work that speaks for itself.">Werk dat voor zichzelf spreekt.</h2>
+          <p data-nl="Een indruk van industriële techniek en metaalbewerking. De onderstaande beelden zijn voorbeelden en geen bevestigde projecten van KX Metaal." data-en="An impression of industrial engineering and metal fabrication. The images below are illustrative examples, not confirmed KX Metaal projects.">Een indruk van industriële techniek en metaalbewerking. De onderstaande beelden zijn voorbeelden en geen bevestigde projecten van KX Metaal.</p>
+        </div>
+        <div class="project-toolbar reveal">
+          <div class="filter-list" id="projectFilters">
+            <button class="filter-btn active" data-filter="all" data-nl="Alles" data-en="All">Alles</button>
+            <button class="filter-btn" data-filter="metaal" data-nl="Metaalbewerking" data-en="Metalwork">Metaalbewerking</button>
+            <button class="filter-btn" data-filter="constructie" data-nl="Constructie" data-en="Structures">Constructie</button>
+            <button class="filter-btn" data-filter="techniek" data-nl="Techniek" data-en="Engineering">Techniek</button>
+          </div>
+          <input class="project-search" id="projectSearch" type="search" placeholder="Zoek een project..." aria-label="Zoek projecten">
+        </div>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card reveal" data-category="metaal" data-search="metaalbewerking industrieel onderdeel">
+            <div class="project-photo"><img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80" alt="Voorbeeld van metaalbewerking" loading="lazy"></div>
+            <div class="project-meta"><span data-nl="Metaalbewerking" data-en="Metal fabrication">Metaalbewerking</span><span>01</span></div>
+            <h3 data-nl="Metaalwerk op maat" data-en="Custom metalwork">Metaalwerk op maat</h3>
+            <p data-nl="Een voorbeeldbeeld van industriële metaalbewerking." data-en="An illustrative image of industrial metal fabrication.">Een voorbeeldbeeld van industriële metaalbewerking.</p>
+          </article>
+          <article class="project-card reveal" data-category="constructie" data-search="constructie staal constructiewerk">
+            <div class="project-photo"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Voorbeeld van een industriële constructie" loading="lazy"></div>
+            <div class="project-meta"><span data-nl="Constructie" data-en="Structures">Constructie</span><span>02</span></div>
+            <h3 data-nl="Constructieve oplossingen" data-en="Structural solutions">Constructieve oplossingen</h3>
+            <p data-nl="Voorbeeld van industriële constructie en staalwerk." data-en="Illustrative example of industrial structures and steelwork.">Voorbeeld van industriële constructie en staalwerk.</p>
+          </article>
+          <article class="project-card reveal" data-category="techniek" data-search="techniek machine engineering">
+            <div class="project-photo"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1000&q=80" alt="Voorbeeld van technische apparatuur" loading="lazy"></div>
+            <div class="project-meta"><span data-nl="Techniek" data-en="Engineering">Techniek</span><span>03</span></div>
+            <h3 data-nl="Technische toepassingen" data-en="Technical applications">Technische toepassingen</h3>
+            <p data-nl="Een voorbeeld van technische apparatuur en maatwerk." data-en="An illustrative example of technical equipment and custom work.">Een voorbeeld van technische apparatuur en maatwerk.</p>
+          </article>
+        </div>
+        <p class="project-empty" id="projectEmpty" data-nl="Geen projecten gevonden. Probeer een andere zoekterm." data-en="No projects found. Try another search term.">Geen projecten gevonden. Probeer een andere zoekterm.</p>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <span class="eyebrow" data-nl="Een technisch vraagstuk?" data-en="A technical challenge?">Een technisch vraagstuk?</span>
+          <h2 data-nl="Laten we de mogelijkheden bespreken." data-en="Let's discuss the possibilities.">Laten we de mogelijkheden bespreken.</h2>
+          <p data-nl="Vertel ons wat u wilt realiseren. We bekijken samen de vraag en de mogelijke vervolgstappen." data-en="Tell us what you want to achieve. We'll discuss your requirements and possible next steps.">Vertel ons wat u wilt realiseren. We bekijken samen de vraag en de mogelijke vervolgstappen.</p>
+        </div>
+        <a class="btn btn-red" href="#offerte"><span data-nl="Project bespreken" data-en="Discuss a project">Project bespreken</span> <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="over">
+      <div class="container about-grid">
+        <img class="about-photo reveal" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85" alt="Technisch werk in een werkplaats" loading="lazy">
+        <div class="reveal">
+          <span class="eyebrow" data-nl="Over KX Metaal" data-en="About KX Metaal">Over KX Metaal</span>
+          <h2 data-nl="Praktisch denken. Techniek begrijpen." data-en="Practical thinking. Understanding engineering.">Praktisch denken. Techniek begrijpen.</h2>
+          <p class="lead" data-nl="KX Metaal richt zich op metaalwerk en technische vraagstukken voor zakelijke opdrachtgevers." data-en="KX Metaal focuses on metalwork and technical challenges for business clients.">KX Metaal richt zich op metaalwerk en technische vraagstukken voor zakelijke opdrachtgevers.</p>
+          <p class="muted" data-nl="Elk project begint met luisteren naar de vraag. Door wensen, toepassing en randvoorwaarden helder te krijgen, ontstaat een goede basis om de juiste aanpak te bepalen." data-en="Every project begins by listening. Understanding the requirements, application and constraints creates a solid basis for choosing the right approach.">Elk project begint met luisteren naar de vraag. Door wensen, toepassing en randvoorwaarden helder te krijgen, ontstaat een goede basis om de juiste aanpak te bepalen.</p>
+          <div class="about-points">
+            <div class="about-point"><strong data-nl="Meedenken" data-en="Collaborative thinking">Meedenken</strong><span data-nl="Aandacht voor de vraag achter het project." data-en="Understanding the need behind the project.">Aandacht voor de vraag achter het project.</span></div>
+            <div class="about-point"><strong data-nl="Maatwerk" data-en="Custom solutions">Maatwerk</strong><span data-nl="De oplossing afstemmen op de toepassing." data-en="Tailoring solutions to the application.">De oplossing afstemmen op de toepassing.</span></div>
+            <div class="about-point"><strong data-nl="Duidelijkheid" data-en="Clarity">Duidelijkheid</strong><span data-nl="Heldere verwachtingen en afspraken." data-en="Clear expectations and agreements.">Heldere verwachtingen en afspraken.</span></div>
+            <div class="about-point"><strong data-nl="Samenwerking" data-en="Collaboration">Samenwerking</strong><span data-nl="Rechtstreeks overleggen over uw project." data-en="Direct communication about your project.">Rechtstreeks overleggen over uw project.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="brochure">
+      <div class="container">
+        <div class="brochure-box reveal">
+          <div>
+            <span class="eyebrow" data-nl="Bedrijfsinformatie" data-en="Company information">Bedrijfsinformatie</span>
+            <h2 style="font-size:clamp(1.7rem,3vw,2.4rem)" data-nl="Neem KX Metaal mee in uw project." data-en="Consider KX Metaal for your project.">Neem KX Metaal mee in uw project.</h2>
+            <p data-nl="Maak een printvriendelijke bedrijfsintroductie die u kunt opslaan als PDF." data-en="Create a print-friendly company introduction that you can save as a PDF.">Maak een printvriendelijke bedrijfsintroductie die u kunt opslaan als PDF.</p>
+          </div>
+          <button class="btn btn-dark" id="brochureBtn" type="button"><span data-nl="Bedrijfsbrochure maken" data-en="Create company brochure">Bedrijfsbrochure maken</span> ↗</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nieuws">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-nl="Nieuws & updates" data-en="News & updates">Nieuws & updates</span>
+          <h2 data-nl="Wat er speelt bij KX Metaal." data-en="What's happening at KX Metaal.">Wat er speelt bij KX Metaal.</h2>
+          <p data-nl="Deze voorbeeldsectie kan later worden gevuld met echte projecten, bedrijfsnieuws en technische updates." data-en="This sample section can later feature real projects, company news and technical updates.">Deze voorbeeldsectie kan later worden gevuld met echte projecten, bedrijfsnieuws en technische updates.</p>
+        </div>
+        <div class="news-grid">
+          <article class="news-card reveal"><div class="news-date" data-nl="BEDRIJFSUPDATE" data-en="COMPANY UPDATE">BEDRIJFSUPDATE</div><h3 data-nl="Een kijkje in het werk" data-en="A look at our work">Een kijkje in het werk</h3><p data-nl="Gebruik deze plek voor een kort bericht over een afgerond project of werkzaamheden in de werkplaats." data-en="Use this space for a short update about a completed project or workshop activity.">Gebruik deze plek voor een kort bericht over een afgerond project of werkzaamheden in de werkplaats.</p></article>
+          <article class="news-card reveal"><div class="news-date" data-nl="PROJECT" data-en="PROJECT">PROJECT</div><h3 data-nl="Van vraag naar oplossing" data-en="From challenge to solution">Van vraag naar oplossing</h3><p data-nl="Vertel later hoe een technische vraag is aangepakt, met toestemming van de klant." data-en="Share how a technical challenge was approached, with the client's permission.">Vertel later hoe een technische vraag is aangepakt, met toestemming van de klant.</p></article>
+          <article class="news-card reveal"><div class="news-date" data-nl="TECHNIEK" data-en="ENGINEERING">TECHNIEK</div><h3 data-nl="Nieuwe mogelijkheden" data-en="New capabilities">Nieuwe mogelijkheden</h3><p data-nl="Plaats hier alleen informatie over nieuwe apparatuur of diensten wanneer die daadwerkelijk beschikbaar zijn." data-en="Only publish information about new equipment or services when they are actually available.">Plaats hier alleen informatie over nieuwe apparatuur of diensten wanneer die daadwerkelijk beschikbaar zijn.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="faq">
+      <div class="container faq-grid">
+        <div class="reveal">
+          <span class="eyebrow" data-nl="Veelgestelde vragen" data-en="Frequently asked questions">Veelgestelde vragen</span>
+          <h2 data-nl="Goed voorbereid aan tafel." data-en="Start with the right information.">Goed voorbereid aan tafel.</h2>
+          <p class="muted" data-nl="Staat uw vraag er niet bij? Neem contact op en beschrijf uw project." data-en="Can't find your question? Get in touch and tell us about your project.">Staat uw vraag er niet bij? Neem contact op en beschrijf uw project.</p>
+          <a href="#contact" class="text-link"><span data-nl="Stel uw vraag" data-en="Ask your question">Stel uw vraag</span> ↗</a>
+        </div>
+        <div class="reveal">
+          <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span data-nl="Welke projecten kan ik bespreken?" data-en="What kinds of projects can I discuss?">Welke projecten kan ik bespreken?</span><span>+</span></button><div class="faq-answer" data-nl="U kunt vragen stellen over metaalbewerking, constructiewerk, technische onderdelen, engineering en machinebouw. De haalbaarheid wordt per aanvraag beoordeeld." data-en="You can enquire about metal fabrication, structural work, technical components, engineering and machine building. Feasibility is assessed for each enquiry.">U kunt vragen stellen over metaalbewerking, constructiewerk, technische onderdelen, engineering en machinebouw. De haalbaarheid wordt per aanvraag beoordeeld.</div></div>
+          <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span data-nl="Kan ik een technische tekening meesturen?" data-en="Can I provide a technical drawing?">Kan ik een technische tekening meesturen?</span><span>+</span></button><div class="faq-answer" data-nl="Ja. Het formulier kan u helpen de aanvraag voor te bereiden. In deze versie wordt geen bestand automatisch verstuurd; voeg uw tekening zelf toe aan de e-mail die u opent. Automatische uploads vereisen een beveiligde backend." data-en="Yes. The form helps you prepare your enquiry. This version does not automatically upload files; attach your drawing to the email you open. Automatic uploads require a secure backend.">Ja. Het formulier kan u helpen de aanvraag voor te bereiden. In deze versie wordt geen bestand automatisch verstuurd; voeg uw tekening zelf toe aan de e-mail die u opent. Automatische uploads vereisen een beveiligde backend.</div></div>
+          <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span data-nl="Werkt KX Metaal voor bedrijven?" data-en="Does KX Metaal work with businesses?">Werkt KX Metaal voor bedrijven?</span><span>+</span></button><div class="faq-answer" data-nl="De website is gericht op zakelijke opdrachtgevers. Beschrijf uw organisatie en de toepassing, zodat de aanvraag goed kan worden beoordeeld." data-en="The website is aimed at business clients. Describe your organisation and application so the enquiry can be assessed.">De website is gericht op zakelijke opdrachtgevers. Beschrijf uw organisatie en de toepassing, zodat de aanvraag goed kan worden beoordeeld.</div></div>
+          <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span data-nl="Hoe vraag ik een offerte aan?" data-en="How do I request a quote?">Hoe vraag ik een offerte aan?</span><span>+</span></button><div class="faq-answer" data-nl="Vul het aanvraagformulier in met uw contactgegevens en projectomschrijving. Controleer de gegevens en verstuur de aanvraag via uw e-mailprogramma." data-en="Complete the enquiry form with your contact details and project description. Review the information and send it through your email application.">Vul het aanvraagformulier in met uw contactgegevens en projectomschrijving. Controleer de gegevens en verstuur de aanvraag via uw e-mailprogramma.</div></div>
+          <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span data-nl="Kan ik eerst overleggen?" data-en="Can I discuss the project first?">Kan ik eerst overleggen?</span><span>+</span></button><div class="faq-answer" data-nl="Natuurlijk. Gebruik het contactformulier om uw vraag te beschrijven. Vul de echte contactgegevens van het bedrijf in voordat de website live gaat." data-en="Certainly. Use the contact form to describe your question. Make sure the company's real contact details are added before the website goes live.">Natuurlijk. Gebruik het contactformulier om uw vraag te beschrijven. Vul de echte contactgegevens van het bedrijf in voordat de website live gaat.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow" data-nl="Contact" data-en="Contact">Contact</span>
+          <h2 data-nl="Vertel ons over uw project." data-en="Tell us about your project.">Vertel ons over uw project.</h2>
+          <p class="lead" data-nl="Een eerste omschrijving is genoeg om het gesprek te beginnen. Geef aan wat u nodig heeft en wat u al weet." data-en="An initial description is enough to start the conversation. Tell us what you need and what information you already have.">Een eerste omschrijving is genoeg om het gesprek te beginnen. Geef aan wat u nodig heeft en wat u al weet.</p>
+          <div class="contact-details">
+            <div class="contact-row"><span data-nl="Bedrijf" data-en="Company">Bedrijf</span><strong>KX Metaal</strong></div>
+            <div class="contact-row"><span data-nl="Werkgebied" data-en="Service area">Werkgebied</span><strong data-nl="Nederland" data-en="The Netherlands">Nederland</strong></div>
+            <div class="contact-row"><span data-nl="E-mail" data-en="Email">E-mail</span><strong data-nl="Vul het juiste e-mailadres in vóór publicatie" data-en="Add the correct email address before publishing">Vul het juiste e-mailadres in vóór publicatie</strong></div>
+          </div>
+        </div>
+
+        <div class="form-card reveal" id="offerte">
+          <h3 data-nl="Project- of offerteaanvraag" data-en="Project or quotation enquiry">Project- of offerteaanvraag</h3>
+          <p class="muted" style="font-size:.88rem" data-nl="Vul hieronder uw gegevens in. Uw e-mailprogramma wordt geopend om de aanvraag te versturen." data-en="Complete the details below. Your email application will open so you can send the enquiry.">Vul hieronder uw gegevens in. Uw e-mailprogramma wordt geopend om de aanvraag te versturen.</p>
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div class="field"><label for="name" data-nl="Naam *" data-en="Name *">Naam *</label><input id="name" name="name" required autocomplete="name" placeholder="Uw naam"></div>
+              <div class="field"><label for="company" data-nl="Bedrijf" data-en="Company">Bedrijf</label><input id="company" name="company" autocomplete="organization" placeholder="Bedrijfsnaam"></div>
+              <div class="field"><label for="email" data-nl="E-mailadres *" data-en="Email address *">E-mailadres *</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="naam@bedrijf.nl"></div>
+              <div class="field"><label for="phone" data-nl="Telefoonnummer" data-en="Phone number">Telefoonnummer</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+31 ..."></div>
+              <div class="field full"><label for="service" data-nl="Waar gaat uw aanvraag over? *" data-en="What is your enquiry about? *">Waar gaat uw aanvraag over? *</label>
+                <select id="service" name="service" required>
+                  <option value="" data-nl="Kies een onderwerp" data-en="Choose a subject">Kies een onderwerp</option>
+                  <option data-nl="Metaalbewerking" data-en="Metal fabrication">Metaalbewerking</option>
+                  <option data-nl="Constructiewerk" data-en="Structural work">Constructiewerk</option>
+                  <option data-nl="Lassen" data-en="Welding">Lassen</option>
+                  <option data-nl="Plaatwerk" data-en="Sheet metal">Plaatwerk</option>
+                  <option data-nl="Engineering / machinebouw" data-en="Engineering / machine building">Engineering / machinebouw</option>
+                  <option data-nl="Anders / overleg" data-en="Other / consultation">Anders / overleg</option>
+                </select>
+              </div>
+              <div class="field"><label for="deadline" data-nl="Gewenste planning" data-en="Desired timeframe">Gewenste planning</label><input id="deadline" name="deadline" placeholder="Bijv. komende maanden"></div>
+              <div class="field"><label for="reference" data-nl="Referentie (optioneel)" data-en="Reference (optional)">Referentie (optioneel)</label><input id="reference" name="reference" placeholder="Projectnummer of referentie"></div>
+              <div class="field full"><label for="message" data-nl="Omschrijving van uw project *" data-en="Project description *">Omschrijving van uw project *</label><textarea id="message" name="message" required placeholder="Wat wilt u laten maken of oplossen? Welke afmetingen, materialen of eisen zijn bekend?"></textarea></div>
+              <div class="field full"><label for="files" data-nl="Bestanden (optioneel)" data-en="Files (optional)">Bestanden (optioneel)</label><input id="files" name="files" type="file" multiple accept=".pdf,.png,.jpg,.jpeg,.webp,.dwg,.dxf,.step,.stp"><span class="muted" style="font-size:.78rem" data-nl="Bestanden worden niet automatisch geüpload. Voeg ze zelf toe aan de e-mail." data-en="Files are not uploaded automatically. Attach them to the email yourself.">Bestanden worden niet automatisch geüpload. Voeg ze zelf toe aan de e-mail.</span></div>
+            </div>
+            <p class="form-note" data-nl="Door te versturen opent uw eigen e-mailprogramma. Controleer de aanvraag voordat u deze verzendt. Voeg geen vertrouwelijke tekeningen toe via een onbeveiligde verbinding." data-en="Submitting opens your own email application. Review the enquiry before sending. Do not send confidential drawings over an unsecured connection.">Door te versturen opent uw eigen e-mailprogramma. Controleer de aanvraag voordat u deze verzendt. Voeg geen vertrouwelijke tekeningen toe via een onbeveiligde verbinding.</p>
+            <button class="btn btn-red" type="submit"><span data-nl="Aanvraag voorbereiden" data-en="Prepare enquiry">Aanvraag voorbereiden</span> ↗</button>
+            <div class="form-status" id="formStatus" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lokale demo. Niet beveiligd en niet gedeeld met andere bezoekers. -->
+    <section class="section section-soft" id="beheer">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-nl="Websitebeheer" data-en="Website management">Websitebeheer</span>
+          <h2 data-nl="Projectbeheer — demo" data-en="Project management — demo">Projectbeheer — demo</h2>
+          <p data-nl="Een lokale demonstratie om te zien hoe projectbeheer eruit kan zien. Dit is geen beveiligd beheersysteem en wijzigingen zijn alleen zichtbaar in deze browser." data-en="A local demonstration of what project management could look like. This is not a secure admin system; changes are only visible in this browser.">Een lokale demonstratie om te zien hoe projectbeheer eruit kan zien. Dit is geen beveiligd beheersysteem en wijzigingen zijn alleen zichtbaar in deze browser.</p>
+        </div>
+        <button class="btn btn-light" id="adminToggle" type="button" data-nl="Open demo-beheer" data-en="Open demo admin">Open demo-beheer</button>
+        <div class="admin-panel" id="adminPanel">
+          <h3 data-nl="Demo: project toevoegen" data-en="Demo: add a project">Demo: project toevoegen</h3>
+          <form id="adminForm" class="form-grid">
+            <div class="field"><label for="adminTitle" data-nl="Projectnaam" data-en="Project name">Projectnaam</label><input id="adminTitle" required></div>
+            <div class="field"><label for="adminCategory" data-nl="Categorie" data-en="Category">Categorie</label><select id="adminCategory"><option value="metaal">Metaalbewerking</option><option value="constructie">Constructie</option><option value="techniek">Techniek</option></select></div>
+            <div class="field full"><label for="adminDescription" data-nl="Omschrijving" data-en="Description">Omschrijving</label><textarea id="adminDescription" required></textarea></div>
+            <div class="field full"><button class="btn btn-dark" type="submit" data-nl="Toevoegen aan deze browser" data-en="Add to this browser">Toevoegen aan deze browser</button></div>
+          </form>
+          <div class="admin-list" id="adminList"></div>
+          <p class="admin-hint" data-nl="Voor echt beheer zijn een beveiligde login, database, server-side validatie en veilige afbeeldingsopslag nodig. Zet deze demo niet online als een echte beheeromgeving." data-en="Real administration requires secure login, a database, server-side validation and secure image storage. Do not publish this demo as a real admin system.">Voor echt beheer zijn een beveiligde login, database, server-side validatie en veilige afbeeldingsopslag nodig. Zet deze demo niet online als een echte beheeromgeving.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="brand" style="margin-bottom:18px">
+            <span class="brand-mark" style="background:#fff;color:#202522">KX</span>
+            <span><span class="brand-name" style="color:#fff">KX METAAL</span><span class="brand-sub" style="color:#b9c2bb" data-nl="TECHNIEK & MAATWERK" data-en="ENGINEERING & CUSTOM WORK">TECHNIEK & MAATWERK</span></span>
+          </a>
+          <p data-nl="Metaalwerk en technische oplossingen voor zakelijke opdrachtgevers. Neem contact op om uw project te bespreken." data-en="Metalwork and technical solutions for business clients. Get in touch to discuss your project.">Metaalwerk en technische oplossingen voor zakelijke opdrachtgevers. Neem contact op om uw project te bespreken.</p>
+        </div>
+        <div><h3 data-nl="Navigatie" data-en="Navigation">Navigatie</h3><div class="footer-links"><a href="#diensten" data-nl="Diensten" data-en="Services">Diensten</a><a href="#mogelijkheden" data-nl="Mogelijkheden" data-en="Capabilities">Mogelijkheden</a><a href="#projecten" data-nl="Projecten" data-en="Projects">Projecten</a><a href="#over" data-nl="Over ons" data-en="About us">Over ons</a></div></div>
+        <div><h3 data-nl="Informatie" data-en="Information">Informatie</h3><div class="footer-links"><a href="#brochure" data-nl="Bedrijfsbrochure" data-en="Company brochure">Bedrijfsbrochure</a><a href="#nieuws" data-nl="Nieuws" data-en="News">Nieuws</a><a href="#faq" data-nl="Veelgestelde vragen" data-en="FAQ">Veelgestelde vragen</a><a href="#contact" data-nl="Offerte aanvragen" data-en="Request a quote">Offerte aanvragen</a></div></div>
+        <div><h3 data-nl="Contact" data-en="Contact">Contact</h3><div class="footer-links"><a href="#contact" data-nl="Neem contact op" data-en="Get in touch">Neem contact op</a><span data-nl="Werkgebied: Nederland" data-en="Service area: The Netherlands">Werkgebied: Nederland</span><span data-nl="Contactgegevens worden nog toegevoegd" data-en="Contact details to be added">Contactgegevens worden nog toegevoegd</span></div></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> KX Metaal. <span data-nl="Alle rechten voorbehouden." data-en="All rights reserved.">Alle rechten voorbehouden.</span></span>
+        <span data-nl="Techniek met aandacht." data-en="Engineering with care.">Techniek met aandacht.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Sluiten">×</button>
+      <img id="modalImage" src="" alt="">
+      <div class="eyebrow" id="modalCategory"></div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription" class="muted"></p>
+      <p class="muted" data-nl="Let op: voorbeeldprojecten en foto's moeten worden vervangen door gecontroleerde informatie van KX Metaal." data-en="Note: example projects and images must be replaced with verified KX Metaal information.">Let op: voorbeeldprojecten en foto's moeten worden vervangen door gecontroleerde informatie van KX Metaal.</p>
+      <a href="#offerte" class="btn btn-dark" id="modalQuote" data-nl="Bespreek een vergelijkbaar project ↗" data-en="Discuss a similar project ↗">Bespreek een vergelijkbaar project ↗</a>
+    </div>
+  </div>
+
+  <script>
+    // Vul het echte zakelijke e-mailadres in voordat de website live gaat.
+    const COMPANY_EMAIL = "VUL-HIER-HET-ECHTE-EMAILADRES-IN";
+
+    let currentLanguage = "nl";
+
+    function setLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      document.querySelectorAll("[data-nl][data-en]").forEach(el => {
+        const value = el.dataset[language];
+        if (value !== undefined) {
+          // Alleen teksten die bewust HTML-markup bevatten gebruiken innerHTML.
+          if (el.closest("h1")) el.innerHTML = value;
+          else el.textContent = value;
+        }
+      });
+
+      document.getElementById("langToggle").textContent = language === "nl" ? "EN" : "NL";
+      document.getElementById("projectSearch").placeholder =
+        language === "nl" ? "Zoek een project..." : "Search projects...";
+      document.getElementById("name").placeholder = language === "nl" ? "Uw naam" : "Your name";
+      document.getElementById("company").placeholder = language === "nl" ? "Bedrijfsnaam" : "Company name";
+      document.getElementById("email").placeholder = language === "nl" ? "naam@bedrijf.nl" : "name@company.com";
+      document.getElementById("phone").placeholder = language === "nl" ? "+31 ..." : "+31 ...";
+      document.getElementById("message").placeholder = language === "nl"
+        ? "Wat wilt u laten maken of oplossen? Welke afmetingen, materialen of eisen zijn bekend?"
+        : "What do you need made or solved? What dimensions, materials or requirements are known?";
+      document.getElementById("langToggle").setAttribute("aria-label", language === "nl" ? "Switch to English" : "Schakel naar Nederlands");
+
+      // Vertaal ook de opties in het onderwerpselectievak.
+      document.querySelectorAll("#service option[data-nl][data-en]").forEach(option => {
+        option.textContent = option.dataset[language];
+      });
+
+      try { localStorage.setItem("kx-language", language); } catch (_) {}
+    }
+
+    document.getElementById("langToggle").addEventListener("click", () => {
+      setLanguage(currentLanguage === "nl" ? "en" : "nl");
     });
 
-    if (open) {
-      item.classList.add("open");
-      button.setAttribute("aria-expanded", "true");
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("open");
+      document.getElementById("menuToggle").setAttribute("aria-expanded", nav.classList.contains("open"));
+    });
+
+    document.querySelectorAll("#navLinks a").forEach(link => {
+      link.addEventListener("click", () => document.getElementById("navLinks").classList.remove("open"));
+    });
+
+    // Projectfilters en zoekfunctie.
+    let activeFilter = "all";
+    const projectCards = [...document.querySelectorAll(".project-card")];
+
+    function filterProjects() {
+      const query = document.getElementById("projectSearch").value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      projectCards.forEach(card => {
+        const categoryMatches = activeFilter === "all" || card.dataset.category === activeFilter;
+        const text = (card.dataset.search + " " + card.textContent).toLowerCase();
+        const queryMatches = !query || text.includes(query);
+        const visible = categoryMatches && queryMatches;
+        card.hidden = !visible;
+        if (visible) visibleCount++;
+      });
+
+      document.getElementById("projectEmpty").style.display = visibleCount ? "none" : "block";
     }
-  });
-});
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
+    document.querySelectorAll(".filter-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(item => item.classList.remove("active"));
+        button.classList.add("active");
+        activeFilter = button.dataset.filter;
+        filterProjects();
+      });
+    });
+    document.getElementById("projectSearch").addEventListener("input", filterProjects);
+
+    // Projectdetailvenster.
+    const modal = document.getElementById("projectModal");
+    projectCards.forEach(card => {
+      card.addEventListener("click", () => {
+        const img = card.querySelector("img");
+        document.getElementById("modalImage").src = img.src;
+        document.getElementById("modalImage").alt = img.alt;
+        document.getElementById("modalTitle").textContent = card.querySelector("h3").textContent;
+        document.getElementById("modalDescription").textContent = card.querySelector("p").textContent;
+        document.getElementById("modalCategory").textContent = card.querySelector(".project-meta span").textContent;
+        modal.classList.add("open");
+        document.getElementById("modalClose").focus();
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove("open");
     }
-  });
-}, {threshold: 0.12});
+    document.getElementById("modalClose").addEventListener("click", closeModal);
+    modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
+    document.addEventListener("keydown", event => { if (event.key === "Escape") closeModal(); });
+    document.getElementById("modalQuote").addEventListener("click", closeModal);
 
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-document.getElementById("year").textContent = new Date().getFullYear();
+    // FAQ-accordions.
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const open = item.classList.toggle("open");
+        button.setAttribute("aria-expanded", String(open));
+        button.querySelector("span:last-child").textContent = open ? "−" : "+";
+      });
+    });
 
-document.getElementById("quoteForm").addEventListener("submit", event => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  if (!form.reportValidity()) return;
+    // Offerteformulier: mailto opent een concept. Dit verstuurt niets automatisch.
+    document.getElementById("quoteForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const status = document.getElementById("formStatus");
 
-  // VERVANG DIT DOOR HET ECHTE BEDRIJFS-E-MAILADRES.
-  const businessEmail = "VUL-HIER-HET-ECHTE-EMAILADRES-IN";
+      if (!COMPANY_EMAIL || COMPANY_EMAIL.includes("VUL-HIER")) {
+        status.style.display = "block";
+        status.textContent = currentLanguage === "nl"
+          ? "Het formulier is nog niet klaar: vul eerst het echte e-mailadres van KX Metaal in bij COMPANY_EMAIL bovenaan het script."
+          : "The form is not ready yet: add KX Metaal's real email address to COMPANY_EMAIL near the top of the script.";
+        return;
+      }
 
-  if (businessEmail.includes("VUL-HIER")) {
-    document.getElementById("formStatus").textContent = currentLang === "nl"
-      ? "Het formulier werkt, maar het echte e-mailadres moet nog in de code worden ingevuld."
-      : "The form is working, but the real business email address must still be added to the code.";
-    return;
-  }
+      const data = new FormData(event.target);
+      const labels = currentLanguage === "nl"
+        ? { title: "Projectaanvraag via de website", name: "Naam", company: "Bedrijf", email: "E-mail", phone: "Telefoon", service: "Onderwerp", deadline: "Planning", reference: "Referentie", message: "Projectomschrijving" }
+        : { title: "Website project enquiry", name: "Name", company: "Company", email: "Email", phone: "Phone", service: "Subject", deadline: "Timeframe", reference: "Reference", message: "Project description" };
 
-  const data = new FormData(form);
-  const subject = (currentLang === "nl" ? "Offerteaanvraag KX Metaal: " : "KX Metaal quotation request: ") + data.get("service");
-  const body = [
-    (currentLang === "nl" ? "Nieuwe aanvraag voor KX Metaal" : "New enquiry for KX Metaal"),
-    "",
-    (currentLang === "nl" ? "Naam: " : "Name: ") + data.get("name"),
-    (currentLang === "nl" ? "Bedrijf: " : "Company: ") + (data.get("company") || "-"),
-    "Email: " + data.get("email"),
-    (currentLang === "nl" ? "Telefoon: " : "Phone: ") + (data.get("phone") || "-"),
-    (currentLang === "nl" ? "Onderwerp: " : "Subject: ") + data.get("service"),
-    "",
-    data.get("message")
-  ].join("\n");
+      const lines = [
+        labels.title, "",
+        labels.name + ": " + data.get("name"),
+        labels.company + ": " + (data.get("company") || "-"),
+        labels.email + ": " + data.get("email"),
+        labels.phone + ": " + (data.get("phone") || "-"),
+        labels.service + ": " + data.get("service"),
+        labels.deadline + ": " + (data.get("deadline") || "-"),
+        labels.reference + ": " + (data.get("reference") || "-"),
+        "", labels.message + ":", data.get("message"), "",
+        currentLanguage === "nl"
+          ? "Controleer de aanvraag en voeg eventuele geselecteerde bestanden zelf toe."
+          : "Review the enquiry and attach any selected files manually."
+      ];
 
-  window.location.href = "mailto:" + businessEmail +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body);
+      const subject = encodeURIComponent(labels.title + " - " + data.get("name"));
+      const body = encodeURIComponent(lines.join("\n"));
+      status.style.display = "block";
+      status.textContent = currentLanguage === "nl"
+        ? "Je e-mailprogramma wordt geopend. Controleer de gegevens en voeg bestanden zelf toe voordat je de e-mail verstuurt."
+        : "Your email application will open. Review the details and attach files manually before sending.";
+      window.location.href = "mailto:" + COMPANY_EMAIL + "?subject=" + subject + "&body=" + body;
+    });
 
-  document.getElementById("formStatus").textContent = currentLang === "nl"
-    ? "Uw e-mailprogramma wordt geopend. Controleer en verstuur het bericht daar."
-    : "Your email application is opening. Review and send the message there.";
-});
+    // Printvriendelijke bedrijfsbrochure; de bezoeker kan deze opslaan als PDF.
+    document.getElementById("brochureBtn").addEventListener("click", () => {
+      const english = currentLanguage === "en";
+      const w = window.open("", "_blank");
+      if (!w) {
+        alert(english ? "Allow pop-ups to create the brochure." : "Sta pop-ups toe om de brochure te maken.");
+        return;
+      }
+      const title = english ? "KX Metaal | Company introduction" : "KX Metaal | Bedrijfsintroductie";
+      const intro = english
+        ? "KX Metaal focuses on metalwork and technical challenges for business clients in the Netherlands."
+        : "KX Metaal richt zich op metaalwerk en technische vraagstukken voor zakelijke opdrachtgevers in Nederland.";
+      const serviceTitle = english ? "Areas of work" : "Werkgebieden";
+      const services = english
+        ? ["Metal fabrication", "Structural work", "Welding and sheet metal", "Stainless steel and aluminium", "Engineering and machine building", "Custom technical solutions"]
+        : ["Metaalbewerking", "Constructiewerk", "Lassen en plaatwerk", "RVS en aluminium", "Engineering en machinebouw", "Technische oplossingen op maat"];
+      const contact = english ? "Contact us to discuss your project." : "Neem contact op om uw project te bespreken.";
+      w.document.write(`<!doctype html><html lang="${currentLanguage}"><head><meta charset="utf-8"><title>${title}</title><style>body{font:16px Arial,sans-serif;color:#202522;max-width:760px;margin:55px auto;padding:0 30px;line-height:1.65}h1{font-size:42px;letter-spacing:-2px}h2{margin-top:38px} .mark{background:#202522;color:white;padding:12px 14px;display:inline-block;font-weight:bold}li{padding:6px 0}.accent{color:#b83a2f}footer{margin-top:55px;border-top:1px solid #ddd;padding-top:20px;color:#555}@media print{body{margin:20px auto}}</style></head><body><div class="mark">KX</div><h1>KX <span class="accent">METAAL</span></h1><p>${intro}</p><h2>${serviceTitle}</h2><ul>${services.map(s => `<li>${s}</li>`).join("")}</ul><h2>${english ? "Our approach" : "Onze aanpak"}</h2><p>${english ? "Every project starts by understanding the requirements, intended application and practical constraints. Scope and feasibility are discussed before work proceeds." : "Elk project begint met inzicht in de wensen, toepassing en praktische randvoorwaarden. De omvang en haalbaarheid worden besproken voordat het werk begint."}</p><footer><strong>${contact}</strong><p>KX Metaal · ${english ? "The Netherlands" : "Nederland"}</p><p>${english ? "Please add verified company contact details before distributing this brochure." : "Voeg gecontroleerde contactgegevens toe voordat u deze brochure verspreidt."}</p></footer><script>window.onload=()=>window.print()<\/script></body></html>`);
+      w.document.close();
+    });
 
-document.getElementById("brochureBtn").addEventListener("click", () => {
-  const win = window.open("", "_blank");
-  if (!win) {
-    alert(currentLang === "nl" ? "Sta pop-ups toe om de brochure te openen." : "Allow pop-ups to open the brochure.");
-    return;
-  }
+    // Lokale projectbeheer-demo. Niet beveiligd en niet gedeeld tussen bezoekers.
+    const ADMIN_KEY = "kx-metaal-demo-projects-v1";
+    let adminProjects = [];
+    try { adminProjects = JSON.parse(localStorage.getItem(ADMIN_KEY) || "[]"); } catch (_) { adminProjects = []; }
 
-  const title = currentLang === "nl" ? "KX Metaal | Bedrijfsbrochure" : "KX Metaal | Company brochure";
-  const content = currentLang === "nl" ? `
-    <h1>KX METAAL</h1>
-    <h2>Engineering · Machinebouw · Metaalbewerking</h2>
-    <p>Technische oplossingen voor zakelijke vraagstukken in Nederland.</p>
-    <h2>Onze diensten</h2>
-    <ul><li>Engineering en technisch ontwerp</li><li>Machinebouw</li><li>Las- en constructiewerk</li><li>Plaatwerk en metalen onderdelen</li><li>Industriële oplossingen en maatwerk</li></ul>
-    <h2>Onze werkwijze</h2>
-    <p>1. Aanvraag en inventarisatie<br>2. Technisch overleg<br>3. Afstemming van voorstel en planning<br>4. Uitvoering na akkoord</p>
-    <h2>Contact</h2>
-    <p>Neem contact op met KX Metaal om uw project te bespreken.</p>
-    <p><b>Let op:</b> vul de officiële contactgegevens in en controleer alle bedrijfsinformatie voordat u deze brochure verspreidt.</p>` : `
-    <h1>KX METAAL</h1>
-    <h2>Engineering · Machinery · Metalworking</h2>
-    <p>Technical solutions for business challenges in the Netherlands.</p>
-    <h2>Our services</h2>
-    <ul><li>Engineering and technical design</li><li>Machine building</li><li>Welding and fabrication</li><li>Sheet metal and metal components</li><li>Industrial solutions and custom work</li></ul>
-    <h2>Our approach</h2>
-    <p>1. Enquiry and requirements<br>2. Technical discussion<br>3. Agreement on proposal and schedule<br>4. Implementation after approval</p>
-    <h2>Contact</h2>
-    <p>Contact KX Metaal to discuss your project.</p>
-    <p><b>Note:</b> add official contact details and verify all company information before distributing this brochure.</p>`;
+    document.getElementById("adminToggle").addEventListener("click", () => {
+      document.getElementById("adminPanel").classList.toggle("show");
+    });
 
-  win.document.write(`<!DOCTYPE html><html lang="${currentLang}"><head><meta charset="UTF-8"><title>${title}</title><style>
-    body{font:16px/1.7 Arial,sans-serif;max-width:800px;margin:50px auto;padding:0 30px;color:#202b35}
-    h1{font-size:40px;letter-spacing:4px;border-bottom:3px solid #82939f;padding-bottom:15px}
-    h2{margin-top:35px;font-size:22px}li{margin:8px 0}
-    .print{background:#202b35;color:white;border:0;padding:12px 18px;cursor:pointer}
-    @media print{.print{display:none}body{margin:0;padding:0}}
-  </style></head><body>${content}<button class="print" onclick="window.print()">${currentLang === "nl" ? "Afdrukken / opslaan als PDF" : "Print / save as PDF"}</button></body></html>`);
-  win.document.close();
-});
+    function renderAdminList() {
+      const list = document.getElementById("adminList");
+      list.replaceChildren();
+      adminProjects.forEach((project, index) => {
+        const item = document.createElement("div");
+        item.className = "admin-item";
+        const label = document.createElement("span");
+        label.textContent = project.title + " — " + project.category;
+        const remove = document.createElement("button");
+        remove.type = "button";
+        remove.className = "small-btn";
+        remove.textContent = currentLanguage === "nl" ? "Verwijderen" : "Delete";
+        remove.addEventListener("click", () => {
+          adminProjects.splice(index, 1);
+          saveAdminProjects();
+        });
+        item.append(label, remove);
+        list.append(item);
+      });
+    }
 
-try {
-  const savedLang = localStorage.getItem("kx-language");
-  if (savedLang === "en" || savedLang === "nl") setLanguage(savedLang);
-} catch(e) {}
-</script>
+    function saveAdminProjects() {
+      try {
+        localStorage.setItem(ADMIN_KEY, JSON.stringify(adminProjects));
+      } catch (_) {
+        alert(currentLanguage === "nl" ? "Opslaan in deze browser is niet gelukt." : "Saving in this browser failed.");
+      }
+      renderAdminList();
+    }
+
+    document.getElementById("adminForm").addEventListener("submit", event => {
+      event.preventDefault();
+      adminProjects.push({
+        title: document.getElementById("adminTitle").value.trim(),
+        category: document.getElementById("adminCategory").value,
+        description: document.getElementById("adminDescription").value.trim()
+      });
+      saveAdminProjects();
+      event.target.reset();
+    });
+
+    // Subtiele verschijningseffecten, met ondersteuning voor reduced motion.
+    const revealObserver = "IntersectionObserver" in window
+      ? new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: .08 })
+      : null;
+
+    document.querySelectorAll(".reveal").forEach(el => {
+      if (revealObserver) revealObserver.observe(el);
+      else el.classList.add("visible");
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    try {
+      const savedLanguage = localStorage.getItem("kx-language");
+      if (savedLanguage === "en" || savedLanguage === "nl") setLanguage(savedLanguage);
+    } catch (_) {}
+    renderAdminList();
+  </script>
 </body>
 </html>

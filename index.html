@@ -2,1626 +2,959 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>KX Metaal | Techniek en metaalwerk op maat</title>
-  <meta name="description" content="Ontdek KX Metaal. Bekijk onze technische oplossingen, werkzaamheden en mogelijkheden voor zakelijke projecten. Neem contact op om uw project te bespreken.">
-  <meta name="theme-color" content="#1769aa">
-
-  <style>
-    :root {
-      --blue: #1769aa;
-      --blue-dark: #104c7c;
-      --navy: #20394c;
-      --pale: #eaf5fc;
-      --pale-2: #f5faff;
-      --white: #ffffff;
-      --text: #354b5c;
-      --muted: #6d8292;
-      --border: #dce8f0;
-      --radius: 12px;
-      --shadow: 0 16px 45px rgba(32, 70, 100, .09);
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 95px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--white);
-      color: var(--text);
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body, button, input, select, textarea { font-family: inherit; }
-
-    img { display: block; max-width: 100%; }
-
-    a { color: inherit; text-decoration: none; }
-
-    button, input, select, textarea { font-size: 1rem; }
-
-    button, a { -webkit-tap-highlight-color: transparent; }
-
-    button:focus-visible, a:focus-visible,
-    input:focus-visible, select:focus-visible,
-    textarea:focus-visible {
-      outline: 3px solid #81bde8;
-      outline-offset: 3px;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 44px));
-      margin-inline: auto;
-    }
-
-    .section { padding: 100px 0; }
-
-    .section-light { background: var(--pale-2); }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0 0 16px;
-      color: var(--blue);
-      font-size: .76rem;
-      font-weight: 800;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 26px;
-      height: 2px;
-      background: var(--blue);
-    }
-
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1, h2, h3 {
-      color: var(--navy);
-      line-height: 1.17;
-      letter-spacing: -.035em;
-    }
-
-    h1 { font-size: clamp(2.7rem, 5.5vw, 5rem); margin-bottom: 24px; }
-    h2 { font-size: clamp(2rem, 3.6vw, 3.2rem); margin-bottom: 20px; }
-    h3 { font-size: 1.25rem; margin-bottom: 12px; }
-
-    .lead {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 1.12rem;
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 48px;
-    }
-
-    .section-heading p:last-child { margin-bottom: 0; }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 50px;
-      padding: 13px 21px;
-      border: 1px solid var(--blue);
-      border-radius: 5px;
-      background: var(--blue);
-      color: white;
-      font-weight: 750;
-      cursor: pointer;
-      transition: background .2s, border-color .2s, transform .2s;
-    }
-
-    .button:hover {
-      background: var(--blue-dark);
-      border-color: var(--blue-dark);
-      transform: translateY(-2px);
-    }
-
-    .button-outline {
-      background: white;
-      color: var(--blue);
-    }
-
-    .button-outline:hover { color: white; }
-
-    .button-small { min-height: 42px; padding: 9px 15px; font-size: .9rem; }
-
-    .topbar {
-      background: var(--navy);
-      color: #e7f3fc;
-      font-size: .82rem;
-    }
-
-    .topbar-inner {
-      min-height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .topbar p { margin: 0; }
-    .topbar a { color: white; }
-
-    .header {
-      position: sticky;
-      z-index: 50;
-      top: 0;
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
-    }
-
-    .nav {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-    }
-
-    .brand-mark {
-      display: grid;
-      width: 47px;
-      height: 47px;
-      place-items: center;
-      background: var(--blue);
-      color: white;
-      font-size: 1.05rem;
-      font-weight: 900;
-      letter-spacing: -.06em;
-      border-radius: 4px;
-    }
-
-    .brand-name {
-      display: block;
-      color: var(--navy);
-      font-size: 1.3rem;
-      font-weight: 850;
-      line-height: 1.1;
-      letter-spacing: .02em;
-    }
-
-    .brand-caption {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: .7rem;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .nav-links > a:not(.button) {
-      color: var(--navy);
-      font-size: .91rem;
-      font-weight: 650;
-    }
-
-    .nav-links > a:not(.button):hover { color: var(--blue); }
-
-    .nav-tools { display: flex; align-items: center; gap: 12px; }
-
-    .language-button {
-      padding: 8px 10px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: white;
-      color: var(--navy);
-      cursor: pointer;
-      font-size: .83rem;
-      font-weight: 800;
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      background: white;
-      color: var(--navy);
-      cursor: pointer;
-      font-size: 1.4rem;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 74px 0 88px;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.99) 0%,
-        rgba(255,255,255,.96) 37%,
-        rgba(255,255,255,.76) 59%,
-        rgba(255,255,255,.12) 100%),
-        url("https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=2000&q=85")
-        center / cover no-repeat;
-    }
-
-    .hero-content { max-width: 700px; }
-
-    .hero h1 span { color: var(--blue); }
-
-    .hero .lead { max-width: 580px; margin-bottom: 30px; }
-
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-
-    .hero-note {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 30px;
-      color: var(--muted);
-      font-size: .87rem;
-    }
-
-    .hero-note::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--blue);
-    }
-
-    .trust-strip {
-      border-block: 1px solid var(--border);
-      background: white;
-    }
-
-    .trust-inner {
-      min-height: 88px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    .trust-item {
-      color: var(--navy);
-      font-size: .91rem;
-      font-weight: 750;
-    }
-
-    .trust-item span {
-      margin-right: 9px;
-      color: var(--blue);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 72px;
-    }
-
-    .image-frame {
-      position: relative;
-      min-height: 420px;
-      background: var(--pale);
-    }
-
-    .image-frame img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .image-note {
-      position: absolute;
-      right: -15px;
-      bottom: 22px;
-      max-width: 240px;
-      padding: 18px 22px;
-      background: white;
-      border-left: 4px solid var(--blue);
-      box-shadow: var(--shadow);
-      color: var(--navy);
-      font-size: .91rem;
-      font-weight: 750;
-    }
-
-    .intro-copy p { color: var(--muted); }
-
-    .text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-top: 10px;
-      color: var(--blue);
-      font-weight: 800;
-    }
-
-    .text-link:hover { color: var(--blue-dark); }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: white;
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-image {
-      height: 210px;
-      background: var(--pale);
-      overflow: hidden;
-    }
-
-    .service-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .4s;
-    }
-
-    .service-card:hover .service-image img { transform: scale(1.04); }
-
-    .service-content { padding: 26px; }
-
-    .service-content p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: .94rem;
-    }
-
-    .service-number {
-      display: block;
-      margin-bottom: 14px;
-      color: var(--blue);
-      font-size: .78rem;
-      font-weight: 850;
-      letter-spacing: .13em;
-    }
-
-    .notice {
-      margin-top: 25px;
-      padding: 15px 18px;
-      border-left: 3px solid #7eafd2;
-      background: #edf7fd;
-      color: #38576e;
-      font-size: .9rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .project-card {
-      border: 1px solid var(--border);
-      background: white;
-    }
-
-    .project-photo {
-      position: relative;
-      height: 235px;
-      overflow: hidden;
-      background: var(--pale);
-    }
-
-    .project-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .4s;
-    }
-
-    .project-card:hover .project-photo img { transform: scale(1.04); }
-
-    .project-label {
-      position: absolute;
-      left: 14px;
-      bottom: 14px;
-      padding: 6px 10px;
-      background: white;
-      color: var(--navy);
-      font-size: .75rem;
-      font-weight: 800;
-    }
-
-    .project-content { padding: 24px; }
-
-    .project-content p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: .92rem;
-    }
-
-    .workflow {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0;
-      margin-top: 50px;
-    }
-
-    .step {
-      position: relative;
-      padding: 0 20px;
-      border-left: 1px solid #cfe1ee;
-    }
-
-    .step:first-child { border-left: 0; padding-left: 0; }
-
-    .step-number {
-      display: grid;
-      width: 46px;
-      height: 46px;
-      margin-bottom: 22px;
-      place-items: center;
-      border: 1px solid #b8d7eb;
-      border-radius: 50%;
-      background: white;
-      color: var(--blue);
-      font-weight: 850;
-    }
-
-    .step p { color: var(--muted); font-size: .9rem; }
-
-    .about-band {
-      position: relative;
-      overflow: hidden;
-      padding: 82px 0;
-      background: var(--navy);
-      color: #dceaf4;
-    }
-
-    .about-band::after {
-      position: absolute;
-      top: -110px;
-      right: -80px;
-      width: 390px;
-      height: 390px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 50%;
-      content: "";
-      box-shadow: 0 0 0 45px rgba(255,255,255,.025),
-                  0 0 0 90px rgba(255,255,255,.025);
-      pointer-events: none;
-    }
-
-    .about-grid {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .about-band h2 { color: white; }
-    .about-band p { color: #d0e0ed; }
-    .about-band .eyebrow { color: #9bd1f5; }
-    .about-band .eyebrow::before { background: #9bd1f5; }
-
-    .about-points { display: grid; gap: 16px; }
-
-    .about-point {
-      padding: 19px 22px;
-      border: 1px solid rgba(255,255,255,.17);
-      background: rgba(255,255,255,.05);
-    }
-
-    .about-point strong { display: block; color: white; margin-bottom: 4px; }
-    .about-point span { color: #c9dce9; font-size: .92rem; }
-
-    .faq-list {
-      max-width: 850px;
-      border-top: 1px solid var(--border);
-    }
-
-    .faq-item { border-bottom: 1px solid var(--border); }
-
-    .faq-question {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 23px 0;
-      border: 0;
-      background: transparent;
-      color: var(--navy);
-      text-align: left;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .faq-symbol {
-      color: var(--blue);
-      font-size: 1.4rem;
-      transition: transform .2s;
-    }
-
-    .faq-answer {
-      display: none;
-      max-width: 720px;
-      padding: 0 35px 23px 0;
-      color: var(--muted);
-    }
-
-    .faq-item.open .faq-answer { display: block; }
-    .faq-item.open .faq-symbol { transform: rotate(45deg); }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 55px;
-      align-items: start;
-    }
-
-    .contact-routes { display: grid; gap: 14px; margin-top: 30px; }
-
-    .contact-route {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 19px;
-      border: 1px solid var(--border);
-      background: white;
-    }
-
-    .route-icon {
-      display: grid;
-      width: 42px;
-      height: 42px;
-      flex-shrink: 0;
-      place-items: center;
-      background: var(--pale);
-      color: var(--blue);
-      font-size: 1.1rem;
-      font-weight: 850;
-    }
-
-    .contact-route strong { display: block; color: var(--navy); }
-    .contact-route span { color: var(--muted); font-size: .89rem; }
-
-    .form-card {
-      padding: 32px;
-      border: 1px solid var(--border);
-      background: white;
-      box-shadow: var(--shadow);
-    }
-
-    .form-card h3 { font-size: 1.5rem; }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .field { display: grid; gap: 7px; }
-    .field-full { grid-column: 1 / -1; }
-
-    .field label {
-      color: var(--navy);
-      font-size: .87rem;
-      font-weight: 750;
-    }
-
-    .field input, .field select, .field textarea {
-      width: 100%;
-      min-height: 47px;
-      padding: 11px 13px;
-      border: 1px solid #cad9e4;
-      border-radius: 4px;
-      background: white;
-      color: var(--navy);
-    }
-
-    .field textarea { min-height: 130px; resize: vertical; }
-
-    .field input::placeholder, .field textarea::placeholder { color: #8799a7; }
-
-    .field small { color: var(--muted); font-size: .8rem; }
-
-    .file-list { margin: 0; padding-left: 20px; color: var(--muted); font-size: .86rem; }
-
-    .form-note {
-      margin: 16px 0;
-      color: var(--muted);
-      font-size: .83rem;
-    }
-
-    .form-status {
-      margin-top: 15px;
-      color: var(--blue-dark);
-      font-size: .9rem;
-      overflow-wrap: anywhere;
-    }
-
-    .footer {
-      padding: 60px 0 22px;
-      background: #f0f7fc;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr;
-      gap: 45px;
-      padding-bottom: 42px;
-    }
-
-    .footer p, .footer a { color: var(--muted); font-size: .9rem; }
-    .footer h3 { font-size: 1rem; letter-spacing: 0; }
-    .footer-links { display: grid; gap: 9px; }
-    .footer-links a:hover { color: var(--blue); }
-
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: .82rem;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity .55s ease, transform .55s ease;
-    }
-
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 12px;
-      z-index: 100;
-      padding: 10px;
-      background: white;
-      color: var(--navy);
-    }
-
-    .skip-link:focus { top: 12px; }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-      }
-      .reveal { opacity: 1; transform: none; }
-    }
-
-    @media (max-width: 1050px) {
-      .nav-links { gap: 15px; }
-      .nav-links > a:not(.button) { font-size: .84rem; }
-      .nav-links .button { padding-inline: 13px; }
-      .intro-grid { gap: 45px; }
-      .workflow { grid-template-columns: repeat(3, 1fr); row-gap: 32px; }
-      .step:nth-child(4) { border-left: 0; padding-left: 0; }
-    }
-
-    @media (max-width: 820px) {
-      .topbar-inner { justify-content: center; text-align: center; }
-      .topbar-inner p:last-child { display: none; }
-
-      .nav { min-height: 72px; }
-      .menu-toggle { display: inline-grid; place-items: center; }
-      .nav-tools { margin-left: auto; }
-
-      .nav-links {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        display: none;
-        align-items: stretch;
-        gap: 0;
-        padding: 12px 22px 22px;
-        border-bottom: 1px solid var(--border);
-        background: white;
-        box-shadow: var(--shadow);
-      }
-
-      .nav-links.open { display: flex; flex-direction: column; }
-      .nav-links > a:not(.button) { padding: 12px 0; font-size: 1rem; }
-      .nav-links .button { margin-top: 8px; }
-      .hero { padding: 68px 0; background-position: 60% center; }
-      .hero-content { max-width: 620px; }
-      .intro-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .image-frame { min-height: 360px; }
-      .service-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); }
-      .workflow { grid-template-columns: repeat(2, 1fr); }
-      .step:nth-child(3), .step:nth-child(5) { border-left: 0; padding-left: 0; }
-      .step:nth-child(4) { border-left: 1px solid #cfe1ee; padding-left: 20px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .footer-grid > :first-child { grid-column: 1 / -1; }
-    }
-
-    @media (max-width: 560px) {
-      .container { width: min(100% - 32px, var(--max)); }
-      .section { padding: 68px 0; }
-      .brand-caption { font-size: .62rem; }
-      .brand-name { font-size: 1.13rem; }
-      .brand-mark { width: 42px; height: 42px; }
-      .hero { padding: 58px 0; }
-      h1 { font-size: clamp(2.4rem, 12vw, 3.6rem); }
-      .hero-actions { align-items: stretch; flex-direction: column; }
-      .hero-actions .button { width: 100%; }
-      .trust-inner { justify-content: flex-start; padding-block: 22px; gap: 12px 20px; }
-      .trust-item { width: calc(50% - 10px); font-size: .82rem; }
-      .image-frame { min-height: 290px; }
-      .image-note { right: 10px; bottom: 10px; max-width: 200px; }
-      .service-grid, .projects-grid, .workflow, .form-grid, .footer-grid { grid-template-columns: 1fr; }
-      .step, .step:first-child, .step:nth-child(4) {
-        padding: 0 0 0 20px;
-        border-left: 1px solid #cfe1ee;
-      }
-      .step-number { margin-bottom: 12px; }
-      .form-card { padding: 22px 17px; }
-      .footer-grid > :first-child { grid-column: auto; }
-      .footer-bottom { flex-direction: column; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1769aa">
+<meta name="description" content="KX Metaal — technische oplossingen en maatwerk door Robby Kuijpers. Actief sinds 2021.">
+<title>KX Metaal | Techniek en maatwerk sinds 2021</title>
+
+<style>
+:root {
+  --blue: #1769aa;
+  --blue-dark: #104c7c;
+  --navy: #20394c;
+  --text: #40566a;
+  --muted: #708497;
+  --pale: #eaf5fc;
+  --pale-2: #f5faff;
+  --white: #fff;
+  --line: #dce8f1;
+  --shadow: 0 14px 40px rgba(25, 65, 95, .09);
+  --radius: 15px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 95px; }
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: white;
+  color: var(--navy);
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+img { max-width: 100%; display: block; }
+.container { width: min(1160px, calc(100% - 44px)); margin: auto; }
+.section { padding: 94px 0; }
+.section-light { background: var(--pale-2); }
+.eyebrow {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.section-heading {
+  max-width: 730px;
+  margin-bottom: 40px;
+}
+.section-heading h2 {
+  font-size: clamp(30px, 4vw, 43px);
+  letter-spacing: -1.4px;
+  line-height: 1.17;
+  margin: 12px 0;
+}
+.section-heading p { color: var(--muted); margin: 15px 0 0; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 21px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: var(--blue);
+  color: white;
+  font-weight: 700;
+  transition: .2s ease;
+}
+.btn:hover { background: var(--blue-dark); transform: translateY(-2px); }
+.btn-outline { background: white; color: var(--blue); border-color: #c8dce9; }
+.btn-outline:hover { background: var(--pale); color: var(--blue-dark); }
+.topbar { background: var(--blue-dark); color: white; font-size: 12px; }
+.topbar-inner {
+  min-height: 37px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.topbar p { margin: 0; }
+.topbar a { font-weight: 700; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  display: flex;
+  min-height: 79px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand-symbol {
+  width: 43px;
+  height: 43px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: white;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.brand strong { display: block; font-size: 20px; letter-spacing: 1.4px; line-height: 1.2; }
+.brand small { display: block; color: var(--muted); font-size: 10px; letter-spacing: 1.6px; margin-top: 3px; }
+.nav-links { display: flex; align-items: center; gap: 23px; }
+.nav-links a:not(.btn) { font-size: 13px; color: var(--text); font-weight: 650; }
+.nav-links a:not(.btn):hover { color: var(--blue); }
+.menu-toggle {
+  display: none;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 9px 12px;
+  color: var(--navy);
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background: #183d59;
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(15,45,68,.94) 0%, rgba(17,55,83,.83) 49%, rgba(17,55,83,.38) 100%),
+    url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=2000&q=85") center/cover;
+}
+.hero-content { position: relative; z-index: 1; padding: 85px 0; max-width: 790px; }
+.hero .eyebrow { color: #b8e0fb; }
+.hero h1 {
+  font-size: clamp(42px, 6.5vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  margin: 20px 0;
+  max-width: 780px;
+}
+.hero h1 span { color: #a9d9fb; }
+.hero p { max-width: 630px; color: #e0edf6; font-size: 17px; line-height: 1.85; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero .btn-outline { background: transparent; color: white; border-color: #a4c6df; }
+.hero .btn-outline:hover { background: rgba(255,255,255,.12); }
+.hero-note { margin-top: 35px; display: flex; align-items: center; gap: 10px; color: #d2e6f4; font-size: 13px; }
+.hero-note span { width: 7px; height: 7px; background: #85c6f2; border-radius: 50%; }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.intro-image {
+  min-height: 410px;
+  background: url("https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1100&q=85") center/cover;
+  border-radius: var(--radius);
+  position: relative;
+  box-shadow: var(--shadow);
+}
+.image-caption {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  background: rgba(255,255,255,.95);
+  padding: 16px 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  color: var(--text);
+}
+.image-caption strong { display: block; color: var(--navy); font-size: 15px; }
+.intro-copy h2 { font-size: clamp(30px, 4vw, 43px); line-height: 1.2; letter-spacing: -1px; margin: 12px 0 20px; }
+.intro-copy p { color: var(--muted); margin: 0 0 17px; }
+.check-list { list-style: none; padding: 0; margin: 25px 0; }
+.check-list li { margin: 12px 0; color: var(--text); display: flex; gap: 11px; }
+.check-list li::before { content: "✓"; color: var(--blue); font-weight: 900; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 28px;
+}
+.stat { padding: 20px 16px; background: white; }
+.stat + .stat { border-left: 1px solid var(--line); }
+.stat strong { display: block; color: var(--blue); font-size: 25px; line-height: 1.2; }
+.stat span { color: var(--muted); font-size: 12px; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-card {
+  padding: 29px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: .25s ease;
+}
+.service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: #bdd9ed; }
+.service-icon {
+  width: 48px; height: 48px; display: grid; place-items: center;
+  background: var(--pale); color: var(--blue); border-radius: 10px; font-size: 23px;
+}
+.service-card h3 { margin: 19px 0 8px; font-size: 20px; }
+.service-card p { color: var(--muted); font-size: 14px; margin: 0; }
+.service-note { margin-top: 22px; color: var(--muted); font-size: 12px; }
+.project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.project-card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: white; }
+.project-photo { height: 210px; background-size: cover; background-position: center; }
+.project-card:nth-child(1) .project-photo {
+  background-image: url("https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80");
+}
+.project-card:nth-child(2) .project-photo {
+  background-image: url("https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80");
+}
+.project-card:nth-child(3) .project-photo {
+  background-image: url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80");
+}
+.project-copy { padding: 23px; }
+.project-copy h3 { margin: 0 0 8px; }
+.project-copy p { color: var(--muted); font-size: 14px; margin: 0; }
+.project-label { color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 23px; }
+.process-step { padding-top: 20px; border-top: 2px solid #c7e0f1; }
+.process-number { color: var(--blue); font-size: 12px; font-weight: 900; letter-spacing: 1px; }
+.process-step h3 { font-size: 18px; margin: 10px 0 7px; }
+.process-step p { color: var(--muted); font-size: 14px; margin: 0; }
+.about-panel {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.about-side { background: var(--blue-dark); color: white; padding: 40px; }
+.about-side .eyebrow { color: #b9dff8; }
+.about-side h3 { font-size: 29px; line-height: 1.25; }
+.about-side p { color: #d5e6f3; }
+.about-copy { padding: 42px; }
+.about-copy h2 { font-size: 32px; margin: 0 0 16px; }
+.about-copy p { color: var(--muted); }
+.about-signature { color: var(--blue); font-weight: 800; margin-top: 24px; }
+.knowledge-section { background: var(--pale-2); }
+.knowledge-search {
+  display: flex; align-items: center; gap: 12px; padding: 0 17px;
+  background: white; border: 1px solid var(--line); border-radius: 9px;
+  max-width: 680px; margin: 28px 0 30px;
+}
+.knowledge-search span { color: var(--blue); font-size: 25px; }
+.knowledge-search input { width: 100%; border: 0; outline: none; padding: 16px 0; background: transparent; color: var(--navy); }
+.knowledge-search:focus-within { outline: 2px solid var(--blue); outline-offset: 2px; }
+.knowledge-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.knowledge-card { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 25px; box-shadow: 0 8px 25px rgba(36,75,101,.04); }
+.knowledge-card[hidden] { display: none; }
+.knowledge-tag { color: var(--blue); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; }
+.knowledge-card h3 { font-size: 19px; line-height: 1.4; margin: 14px 0 10px; }
+.knowledge-card p, .knowledge-extra { color: var(--muted); font-size: 14px; line-height: 1.8; }
+.knowledge-toggle {
+  display: flex; justify-content: space-between; align-items: center; width: 100%;
+  margin-top: 17px; padding: 13px 0 0; border: 0; border-top: 1px solid var(--line);
+  background: transparent; color: var(--blue); font-weight: 750; text-align: left;
+}
+.knowledge-toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+.knowledge-extra { padding-top: 12px; }
+.knowledge-extra[hidden] { display: none; }
+#knowledgeEmpty { color: var(--muted); padding: 20px 0; }
+.faq-list { max-width: 850px; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-question {
+  width: 100%; border: 0; background: transparent; color: var(--navy);
+  display: flex; justify-content: space-between; align-items: center; text-align: left;
+  padding: 21px 0; font-weight: 750; gap: 20px;
+}
+.faq-question span { color: var(--blue); font-size: 23px; }
+.faq-answer { color: var(--muted); padding: 0 35px 20px 0; }
+.faq-answer[hidden] { display: none; }
+.contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: start; }
+.contact-copy h2 { font-size: clamp(30px, 4vw, 43px); line-height: 1.2; margin: 12px 0 18px; }
+.contact-copy > p { color: var(--muted); }
+.contact-detail { border-top: 1px solid var(--line); padding: 16px 0; }
+.contact-detail strong { display: block; font-size: 13px; }
+.contact-detail span { color: var(--muted); font-size: 14px; }
+.contact-form { background: white; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.form-heading h3 { margin: 0; font-size: 23px; }
+.form-heading p { margin: 5px 0 22px; color: var(--muted); font-size: 13px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: 12px; font-weight: 750; }
+.field input, .field select, .field textarea {
+  width: 100%; border: 1px solid #d7e4ed; border-radius: 7px;
+  padding: 12px; color: var(--navy); background: white; outline: none;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #1769aa18; }
+.field textarea { min-height: 125px; resize: vertical; }
+.form-hint { color: var(--muted); font-size: 11px; margin: 14px 0; }
+.form-status { color: var(--blue-dark); font-size: 13px; margin-top: 15px; overflow-wrap: anywhere; }
+.contact-form .btn { width: 100%; margin-top: 7px; }
+footer { background: #f2f8fc; border-top: 1px solid var(--line); padding: 34px 0; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+.footer-inner p { color: var(--muted); font-size: 12px; margin: 4px 0 0; }
+.footer-links { display: flex; gap: 18px; flex-wrap: wrap; color: var(--text); font-size: 12px; }
+.footer-links a:hover { color: var(--blue); }
+.reveal { animation: appear .7s ease both; }
+@keyframes appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 980px) {
+  .nav-links { gap: 13px; }
+  .nav-links a:not(.btn) { font-size: 12px; }
+  .nav-links .btn { padding: 10px 13px; }
+  .intro-grid { gap: 35px; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 760px) {
+  .container { width: min(100% - 32px, 600px); }
+  .section { padding: 68px 0; }
+  .topbar-inner { justify-content: center; text-align: center; }
+  .topbar-inner p:first-child { display: none; }
+  .nav { min-height: 70px; }
+  .menu-toggle { display: block; }
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: white; border-bottom: 1px solid var(--line);
+    padding: 18px 22px 24px; align-items: stretch; flex-direction: column; gap: 0;
+    box-shadow: 0 12px 20px rgba(20,55,80,.08);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a:not(.btn) { font-size: 14px; padding: 11px 0; }
+  .nav-links .btn { margin-top: 10px; }
+  .hero { min-height: 540px; }
+  .hero-content { padding: 70px 0; }
+  .hero h1 { letter-spacing: -1.5px; }
+  .hero p { font-size: 15px; }
+  .intro-grid, .about-panel, .contact-grid { grid-template-columns: 1fr; }
+  .intro-image { min-height: 300px; order: 2; }
+  .service-grid, .project-grid, .knowledge-grid { grid-template-columns: 1fr; }
+  .stats { margin-top: 24px; }
+  .stat { padding: 15px 10px; }
+  .stat strong { font-size: 21px; }
+  .stat span { font-size: 11px; }
+  .about-side, .about-copy { padding: 29px; }
+  .contact-grid { gap: 30px; }
+  .footer-inner { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 440px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .field.full { grid-column: auto; }
+  .contact-form { padding: 21px; }
+  .process-grid { grid-template-columns: 1fr; }
+  .hero-actions .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+}
+</style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main" data-i18n="skip">Ga naar de inhoud</a>
-
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <p data-i18n="topline">Technische oplossingen voor zakelijke projecten</p>
-      <p><a href="#contact" data-i18n="toplink">Een project bespreken →</a></p>
-    </div>
+<div class="topbar">
+  <div class="container topbar-inner">
+    <p>Technische oplossingen en maatwerk</p>
+    <p><a href="#contact">Een project bespreken? Neem contact op →</a></p>
   </div>
+</div>
 
-  <header class="header">
-    <nav class="container nav" aria-label="Hoofdnavigatie">
-      <a href="#home" class="brand" aria-label="KX Metaal home">
-        <span class="brand-mark">KX</span>
-        <span>
-          <span class="brand-name">KX METAAL</span>
-          <span class="brand-caption" data-i18n="brandCaption">Techniek op maat</span>
-        </span>
-      </a>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#diensten" data-i18n="navServices">Diensten</a>
-        <a href="#werkwijze" data-i18n="navProcess">Werkwijze</a>
-        <a href="#projecten" data-i18n="navProjects">Projecten</a>
-        <a href="#over-ons" data-i18n="navAbout">Over ons</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-        <a class="button button-small" href="#contact" data-i18n="navQuote">Offerte aanvragen</a>
-      </div>
-
-      <div class="nav-tools">
-        <button class="language-button" id="languageToggle" type="button" aria-label="Switch language">EN</button>
-        <button class="menu-toggle" id="menuToggle" type="button"
-          aria-label="Menu openen" aria-expanded="false" aria-controls="navLinks">☰</button>
-      </div>
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand" aria-label="KX Metaal home">
+      <span class="brand-symbol">KX</span>
+      <span><strong>KX METAAL</strong><small>TECHNIEK & MAATWERK</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">☰ Menu</button>
+    <nav class="nav-links" id="navLinks" aria-label="Hoofdnavigatie">
+      <a href="#over">Over ons</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#werkwijze">Werkwijze</a>
+      <a href="#projecten">Projecten</a>
+      <a href="#kennisbank">Kennisbank</a>
+      <a href="#contact" class="btn">Project bespreken ↗</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="main">
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-          <p class="eyebrow" data-i18n="heroEyebrow">KX Metaal · Techniek & maatwerk</p>
-          <h1 data-i18n="heroTitle">Techniek die werkt.<br><span>Maatwerk dat past.</span></h1>
-          <p class="lead" data-i18n="heroText">
-            Een technisch project begint met een goed gesprek. Ontdek de mogelijkheden en bespreek wat uw organisatie nodig heeft.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="button" data-i18n="heroButton">Bespreek uw project <span aria-hidden="true">→</span></a>
-            <a href="#diensten" class="button button-outline" data-i18n="heroSecondary">Bekijk de mogelijkheden</a>
-          </div>
-          <p class="hero-note" data-i18n="heroNote">Persoonlijk contact over uw technische vraagstuk</p>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-content reveal">
+      <span class="eyebrow">KX Metaal · Sinds 2021</span>
+      <h1>Techniek die werkt.<br><span>Maatwerk dat past.</span></h1>
+      <p>
+        Een technische uitdaging begint met een goed gesprek.
+        KX Metaal denkt mee over de vraag, de mogelijkheden en
+        een passende oplossing voor jouw project.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn">Bespreek je project <span>→</span></a>
+        <a href="#diensten" class="btn btn-outline">Ontdek de mogelijkheden</a>
+      </div>
+      <div class="hero-note"><span></span> Persoonlijk contact · Technisch meedenken · Sinds 2021</div>
+    </div>
+  </section>
+
+  <section class="section" id="over">
+    <div class="container intro-grid">
+      <div class="intro-image" role="img" aria-label="Illustratieve foto van een technische werkplaats">
+        <div class="image-caption">
+          <strong>Techniek met aandacht voor het project</strong>
+          <span>Een heldere vraag is het begin van een goede oplossing.</span>
         </div>
       </div>
-    </section>
-
-    <div class="trust-strip">
-      <div class="container trust-inner">
-        <div class="trust-item"><span>01</span><span data-i18n="trust1">Technisch meedenken</span></div>
-        <div class="trust-item"><span>02</span><span data-i18n="trust2">Oplossingen op maat</span></div>
-        <div class="trust-item"><span>03</span><span data-i18n="trust3">Duidelijke communicatie</span></div>
-        <div class="trust-item"><span>04</span><span data-i18n="trust4">Zakelijke samenwerking</span></div>
+      <div class="intro-copy">
+        <span class="eyebrow">Over KX Metaal</span>
+        <h2>Persoonlijk contact. Een praktische aanpak.</h2>
+        <p>
+          KX Metaal is verbonden aan Robby Kuijpers en is actief sinds 2021.
+          De basis van een goed project is begrijpen wat er nodig is en
+          samen bekijken welke aanpak daarbij past.
+        </p>
+        <p>
+          Of een vraag nu al volledig is uitgewerkt of nog in de
+          ontwikkelfase zit: een duidelijke omschrijving helpt om
+          de mogelijkheden te bespreken.
+        </p>
+        <ul class="check-list">
+          <li>Rechtstreeks contact met Robby Kuijpers</li>
+          <li>Aandacht voor de technische vraag</li>
+          <li>Heldere informatie als basis voor overleg</li>
+        </ul>
+        <div class="stats">
+          <div class="stat"><strong>2021</strong><span>Actief sinds</span></div>
+          <div class="stat"><strong>1-op-1</strong><span>Persoonlijk contact</span></div>
+          <div class="stat"><strong>Op maat</strong><span>Per aanvraag bekijken</span></div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <section class="section">
-      <div class="container intro-grid">
-        <div class="image-frame reveal">
-          <img
-            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1100&q=85"
-            alt="Technisch werk in een industriële omgeving"
-            loading="lazy">
-          <div class="image-note" data-i18n="imageNote">Een goede oplossing begint met inzicht in de vraag.</div>
-        </div>
-        <div class="intro-copy reveal">
-          <p class="eyebrow" data-i18n="introEyebrow">Techniek met een doel</p>
-          <h2 data-i18n="introTitle">Van technische vraag naar passende oplossing</h2>
-          <p data-i18n="introText1">
-            Iedere opdracht begint met begrijpen wat er nodig is. Wat moet de oplossing doen, aan welke eisen moet deze voldoen en wat is praktisch uitvoerbaar?
-          </p>
-          <p data-i18n="introText2">
-            KX Metaal wil met klanten helder overleggen over de vraag, de mogelijkheden en de vervolgstappen. De concrete werkzaamheden en mogelijkheden worden per project besproken.
-          </p>
-          <a class="text-link" href="#contact" data-i18n="introLink">Bespreek uw vraagstuk <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-light" id="diensten">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="servicesEyebrow">Wat we kunnen bespreken</p>
-          <h2 data-i18n="servicesTitle">Technische mogelijkheden</h2>
-          <p class="lead" data-i18n="servicesIntro">
-            Een eerste overzicht van mogelijke onderwerpen voor zakelijke opdrachten. De definitieve diensten moeten worden afgestemd op de daadwerkelijke werkzaamheden van KX Metaal.
-          </p>
-        </div>
-
-        <div class="service-grid">
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=900&q=85"
-                alt="Industriële machine in een werkplaats" loading="lazy">
-            </div>
-            <div class="service-content">
-              <span class="service-number">01 / <span data-i18n="serviceCategory">MOGELIJK ONDERWERP</span></span>
-              <h3 data-i18n="service1Title">Machinebouw</h3>
-              <p data-i18n="service1Text">Bespreek uw machinevraagstuk, de gewenste toepassing en de technische eisen van uw project.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85"
-                alt="Metaalbewerking in een industriële werkplaats" loading="lazy">
-            </div>
-            <div class="service-content">
-              <span class="service-number">02 / <span data-i18n="serviceCategory">MOGELIJK ONDERWERP</span></span>
-              <h3 data-i18n="service2Title">Metaalwerk</h3>
-              <p data-i18n="service2Text">Bespreek onderdelen, constructies, materiaalkeuze en de gewenste afwerking.</p>
-            </div>
-          </article>
-
-          <article class="service-card reveal">
-            <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=85"
-                alt="Technische werkzaamheden en apparatuur" loading="lazy">
-            </div>
-            <div class="service-content">
-              <span class="service-number">03 / <span data-i18n="serviceCategory">MOGELIJK ONDERWERP</span></span>
-              <h3 data-i18n="service3Title">Technische oplossingen</h3>
-              <p data-i18n="service3Text">Verken een technische uitdaging en bespreek welke aanpak mogelijk geschikt is.</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="notice reveal" data-i18n="servicesNotice">
-          Ontwikkelversie: bevestig deze drie onderwerpen eerst met KX Metaal. Verwijder of wijzig diensten die niet worden aangeboden.
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="projecten">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="projectsEyebrow">Werk in beeld</p>
-          <h2 data-i18n="projectsTitle">Projecten en praktijkvoorbeelden</h2>
-          <p class="lead" data-i18n="projectsIntro">
-            Een goede projectenpagina laat zien wat er werkelijk is gemaakt, welke uitdaging speelde en hoe het eindresultaat eruitziet.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-photo">
-              <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=900&q=85"
-                alt="Industriële apparatuur als voorbeeldbeeld" loading="lazy">
-              <span class="project-label" data-i18n="placeholderLabel">Voorbeeldbeeld</span>
-            </div>
-            <div class="project-content">
-              <h3 data-i18n="project1Title">Project toevoegen</h3>
-              <p data-i18n="project1Text">Vervang dit onderdeel door een echt project, met de opdracht, aanpak en het resultaat.</p>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-photo">
-              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85"
-                alt="Metaalwerkplaats als voorbeeldbeeld" loading="lazy">
-              <span class="project-label" data-i18n="placeholderLabel">Voorbeeldbeeld</span>
-            </div>
-            <div class="project-content">
-              <h3 data-i18n="project2Title">Technische realisatie</h3>
-              <p data-i18n="project2Text">Voeg hier foto's en een beschrijving toe zodra een echt project is geselecteerd.</p>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-photo">
-              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=85"
-                alt="Technische omgeving als voorbeeldbeeld" loading="lazy">
-              <span class="project-label" data-i18n="placeholderLabel">Voorbeeldbeeld</span>
-            </div>
-            <div class="project-content">
-              <h3 data-i18n="project3Title">Maatwerk in de praktijk</h3>
-              <p data-i18n="project3Text">Gebruik dit onderdeel voor een opdracht die met toestemming van de klant getoond mag worden.</p>
-            </div>
-          </article>
-        </div>
-
-        <p class="notice reveal" data-i18n="projectsNotice">
-          Dit zijn voorbeeldbeelden, geen bevestigde projecten van KX Metaal. Publiceer alleen echte projecten met correcte beschrijvingen en toestemming waar nodig.
-        </p>
-      </div>
-    </section>
-
-    <section class="section section-light" id="werkwijze">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="processEyebrow">Van aanvraag tot oplevering</p>
-          <h2 data-i18n="processTitle">Een heldere werkwijze</h2>
-          <p class="lead" data-i18n="processIntro">Een mogelijke structuur voor het samenwerken aan een technisch project.</p>
-        </div>
-
-        <div class="workflow">
-          <article class="step reveal">
-            <div class="step-number">01</div>
-            <h3 data-i18n="step1Title">Aanvraag</h3>
-            <p data-i18n="step1Text">U vertelt wat u nodig heeft en wat het doel van de opdracht is.</p>
-          </article>
-          <article class="step reveal">
-            <div class="step-number">02</div>
-            <h3 data-i18n="step2Title">Overleg</h3>
-            <p data-i18n="step2Text">We bespreken de eisen, de planning en eventuele technische vragen.</p>
-          </article>
-          <article class="step reveal">
-            <div class="step-number">03</div>
-            <h3 data-i18n="step3Title">Voorstel</h3>
-            <p data-i18n="step3Text">De mogelijkheden en de passende vervolgstappen worden uitgewerkt.</p>
-          </article>
-          <article class="step reveal">
-            <div class="step-number">04</div>
-            <h3 data-i18n="step4Title">Uitvoering</h3>
-            <p data-i18n="step4Text">Na akkoord wordt de afgesproken opdracht uitgevoerd.</p>
-          </article>
-          <article class="step reveal">
-            <div class="step-number">05</div>
-            <h3 data-i18n="step5Title">Oplevering</h3>
-            <p data-i18n="step5Text">De afspraken over afronding en overdracht worden nagekomen.</p>
-          </article>
-        </div>
-
-        <p class="notice reveal" data-i18n="processNotice">
-          Controleer met KX Metaal of deze stappen overeenkomen met de echte werkwijze.
-        </p>
-      </div>
-    </section>
-
-    <section class="about-band" id="over-ons">
-      <div class="container about-grid">
-        <div class="reveal">
-          <p class="eyebrow" data-i18n="aboutEyebrow">Over KX Metaal</p>
-          <h2 data-i18n="aboutTitle">Een technisch bedrijf met oog voor de opdracht</h2>
-          <p data-i18n="aboutText">
-            Een goede samenwerking begint met duidelijke afspraken, realistische verwachtingen en aandacht voor de technische vraag. Op deze plek komt het echte verhaal van KX Metaal: de mensen, de ervaring en de manier waarop het bedrijf werkt.
-          </p>
-          <a class="button" href="#contact" data-i18n="aboutButton">Neem contact op <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="about-points reveal">
-          <div class="about-point">
-            <strong data-i18n="aboutPoint1Title">Het bedrijf</strong>
-            <span data-i18n="aboutPoint1Text">Voeg de geschiedenis en achtergrond van KX Metaal toe.</span>
-          </div>
-          <div class="about-point">
-            <strong data-i18n="aboutPoint2Title">De mensen</strong>
-            <span data-i18n="aboutPoint2Text">Introduceer het team met echte namen en foto's, als dat gewenst is.</span>
-          </div>
-          <div class="about-point">
-            <strong data-i18n="aboutPoint3Title">De aanpak</strong>
-            <span data-i18n="aboutPoint3Text">Beschrijf de waarden en werkwijze die het bedrijf echt kenmerken.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="faqEyebrow">Veelgestelde vragen</p>
-          <h2 data-i18n="faqTitle">Eerst even duidelijkheid</h2>
-        </div>
-
-        <div class="faq-list reveal">
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span data-i18n="faq1Q">Hoe kan ik een project bespreken?</span><span class="faq-symbol">+</span>
-            </button>
-            <div class="faq-answer" data-i18n="faq1A">Gebruik het contactformulier om de vraag en de gewenste vervolgstap te beschrijven. Het formulier is in deze ontwikkelversie nog niet gekoppeld aan een verzendserver.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span data-i18n="faq2Q">Kan ik technische tekeningen meesturen?</span><span class="faq-symbol">+</span>
-            </button>
-            <div class="faq-answer" data-i18n="faq2A">Je kunt in deze versie bestanden selecteren. Ze worden nog niet veilig geüpload of automatisch als bijlage verzonden. Daarvoor moet later een echte verzendoplossing worden ingericht.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span data-i18n="faq3Q">Welke werkzaamheden voert KX Metaal uit?</span><span class="faq-symbol">+</span>
-            </button>
-            <div class="faq-answer" data-i18n="faq3A">De definitieve dienstenlijst wordt afgestemd met het bedrijf. Neem contact op om een specifieke technische vraag te bespreken.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span data-i18n="faq4Q">Werkt KX Metaal ook voor zakelijke klanten?</span><span class="faq-symbol">+</span>
-            </button>
-            <div class="faq-answer" data-i18n="faq4A">Deze website is ontworpen voor zakelijke aanvragen. De doelgroepen en mogelijkheden moeten nog worden bevestigd door KX Metaal.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-light" id="contact">
-      <div class="container contact-grid">
-        <div class="reveal">
-          <p class="eyebrow" data-i18n="contactEyebrow">Contact & aanvragen</p>
-          <h2 data-i18n="contactTitle">Wat is uw technische vraag?</h2>
-          <p class="lead" data-i18n="contactIntro">
-            Vertel kort waar u aan werkt. Kies het soort vraag, zodat uw bericht straks bij de juiste contactpersoon terecht kan komen.
-          </p>
-
-          <div class="contact-routes">
-            <div class="contact-route">
-              <div class="route-icon">01</div>
-              <div>
-                <strong data-i18n="route1Title">Nieuw project of offerte</strong>
-                <span data-i18n="route1Text">Omschrijf de opdracht, eisen en gewenste planning.</span>
-              </div>
-            </div>
-            <div class="contact-route">
-              <div class="route-icon">02</div>
-              <div>
-                <strong data-i18n="route2Title">Technische vraag</strong>
-                <span data-i18n="route2Text">Beschrijf het vraagstuk en eventuele aandachtspunten.</span>
-              </div>
-            </div>
-            <div class="contact-route">
-              <div class="route-icon">03</div>
-              <div>
-                <strong data-i18n="route3Title">Algemene vraag</strong>
-                <span data-i18n="route3Text">Voor andere vragen of een eerste kennismaking.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-card reveal">
-          <h3 data-i18n="formTitle">Project of vraag bespreken</h3>
-          <p class="lead" style="font-size:.95rem" data-i18n="formIntro">Vul de gegevens in. Verplichte velden zijn gemarkeerd met een sterretje (*).</p>
-
-          <form id="quoteForm">
-            <div class="form-grid">
-              <div class="field">
-                <label for="name" data-i18n="labelName">Naam *</label>
-                <input id="name" name="name" autocomplete="name" required>
-              </div>
-
-              <div class="field">
-                <label for="company" data-i18n="labelCompany">Bedrijf</label>
-                <input id="company" name="company" autocomplete="organization">
-              </div>
-
-              <div class="field">
-                <label for="email" data-i18n="labelEmail">E-mailadres *</label>
-                <input id="email" name="email" type="email" autocomplete="email" required>
-              </div>
-
-              <div class="field">
-                <label for="phone" data-i18n="labelPhone">Telefoonnummer</label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel">
-              </div>
-
-              <div class="field field-full">
-                <label for="requestType" data-i18n="labelType">Soort aanvraag *</label>
-                <select id="requestType" name="requestType" required>
-                  <option value="" data-i18n="typeChoose">Maak een keuze</option>
-                  <option value="Offerte / nieuw project" data-i18n="typeQuote">Offerte / nieuw project</option>
-                  <option value="Technische vraag" data-i18n="typeTechnical">Technische vraag</option>
-                  <option value="Algemene vraag" data-i18n="typeGeneral">Algemene vraag</option>
-                </select>
-              </div>
-
-              <div class="field field-full">
-                <label for="description" data-i18n="labelDescription">Beschrijving van uw vraag *</label>
-                <textarea id="description" name="description" required
-                  data-i18n-placeholder="descriptionPlaceholder"
-                  placeholder="Wat is de opdracht, wat zijn de eisen en wat wilt u bereiken?"></textarea>
-              </div>
-
-              <div class="field field-full">
-                <label for="deadline" data-i18n="labelDeadline">Gewenste planning (optioneel)</label>
-                <input id="deadline" name="deadline" data-i18n-placeholder="deadlinePlaceholder"
-                  placeholder="Bijvoorbeeld: gewenste oplevermaand">
-              </div>
-
-              <div class="field field-full">
-                <label for="files" data-i18n="labelFiles">Technische tekeningen of documenten</label>
-                <input id="files" name="files" type="file" multiple accept=".pdf,.png,.jpg,.jpeg,.dwg,.dxf,.step,.stp">
-                <small data-i18n="fileHelp">PDF, afbeeldingen of technische bestanden selecteren. In deze demo worden ze niet geüpload.</small>
-                <ul class="file-list" id="fileList"></ul>
-              </div>
-            </div>
-
-            <p class="form-note" data-i18n="formPrivacy">
-              Deel in deze ontwikkelversie geen vertrouwelijke technische informatie. Dit formulier verstuurt of bewaart uw gegevens nog niet.
-            </p>
-
-            <button class="button" type="submit" data-i18n="formSubmit">Aanvraag voorbereiden <span aria-hidden="true">→</span></button>
-            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
+  <section class="section section-light" id="diensten">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a href="#home" class="brand">
-            <span class="brand-mark">KX</span>
-            <span>
-              <span class="brand-name">KX METAAL</span>
-              <span class="brand-caption" data-i18n="brandCaption">Techniek op maat</span>
-            </span>
-          </a>
-          <p style="max-width:340px;margin-top:20px" data-i18n="footerIntro">
-            Een professionele plek om technische mogelijkheden te verkennen en zakelijke projecten te bespreken.
-          </p>
-        </div>
-
-        <div>
-          <h3 data-i18n="footerNavTitle">Navigatie</h3>
-          <div class="footer-links">
-            <a href="#diensten" data-i18n="navServices">Diensten</a>
-            <a href="#werkwijze" data-i18n="navProcess">Werkwijze</a>
-            <a href="#projecten" data-i18n="navProjects">Projecten</a>
-            <a href="#over-ons" data-i18n="navAbout">Over ons</a>
-            <a href="#contact" data-i18n="navContact">Contact</a>
-          </div>
-        </div>
-
-        <div>
-          <h3 data-i18n="footerContactTitle">Contactgegevens</h3>
-          <div class="footer-links">
-            <span data-i18n="footerEmail">E-mail: nog invullen</span>
-            <span data-i18n="footerAddress">Adres: nog controleren</span>
-            <span data-i18n="footerCompany">Bedrijfsgegevens: nog controleren</span>
-          </div>
-        </div>
+      <div class="section-heading">
+        <span class="eyebrow">Diensten</span>
+        <h2>Van technische vraag naar een passende aanpak.</h2>
+        <p>
+          Hieronder staan mogelijke onderwerpen voor KX Metaal.
+          De precieze werkzaamheden moeten door het bedrijf worden bevestigd.
+        </p>
       </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">⚙</div>
+          <h3>Machinebouw</h3>
+          <p>Een technische machinevraag bespreken en bekijken welke uitwerking mogelijk en passend is.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">⌁</div>
+          <h3>Metaalwerk</h3>
+          <p>De gewenste toepassing, afmetingen en materiaalvereisten in kaart brengen voor een aanvraag.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon" aria-hidden="true">⌘</div>
+          <h3>Technische oplossingen</h3>
+          <p>Meedenken over een technische uitdaging en de informatie verzamelen die nodig is voor een goede beoordeling.</p>
+        </article>
+      </div>
+      <p class="service-note">Let op: bevestig deze drie dienstomschrijvingen met Robby voordat de website wordt gepubliceerd.</p>
+    </div>
+  </section>
 
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> KX Metaal</span>
-        <span data-i18n="footerDisclaimer">Ontwikkelversie — bedrijfsgegevens en inhoud nog controleren.</span>
+  <section class="section" id="projecten">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Projecten & voorbeelden</span>
+        <h2>Laat het werk straks voor zichzelf spreken.</h2>
+        <p>
+          Deze afbeeldingen zijn tijdelijke sfeerbeelden en tonen geen bevestigde
+          projecten van KX Metaal. Vervang ze later door eigen foto's.
+        </p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-photo" role="img" aria-label="Illustratieve foto van industriële apparatuur"></div>
+          <div class="project-copy">
+            <span class="project-label">Voorbeeldcategorie</span>
+            <h3>Technische constructies</h3>
+            <p>Ruimte om later een echt project, de vraag en de uiteindelijke oplossing te beschrijven.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-photo" role="img" aria-label="Illustratieve foto van technisch werk"></div>
+          <div class="project-copy">
+            <span class="project-label">Voorbeeldcategorie</span>
+            <h3>Technische uitwerking</h3>
+            <p>Beschrijf hier later de aanleiding, technische aandachtspunten en uitgevoerde werkzaamheden.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-photo" role="img" aria-label="Illustratieve foto van een technische werkplaats"></div>
+          <div class="project-copy">
+            <span class="project-label">Voorbeeldcategorie</span>
+            <h3>Maatwerkoplossingen</h3>
+            <p>Een plek voor foto's en informatie over een afgerond project, na goedkeuring van de klant.</p>
+          </div>
+        </article>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // VUL HET OFFICIËLE E-MAILADRES IN ALS DE CONTACTGEGEVENS BEVESTIGD ZIJN.
-    // Laat leeg totdat het adres is gecontroleerd.
-    const REAL_EMAIL = "";
+  <section class="section section-light" id="werkwijze">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Werkwijze</span>
+        <h2>Een duidelijk begin voor ieder project.</h2>
+        <p>Een mogelijke projectaanpak. De precieze werkwijze stemmen we af met Robby.</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-step">
+          <span class="process-number">STAP 01</span>
+          <h3>De vraag</h3>
+          <p>Omschrijf het probleem, het doel en wat je wilt bereiken.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-number">STAP 02</span>
+          <h3>Informatie</h3>
+          <p>Verzamel relevante maten, tekeningen, foto's en specificaties.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-number">STAP 03</span>
+          <h3>Overleg</h3>
+          <p>Bespreek de vraag en bekijk welke mogelijkheden er zijn.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-number">STAP 04</span>
+          <h3>Vervolg</h3>
+          <p>Leg eventuele afspraken, planning en vervolgstappen vast.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    const translations = {
-      nl: {
-        skip: "Ga naar de inhoud",
-        topline: "Technische oplossingen voor zakelijke projecten",
-        toplink: "Een project bespreken →",
-        brandCaption: "Techniek op maat",
-        navServices: "Diensten", navProcess: "Werkwijze",
-        navProjects: "Projecten", navAbout: "Over ons",
-        navContact: "Contact", navQuote: "Offerte aanvragen",
-        heroEyebrow: "KX Metaal · Techniek & maatwerk",
-        heroTitle: 'Techniek die werkt.<br><span>Maatwerk dat past.</span>',
-        heroText: "Een technisch project begint met een goed gesprek. Ontdek de mogelijkheden en bespreek wat uw organisatie nodig heeft.",
-        heroButton: 'Bespreek uw project <span aria-hidden="true">→</span>',
-        heroSecondary: "Bekijk de mogelijkheden",
-        heroNote: "Persoonlijk contact over uw technische vraagstuk",
-        trust1: "Technisch meedenken", trust2: "Oplossingen op maat",
-        trust3: "Duidelijke communicatie", trust4: "Zakelijke samenwerking",
-        imageNote: "Een goede oplossing begint met inzicht in de vraag.",
-        introEyebrow: "Techniek met een doel",
-        introTitle: "Van technische vraag naar passende oplossing",
-        introText1: "Iedere opdracht begint met begrijpen wat er nodig is. Wat moet de oplossing doen, aan welke eisen moet deze voldoen en wat is praktisch uitvoerbaar?",
-        introText2: "KX Metaal wil met klanten helder overleggen over de vraag, de mogelijkheden en de vervolgstappen. De concrete werkzaamheden en mogelijkheden worden per project besproken.",
-        introLink: 'Bespreek uw vraagstuk <span aria-hidden="true">→</span>',
-        servicesEyebrow: "Wat we kunnen bespreken",
-        servicesTitle: "Technische mogelijkheden",
-        servicesIntro: "Een eerste overzicht van mogelijke onderwerpen voor zakelijke opdrachten. De definitieve diensten moeten worden afgestemd op de daadwerkelijke werkzaamheden van KX Metaal.",
-        serviceCategory: "MOGELIJK ONDERWERP",
-        service1Title: "Machinebouw",
-        service1Text: "Bespreek uw machinevraagstuk, de gewenste toepassing en de technische eisen van uw project.",
-        service2Title: "Metaalwerk",
-        service2Text: "Bespreek onderdelen, constructies, materiaalkeuze en de gewenste afwerking.",
-        service3Title: "Technische oplossingen",
-        service3Text: "Verken een technische uitdaging en bespreek welke aanpak mogelijk geschikt is.",
-        servicesNotice: "Ontwikkelversie: bevestig deze drie onderwerpen eerst met KX Metaal. Verwijder of wijzig diensten die niet worden aangeboden.",
-        projectsEyebrow: "Werk in beeld",
-        projectsTitle: "Projecten en praktijkvoorbeelden",
-        projectsIntro: "Een goede projectenpagina laat zien wat er werkelijk is gemaakt, welke uitdaging speelde en hoe het eindresultaat eruitziet.",
-        placeholderLabel: "Voorbeeldbeeld",
-        project1Title: "Project toevoegen",
-        project1Text: "Vervang dit onderdeel door een echt project, met de opdracht, aanpak en het resultaat.",
-        project2Title: "Technische realisatie",
-        project2Text: "Voeg hier foto's en een beschrijving toe zodra een echt project is geselecteerd.",
-        project3Title: "Maatwerk in de praktijk",
-        project3Text: "Gebruik dit onderdeel voor een opdracht die met toestemming van de klant getoond mag worden.",
-        projectsNotice: "Dit zijn voorbeeldbeelden, geen bevestigde projecten van KX Metaal. Publiceer alleen echte projecten met correcte beschrijvingen en toestemming waar nodig.",
-        processEyebrow: "Van aanvraag tot oplevering",
-        processTitle: "Een heldere werkwijze",
-        processIntro: "Een mogelijke structuur voor het samenwerken aan een technisch project.",
-        step1Title: "Aanvraag", step1Text: "U vertelt wat u nodig heeft en wat het doel van de opdracht is.",
-        step2Title: "Overleg", step2Text: "We bespreken de eisen, de planning en eventuele technische vragen.",
-        step3Title: "Voorstel", step3Text: "De mogelijkheden en de passende vervolgstappen worden uitgewerkt.",
-        step4Title: "Uitvoering", step4Text: "Na akkoord wordt de afgesproken opdracht uitgevoerd.",
-        step5Title: "Oplevering", step5Text: "De afspraken over afronding en overdracht worden nagekomen.",
-        processNotice: "Controleer met KX Metaal of deze stappen overeenkomen met de echte werkwijze.",
-        aboutEyebrow: "Over KX Metaal",
-        aboutTitle: "Een technisch bedrijf met oog voor de opdracht",
-        aboutText: "Een goede samenwerking begint met duidelijke afspraken, realistische verwachtingen en aandacht voor de technische vraag. Op deze plek komt het echte verhaal van KX Metaal: de mensen, de ervaring en de manier waarop het bedrijf werkt.",
-        aboutButton: 'Neem contact op <span aria-hidden="true">→</span>',
-        aboutPoint1Title: "Het bedrijf",
-        aboutPoint1Text: "Voeg de geschiedenis en achtergrond van KX Metaal toe.",
-        aboutPoint2Title: "De mensen",
-        aboutPoint2Text: "Introduceer het team met echte namen en foto's, als dat gewenst is.",
-        aboutPoint3Title: "De aanpak",
-        aboutPoint3Text: "Beschrijf de waarden en werkwijze die het bedrijf echt kenmerken.",
-        faqEyebrow: "Veelgestelde vragen", faqTitle: "Eerst even duidelijkheid",
-        faq1Q: "Hoe kan ik een project bespreken?",
-        faq1A: "Gebruik het contactformulier om de vraag en de gewenste vervolgstap te beschrijven. Het formulier is in deze ontwikkelversie nog niet gekoppeld aan een verzendserver.",
-        faq2Q: "Kan ik technische tekeningen meesturen?",
-        faq2A: "Je kunt in deze versie bestanden selecteren. Ze worden nog niet veilig geüpload of automatisch als bijlage verzonden. Daarvoor moet later een echte verzendoplossing worden ingericht.",
-        faq3Q: "Welke werkzaamheden voert KX Metaal uit?",
-        faq3A: "De definitieve dienstenlijst wordt afgestemd met het bedrijf. Neem contact op om een specifieke technische vraag te bespreken.",
-        faq4Q: "Werkt KX Metaal ook voor zakelijke klanten?",
-        faq4A: "Deze website is ontworpen voor zakelijke aanvragen. De doelgroepen en mogelijkheden moeten nog worden bevestigd door KX Metaal.",
-        contactEyebrow: "Contact & aanvragen",
-        contactTitle: "Wat is uw technische vraag?",
-        contactIntro: "Vertel kort waar u aan werkt. Kies het soort vraag, zodat uw bericht straks bij de juiste contactpersoon terecht kan komen.",
-        route1Title: "Nieuw project of offerte", route1Text: "Omschrijf de opdracht, eisen en gewenste planning.",
-        route2Title: "Technische vraag", route2Text: "Beschrijf het vraagstuk en eventuele aandachtspunten.",
-        route3Title: "Algemene vraag", route3Text: "Voor andere vragen of een eerste kennismaking.",
-        formTitle: "Project of vraag bespreken",
-        formIntro: "Vul de gegevens in. Verplichte velden zijn gemarkeerd met een sterretje (*).",
-        labelName: "Naam *", labelCompany: "Bedrijf",
-        labelEmail: "E-mailadres *", labelPhone: "Telefoonnummer",
-        labelType: "Soort aanvraag *", typeChoose: "Maak een keuze",
-        typeQuote: "Offerte / nieuw project", typeTechnical: "Technische vraag",
-        typeGeneral: "Algemene vraag",
-        labelDescription: "Beschrijving van uw vraag *",
-        descriptionPlaceholder: "Wat is de opdracht, wat zijn de eisen en wat wilt u bereiken?",
-        labelDeadline: "Gewenste planning (optioneel)",
-        deadlinePlaceholder: "Bijvoorbeeld: gewenste oplevermaand",
-        labelFiles: "Technische tekeningen of documenten",
-        fileHelp: "PDF, afbeeldingen of technische bestanden selecteren. In deze demo worden ze niet geüpload.",
-        formPrivacy: "Deel in deze ontwikkelversie geen vertrouwelijke technische informatie. Dit formulier verstuurt of bewaart uw gegevens nog niet.",
-        formSubmit: 'Aanvraag voorbereiden <span aria-hidden="true">→</span>',
-        footerIntro: "Een professionele plek om technische mogelijkheden te verkennen en zakelijke projecten te bespreken.",
-        footerNavTitle: "Navigatie", footerContactTitle: "Contactgegevens",
-        footerEmail: "E-mail: nog invullen",
-        footerAddress: "Adres: nog controleren",
-        footerCompany: "Bedrijfsgegevens: nog controleren",
-        footerDisclaimer: "Ontwikkelversie — bedrijfsgegevens en inhoud nog controleren.",
-        menuOpen: "Menu openen", menuClose: "Menu sluiten",
-        fileNone: "Geen bestanden geselecteerd.",
-        fileSelected: "Geselecteerde bestanden:",
-        emailMissing: "Het formulier is gecontroleerd, maar er is nog geen officieel e-mailadres ingesteld. Er is niets verzonden. Vul later het juiste adres in de code in.",
-        emailReady: "Er wordt een e-mailconcept geopend. Controleer de gegevens voordat u het zelf verzendt. Bestanden worden niet automatisch toegevoegd."
-      },
-      en: {
-        skip: "Skip to content",
-        topline: "Technical solutions for business projects",
-        toplink: "Discuss a project →",
-        brandCaption: "Engineering & custom solutions",
-        navServices: "Services", navProcess: "Our process",
-        navProjects: "Projects", navAbout: "About us",
-        navContact: "Contact", navQuote: "Request a quote",
-        heroEyebrow: "KX Metaal · Engineering & custom work",
-        heroTitle: 'Engineering that works.<br><span>Solutions that fit.</span>',
-        heroText: "Every technical project starts with a good conversation. Explore the possibilities and discuss what your organisation needs.",
-        heroButton: 'Discuss your project <span aria-hidden="true">→</span>',
-        heroSecondary: "Explore the possibilities",
-        heroNote: "Personal contact about your technical challenge",
-        trust1: "Technical thinking", trust2: "Tailored solutions",
-        trust3: "Clear communication", trust4: "Business collaboration",
-        imageNote: "A good solution starts with understanding the challenge.",
-        introEyebrow: "Engineering with purpose",
-        introTitle: "From technical challenge to a suitable solution",
-        introText1: "Every assignment starts with understanding what is needed. What should the solution do, what requirements must it meet, and what is practical to achieve?",
-        introText2: "KX Metaal aims to discuss the challenge, possibilities and next steps clearly with customers. The actual services and capabilities should be confirmed for each project.",
-        introLink: 'Discuss your challenge <span aria-hidden="true">→</span>',
-        servicesEyebrow: "What we can discuss",
-        servicesTitle: "Technical possibilities",
-        servicesIntro: "An initial overview of possible topics for business projects. The final service list must reflect the actual work carried out by KX Metaal.",
-        serviceCategory: "POSSIBLE SERVICE",
-        service1Title: "Machine building",
-        service1Text: "Discuss your machine requirements, intended application and technical project specifications.",
-        service2Title: "Metalwork",
-        service2Text: "Discuss components, structures, material selection and the desired finish.",
-        service3Title: "Technical solutions",
-        service3Text: "Explore a technical challenge and discuss which approach may be suitable.",
-        servicesNotice: "Development version: confirm these three topics with KX Metaal first. Remove or amend services that are not offered.",
-        projectsEyebrow: "Work in focus",
-        projectsTitle: "Projects and examples",
-        projectsIntro: "A good project page shows what was actually made, the challenge involved and the final result.",
-        placeholderLabel: "Example image",
-        project1Title: "Add a project",
-        project1Text: "Replace this section with a real project, including the brief, approach and result.",
-        project2Title: "Technical implementation",
-        project2Text: "Add photos and a description once a real project has been selected.",
-        project3Title: "Custom work in practice",
-        project3Text: "Use this section for a project that may be shown with the customer's permission.",
-        projectsNotice: "These are example images, not confirmed KX Metaal projects. Publish only real projects with accurate descriptions and permission where needed.",
-        processEyebrow: "From enquiry to delivery",
-        processTitle: "A clear process",
-        processIntro: "A possible structure for working together on a technical project.",
-        step1Title: "Enquiry", step1Text: "You explain what you need and the goal of the assignment.",
-        step2Title: "Discussion", step2Text: "We discuss requirements, planning and technical questions.",
-        step3Title: "Proposal", step3Text: "The options and suitable next steps are worked out.",
-        step4Title: "Execution", step4Text: "Once agreed, the assignment is carried out as discussed.",
-        step5Title: "Delivery", step5Text: "The agreed completion and handover arrangements are followed.",
-        processNotice: "Check with KX Metaal whether these steps match its actual working process.",
-        aboutEyebrow: "About KX Metaal",
-        aboutTitle: "A technical company focused on your project",
-        aboutText: "Good cooperation starts with clear agreements, realistic expectations and attention to the technical challenge. This section will tell the real story of KX Metaal: its people, experience and way of working.",
-        aboutButton: 'Contact us <span aria-hidden="true">→</span>',
-        aboutPoint1Title: "The company",
-        aboutPoint1Text: "Add the history and background of KX Metaal.",
-        aboutPoint2Title: "The people",
-        aboutPoint2Text: "Introduce the team using real names and photos, if desired.",
-        aboutPoint3Title: "The approach",
-        aboutPoint3Text: "Describe the values and working methods that genuinely define the company.",
-        faqEyebrow: "Frequently asked questions", faqTitle: "A few useful answers",
-        faq1Q: "How can I discuss a project?",
-        faq1A: "Use the contact form to describe your question and preferred next step. In this development version, the form is not connected to a sending server.",
-        faq2Q: "Can I include technical drawings?",
-        faq2A: "You can select files in this version. They are not securely uploaded or automatically attached to a message. A real submission solution must be configured later.",
-        faq3Q: "What services does KX Metaal provide?",
-        faq3A: "The final service list must be confirmed with the company. Contact KX Metaal to discuss a specific technical question.",
-        faq4Q: "Does KX Metaal work with business customers?",
-        faq4A: "This website is designed for business enquiries. Target customers and capabilities still need to be confirmed by KX Metaal.",
-        contactEyebrow: "Contact & enquiries",
-        contactTitle: "What is your technical question?",
-        contactIntro: "Briefly describe what you are working on. Choose the type of enquiry so your message can be directed appropriately later.",
-        route1Title: "New project or quote", route1Text: "Describe the assignment, requirements and preferred schedule.",
-        route2Title: "Technical question", route2Text: "Describe the challenge and any points to consider.",
-        route3Title: "General enquiry", route3Text: "For other questions or an initial introduction.",
-        formTitle: "Discuss a project or question",
-        formIntro: "Fill in your details. Required fields are marked with an asterisk (*).",
-        labelName: "Name *", labelCompany: "Company",
-        labelEmail: "Email address *", labelPhone: "Phone number",
-        labelType: "Enquiry type *", typeChoose: "Choose an option",
-        typeQuote: "Quote / new project", typeTechnical: "Technical question",
-        typeGeneral: "General enquiry",
-        labelDescription: "Describe your enquiry *",
-        descriptionPlaceholder: "What is the assignment, what are the requirements, and what do you want to achieve?",
-        labelDeadline: "Preferred schedule (optional)",
-        deadlinePlaceholder: "For example: preferred delivery month",
-        labelFiles: "Technical drawings or documents",
-        fileHelp: "Select PDFs, images or technical files. Files are not uploaded in this demo.",
-        formPrivacy: "Do not share confidential technical information in this development version. This form does not yet send or store your details.",
-        formSubmit: 'Prepare enquiry <span aria-hidden="true">→</span>',
-        footerIntro: "A professional place to explore technical possibilities and discuss business projects.",
-        footerNavTitle: "Navigation", footerContactTitle: "Contact details",
-        footerEmail: "Email: to be added",
-        footerAddress: "Address: to be verified",
-        footerCompany: "Company details: to be verified",
-        footerDisclaimer: "Development version — company details and content need review.",
-        menuOpen: "Open menu", menuClose: "Close menu",
-        fileNone: "No files selected.",
-        fileSelected: "Selected files:",
-        emailMissing: "The form has been checked, but no official email address has been configured. Nothing was sent. Add the correct address to the code later.",
-        emailReady: "An email draft will open. Review the details before sending it yourself. Files are not automatically attached."
-      }
-    };
+  <section class="section">
+    <div class="container">
+      <div class="about-panel">
+        <div class="about-side">
+          <span class="eyebrow">Even voorstellen</span>
+          <h3>Robby Kuijpers</h3>
+          <p>KX Metaal</p>
+          <p>Actief sinds 2021</p>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">De persoon achter KX Metaal</span>
+          <h2>Direct contact met Robby.</h2>
+          <p>
+            Bij een technische aanvraag is het prettig om rechtstreeks
+            met de juiste persoon te kunnen overleggen. Daarom krijgt
+            persoonlijk contact een centrale plek op deze website.
+          </p>
+          <p>
+            Heb je een idee, een technische vraag of informatie over
+            een mogelijk project? Gebruik het contactformulier om de
+            vraag duidelijk te omschrijven.
+          </p>
+          <div class="about-signature">Robby Kuijpers · KX Metaal</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    let currentLanguage = "nl";
+  <section class="section knowledge-section" id="kennisbank">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Kennis & techniek</span>
+        <h2>De technische kennisbank.</h2>
+        <p>
+          Praktische achtergrondinformatie om een technische aanvraag
+          beter voor te bereiden. Zoek op een onderwerp of open een artikel.
+        </p>
+      </div>
 
-    function translatePage(language) {
-      currentLanguage = language;
-      document.documentElement.lang = language;
+      <label class="knowledge-search">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" id="knowledgeSearch"
+          placeholder="Zoek op tekeningen, materialen, offertes..."
+          aria-label="Zoek in de kennisbank">
+      </label>
 
-      document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.dataset.i18n;
-        if (translations[language][key] !== undefined) {
-          element.innerHTML = translations[language][key];
-        }
-      });
+      <div class="knowledge-grid" id="knowledgeGrid">
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Projectvoorbereiding</span>
+          <h3>Wat staat er in een technische tekening?</h3>
+          <p>Een tekening kan maten, toleranties, materiaalgegevens en technische specificaties bevatten.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            Controleer of de maatvoering duidelijk is en belangrijke details zijn aangegeven. Voeg waar nodig aanvullende foto's, specificaties of toelichting toe. Vermeld welke gegevens nog niet bekend zijn.
+          </div>
+        </article>
 
-      document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
-        const key = element.dataset.i18nPlaceholder;
-        if (translations[language][key] !== undefined) {
-          element.placeholder = translations[language][key];
-        }
-      });
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Materialen</span>
+          <h3>Welk materiaal is geschikt?</h3>
+          <p>De toepassing, belasting, omgeving en gewenste afwerking spelen een rol bij de materiaalkeuze.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            Beschrijf waarvoor het onderdeel wordt gebruikt en in welke omstandigheden het werkt. De uiteindelijke materiaalkeuze hangt af van de technische eisen en moet zo nodig door een vakdeskundige worden beoordeeld.
+          </div>
+        </article>
 
-      const languageButton = document.getElementById("languageToggle");
-      languageButton.textContent = language === "nl" ? "EN" : "NL";
-      languageButton.setAttribute(
-        "aria-label",
-        language === "nl" ? "Switch to English" : "Schakel naar Nederlands"
-      );
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Machinebouw</span>
+          <h3>Hoe bereid je een machinebouwproject voor?</h3>
+          <p>Een heldere omschrijving van de gewenste werking helpt om een project te beoordelen.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            Beschrijf het doel, de gewenste werking, beschikbare ruimte, relevante veiligheidsvoorwaarden en eventuele bestaande tekeningen of voorbeelden. Noteer ook welke onderdelen nog moeten worden uitgewerkt.
+          </div>
+        </article>
 
-      updateFileList();
-      updateMenuLabel();
-    }
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Offerte aanvragen</span>
+          <h3>Welke informatie helpt bij een offerte?</h3>
+          <p>Met een duidelijke aanvraag kan een technische vraag beter worden begrepen.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            Vermeld het doel, de aantallen, gewenste afmetingen, planning en eventuele technische eisen. Geef ook aan welke zaken nog nader bepaald moeten worden. Zo kan worden besproken welke informatie nog ontbreekt.
+          </div>
+        </article>
 
-    document.getElementById("languageToggle").addEventListener("click", () => {
-      translatePage(currentLanguage === "nl" ? "en" : "nl");
-    });
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Technische eisen</span>
+          <h3>Waarom zijn toleranties belangrijk?</h3>
+          <p>Toleranties beschrijven hoeveel een maat mag afwijken van de opgegeven waarde.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            De juiste toleranties hangen af van de functie van het onderdeel en de manier waarop onderdelen samenkomen. Leg kritieke maten daarom duidelijk vast in de tekening en laat twijfelgevallen technisch beoordelen.
+          </div>
+        </article>
 
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Projectinformatie</span>
+          <h3>Wat moet je meesturen bij een aanvraag?</h3>
+          <p>Tekeningen, foto's en referentievoorbeelden kunnen helpen om de gewenste oplossing te begrijpen.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            Voeg relevante bestanden toe en vermeld waar ze betrekking op hebben. Gebruik duidelijke bestandsnamen en geef aan wat al vaststaat en wat nog moet worden bepaald.
+          </div>
+        </article>
 
-    function closeMenu() {
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Planning</span>
+          <h3>Hoe geef je een projectplanning aan?</h3>
+          <p>Een gewenste opleverdatum is nuttig, maar de haalbaarheid moet nog worden besproken.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            Geef aan wanneer het project bij voorkeur klaar moet zijn en of er belangrijke tussenmomenten zijn. Een gewenste datum is nog geen bevestigde leverdatum; bespreek de planning altijd vooraf.
+          </div>
+        </article>
+
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Afmetingen</span>
+          <h3>Welke maten zijn belangrijk?</h3>
+          <p>Afmetingen en beschikbare ruimte kunnen bepalend zijn voor een technische oplossing.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            Noteer relevante lengte-, breedte- en hoogtematen en vermeld de gebruikte eenheden. Maak duidelijk welke maten vaststaan en welke nog kunnen veranderen. Voeg waar mogelijk een tekening of foto met maatverwijzingen toe.
+          </div>
+        </article>
+
+        <article class="knowledge-card">
+          <span class="knowledge-tag">Communicatie</span>
+          <h3>Hoe beschrijf je een technische uitdaging?</h3>
+          <p>Een concrete omschrijving helpt om sneller tot de kern van de vraag te komen.</p>
+          <button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button>
+          <div class="knowledge-extra" hidden>
+            Beschrijf de huidige situatie, wat er niet goed werkt of wat je wilt bereiken en welke eisen belangrijk zijn. Voeg voorbeelden toe en benoem eventuele beperkingen, zoals beschikbare ruimte of gebruiksomstandigheden.
+          </div>
+        </article>
+      </div>
+
+      <p id="knowledgeEmpty" hidden>Geen artikelen gevonden. Probeer een andere zoekterm.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Veelgestelde vragen</span>
+        <h2>Veelgestelde vragen.</h2>
+        <p>Algemene antwoorden om een eerste stap te zetten. Specifieke afspraken moeten rechtstreeks worden bevestigd.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Hoe kan ik een project bespreken?<span>＋</span></button>
+          <div class="faq-answer" hidden>Gebruik het contactformulier en beschrijf je project, de gewenste oplossing en de informatie die al beschikbaar is.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Moet ik al een technische tekening hebben?<span>＋</span></button>
+          <div class="faq-answer" hidden>Niet altijd. Een duidelijke omschrijving en eventuele foto's kunnen een eerste gesprek ondersteunen. Welke informatie nodig is, hangt af van de aanvraag.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Kan ik zelf bestanden toevoegen?<span>＋</span></button>
+          <div class="faq-answer" hidden>Je kunt via het formulier een bestandsnaam selecteren, maar deze demo uploadt of verstuurt bestanden niet. Deel bestanden pas via een door KX Metaal bevestigde methode.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Wanneer is een project klaar?<span>＋</span></button>
+          <div class="faq-answer" hidden>De planning hangt af van de aanvraag en moet per project worden besproken. Een gewenste datum is niet automatisch een bevestigde opleverdatum.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <span class="eyebrow">Contact & aanvraag</span>
+        <h2>Vertel ons over je technische uitdaging.</h2>
+        <p>
+          Omschrijf je idee, de toepassing of de vraag waar je mee zit.
+          Hoe duidelijker de informatie, hoe makkelijker je aanvraag
+          kan worden besproken.
+        </p>
+        <div class="contact-detail">
+          <strong>Contactpersoon</strong>
+          <span>Robby Kuijpers</span>
+        </div>
+        <div class="contact-detail">
+          <strong>Bedrijf</strong>
+          <span>KX Metaal</span>
+        </div>
+        <div class="contact-detail">
+          <strong>Actief sinds</strong>
+          <span>2021</span>
+        </div>
+        <div class="contact-detail">
+          <strong>E-mail</strong>
+          <span>Het officiële e-mailadres wordt hier nog toegevoegd.</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="quoteForm">
+        <div class="form-heading">
+          <h3>Projectaanvraag</h3>
+          <p>Vul in wat je al weet. Niet alle projectgegevens hoeven al bekend te zijn.</p>
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Naam *</label>
+            <input id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="company">Bedrijf</label>
+            <input id="company" name="company" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="email">E-mailadres *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Telefoonnummer</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field full">
+            <label for="type">Soort aanvraag *</label>
+            <select id="type" name="type" required>
+              <option value="">Maak een keuze</option>
+              <option>Machinebouw</option>
+              <option>Metaalwerk</option>
+              <option>Technische oplossing</option>
+              <option>Bestaand onderdeel</option>
+              <option>Technisch advies</option>
+              <option>Anders / nog niet zeker</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="title">Projectnaam of korte omschrijving</label>
+            <input id="title" name="title" placeholder="Bijvoorbeeld: aanpassing van een machine">
+          </div>
+          <div class="field full">
+            <label for="goal">Wat wil je bereiken? *</label>
+            <textarea id="goal" name="goal" required placeholder="Beschrijf de toepassing, de vraag en de gewenste oplossing..."></textarea>
+          </div>
+          <div class="field">
+            <label for="quantity">Aantal / oplage</label>
+            <input id="quantity" name="quantity" placeholder="Bijvoorbeeld: 2 stuks">
+          </div>
+          <div class="field">
+            <label for="dimensions">Afmetingen</label>
+            <input id="dimensions" name="dimensions" placeholder="Indien bekend">
+          </div>
+          <div class="field full">
+            <label for="materials">Materiaal of technische eisen</label>
+            <textarea id="materials" name="materials" placeholder="Materiaal, belasting, omgeving of andere eisen..."></textarea>
+          </div>
+          <div class="field">
+            <label for="planning">Gewenste planning</label>
+            <input id="planning" name="planning" placeholder="Bijvoorbeeld: eind november">
+          </div>
+          <div class="field">
+            <label for="budget">Budget (optioneel)</label>
+            <input id="budget" name="budget" placeholder="Indien bekend">
+          </div>
+          <div class="field full">
+            <label for="files">Bestanden selecteren (optioneel)</label>
+            <input id="files" name="files" type="file" multiple accept=".pdf,.png,.jpg,.jpeg,.webp,.dwg,.dxf,.step,.stp">
+            <span class="form-hint">Demo: bestanden worden niet geüpload of automatisch meegestuurd.</span>
+          </div>
+        </div>
+        <p class="form-hint">* Verplichte velden. Dit formulier verstuurt geen gegevens naar een server.</p>
+        <button class="btn" type="submit">Aanvraag voorbereiden ↗</button>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="brand">
+      <span class="brand-symbol">KX</span>
+      <span><strong>KX METAAL</strong><small>TECHNIEK & MAATWERK</small>
+      <p>Robby Kuijpers · Actief sinds 2021</p></span>
+    </div>
+    <div class="footer-links">
+      <a href="#over">Over ons</a>
+      <a href="#diensten">Diensten</a>
+      <a href="#kennisbank">Kennisbank</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© <span id="year"></span> KX Metaal</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.textContent = open ? "✕ Sluiten" : "☰ Menu";
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
       navLinks.classList.remove("open");
       menuToggle.setAttribute("aria-expanded", "false");
-      updateMenuLabel();
-    }
+      menuToggle.textContent = "☰ Menu";
+    });
+  });
 
-    function updateMenuLabel() {
-      const open = menuToggle.getAttribute("aria-expanded") === "true";
-      const labels = translations[currentLanguage];
-      menuToggle.setAttribute("aria-label", open ? labels.menuClose : labels.menuOpen);
-    }
+  // Zoekfunctie voor de kennisbank.
+  const search = document.getElementById("knowledgeSearch");
+  const grid = document.getElementById("knowledgeGrid");
+  const empty = document.getElementById("knowledgeEmpty");
+  const cards = [...grid.querySelectorAll(".knowledge-card")];
 
-    menuToggle.addEventListener("click", () => {
-      const open = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(open));
-      updateMenuLabel();
+  search.addEventListener("input", () => {
+    const query = search.value.trim().toLocaleLowerCase("nl");
+    let visible = 0;
+
+    cards.forEach(card => {
+      const matches = card.textContent.toLocaleLowerCase("nl").includes(query);
+      card.hidden = !matches;
+      if (matches) visible++;
     });
 
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", closeMenu);
+    empty.hidden = visible > 0;
+  });
+
+  // Artikelen openen en sluiten.
+  grid.addEventListener("click", event => {
+    const button = event.target.closest(".knowledge-toggle");
+    if (!button) return;
+
+    const content = button.nextElementSibling;
+    const opening = content.hidden;
+
+    content.hidden = !opening;
+    button.setAttribute("aria-expanded", String(opening));
+    button.innerHTML = opening
+      ? 'Lees minder <span>−</span>'
+      : 'Lees meer <span>＋</span>';
+  });
+
+  // Veelgestelde vragen openen en sluiten.
+  document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      const answer = button.nextElementSibling;
+      const opening = answer.hidden;
+      answer.hidden = !opening;
+      button.setAttribute("aria-expanded", String(opening));
+      button.querySelector("span").textContent = opening ? "−" : "＋";
     });
+  });
 
-    document.querySelectorAll(".faq-question").forEach(button => {
-      button.addEventListener("click", () => {
-        const item = button.closest(".faq-item");
-        const isOpen = item.classList.toggle("open");
-        button.setAttribute("aria-expanded", String(isOpen));
-      });
-    });
+  // E-mailadres pas invullen na bevestiging door het bedrijf.
+  const REAL_EMAIL = "";
 
-    const fileInput = document.getElementById("files");
-    const fileList = document.getElementById("fileList");
+  document.getElementById("quoteForm").addEventListener("submit", event => {
+    event.preventDefault();
 
-    function updateFileList() {
-      fileList.replaceChildren();
-      const files = Array.from(fileInput.files || []);
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
 
-      if (!files.length) {
-        const item = document.createElement("li");
-        item.textContent = translations[currentLanguage].fileNone;
-        fileList.appendChild(item);
-        return;
-      }
+    const data = new FormData(form);
+    const fields = [
+      ["Naam", "name"],
+      ["Bedrijf", "company"],
+      ["E-mailadres", "email"],
+      ["Telefoonnummer", "phone"],
+      ["Soort aanvraag", "type"],
+      ["Projectnaam", "title"],
+      ["Projectomschrijving", "goal"],
+      ["Aantal / oplage", "quantity"],
+      ["Afmetingen", "dimensions"],
+      ["Materiaal en technische eisen", "materials"],
+      ["Gewenste planning", "planning"],
+      ["Budget", "budget"]
+    ];
 
-      const heading = document.createElement("li");
-      heading.textContent = translations[currentLanguage].fileSelected;
-      fileList.appendChild(heading);
+    const body = fields
+      .map(([label, key]) => `${label}: ${data.get(key) || "Niet ingevuld"}`)
+      .join("\n\n");
 
-      files.forEach(file => {
-        const item = document.createElement("li");
-        item.textContent = `${file.name} (${Math.ceil(file.size / 1024)} KB)`;
-        fileList.appendChild(item);
-      });
+    const selectedFiles = [...document.getElementById("files").files];
+    const fileNote = selectedFiles.length
+      ? "\n\nGeselecteerde bestanden (niet meegestuurd): " +
+        selectedFiles.map(file => file.name).join(", ")
+      : "\n\nEr zijn geen bestanden geselecteerd.";
+
+    const status = document.getElementById("formStatus");
+
+    if (!REAL_EMAIL) {
+      status.textContent =
+        "De demo werkt: je aanvraag is samengesteld, maar niet verzonden. " +
+        "Vul eerst het officiële e-mailadres in bij REAL_EMAIL in de code. " +
+        "Geselecteerde bestanden worden niet meegestuurd.";
+      return;
     }
 
-    fileInput.addEventListener("change", updateFileList);
-    updateFileList();
+    const subject = encodeURIComponent("Projectaanvraag KX Metaal");
+    const emailBody = encodeURIComponent(body + fileNote);
+    window.location.href =
+      `mailto:${REAL_EMAIL}?subject=${subject}&body=${emailBody}`;
 
-    const quoteForm = document.getElementById("quoteForm");
-    const formStatus = document.getElementById("formStatus");
+    status.textContent =
+      "Je e-mailprogramma wordt geopend. Controleer de aanvraag en verstuur deze daar zelf. Bestanden moet je handmatig toevoegen.";
+  });
 
-    quoteForm.addEventListener("submit", event => {
-      event.preventDefault();
-      formStatus.textContent = "";
-
-      if (!quoteForm.reportValidity()) return;
-
-      // The form must never pretend to send an enquiry without a real destination.
-      if (!REAL_EMAIL || !REAL_EMAIL.includes("@")) {
-        formStatus.textContent = translations[currentLanguage].emailMissing;
-        return;
-      }
-
-      const data = new FormData(quoteForm);
-      const subject = `${data.get("requestType")} - KX Metaal`;
-      const body = [
-        `Naam: ${data.get("name")}`,
-        `Bedrijf: ${data.get("company") || "-"}`,
-        `E-mail: ${data.get("email")}`,
-        `Telefoon: ${data.get("phone") || "-"}`,
-        `Soort aanvraag: ${data.get("requestType")}`,
-        `Gewenste planning: ${data.get("deadline") || "-"}`,
-        "",
-        "Beschrijving:",
-        data.get("description"),
-        "",
-        "Geselecteerde bestanden (niet automatisch bijgevoegd):",
-        ...Array.from(fileInput.files || []).map(file => file.name)
-      ].join("\n");
-
-      formStatus.textContent = translations[currentLanguage].emailReady;
-
-      const mailto = `mailto:${REAL_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-    });
-
-    // Subtle reveal effects, with reduced-motion support.
-    const revealItems = document.querySelectorAll(".reveal");
-
-    if ("IntersectionObserver" in window &&
-        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-
-      revealItems.forEach(item => observer.observe(item));
-    } else {
-      revealItems.forEach(item => item.classList.add("visible"));
-    }
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>

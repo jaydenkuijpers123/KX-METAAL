@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#1769aa">
   <meta name="description" content="Neem contact op met KX Metaal voor vragen over metaalwerk, technische oplossingen of een mogelijke offerte.">
-  <title>Contact | KX Metaal</title>
+  <title>Contact opnemen | KX Metaal</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -19,8 +19,10 @@
       <span>KX Metaal</span>
     </a>
 
-    <button class="menu-toggle" type="button" aria-label="Menu openen"
-      aria-expanded="false" aria-controls="main-navigation">
+    <button class="menu-toggle" type="button"
+      aria-label="Menu openen"
+      aria-expanded="false"
+      aria-controls="main-navigation">
       ☰ Menu
     </button>
 
@@ -29,32 +31,35 @@
       <a href="diensten.html">Diensten</a>
       <a href="projecten.html">Projecten</a>
       <a href="over-ons.html">Over ons</a>
-      <a class="button" href="contact.html">Contact</a>
+      <a class="button" href="contact.html" aria-current="page">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
+
+  <!-- Introductie -->
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">We horen graag van je</span>
-      <h1>Neem contact op</h1>
+      <span class="eyebrow">Contact met KX Metaal</span>
+      <h1>Vertel ons over jouw project</h1>
       <p class="lead">
-        Heb je een vraag of wil je een project bespreken?
-        Vul het formulier in om contact op te nemen met KX Metaal.
+        Heb je een vraag, een idee of wil je een mogelijke offerte bespreken?
+        Stuur een bericht en licht toe waar je naar op zoek bent.
       </p>
     </div>
   </section>
 
+  <!-- Contactformulier -->
   <section class="section section-light">
     <div class="container contact-grid">
 
       <aside class="contact-panel">
-        <span class="eyebrow">Contactgegevens</span>
-        <h2>Hoe kunnen we je helpen?</h2>
+        <span class="eyebrow">Neem contact op</span>
+        <h2>Waar kunnen we je mee helpen?</h2>
         <p>
-          Vertel ons kort wat je nodig hebt. De juiste contactgegevens
-          worden later door KX Metaal toegevoegd.
+          Geef aan wat je wilt bespreken. Met een duidelijke omschrijving
+          kunnen we beter bekijken wat de volgende stap kan zijn.
         </p>
 
         <div class="contact-item">
@@ -63,22 +68,38 @@
         </div>
 
         <div class="contact-item">
+          <strong>Onderwerp</strong>
+          <span>Metaalwerk, techniek en mogelijke projecten</span>
+        </div>
+
+        <div class="contact-item">
           <strong>E-mail</strong>
-          <span>Contactgegevens worden nog toegevoegd.</span>
+          <span>Het e-mailadres wordt nog toegevoegd.</span>
         </div>
 
         <div class="contact-item">
           <strong>Telefoon</strong>
-          <span>Contactgegevens worden nog toegevoegd.</span>
+          <span>Het telefoonnummer wordt nog toegevoegd.</span>
         </div>
 
         <div class="contact-item">
           <strong>Adres en openingstijden</strong>
-          <span>Worden later aangevuld.</span>
+          <span>Deze gegevens worden later aangevuld.</span>
+        </div>
+
+        <div class="card contact-note">
+          <div class="card-content">
+            <h3>Een project bespreken?</h3>
+            <p>
+              Beschrijf je idee, de toepassing en eventuele wensen.
+              Vermeld alleen informatie die nodig is voor je vraag.
+            </p>
+          </div>
         </div>
       </aside>
 
-      <form class="contact-form"
+      <form
+        class="contact-form"
         name="contact"
         method="POST"
         action="/bedankt.html"
@@ -88,57 +109,143 @@
         <input type="hidden" name="form-name" value="contact">
 
         <p hidden>
-          <label>Laat dit veld leeg:
+          <label>
+            Laat dit veld leeg:
             <input name="bot-field">
           </label>
         </p>
 
         <h2>Stuur een bericht</h2>
-        <p>Vul de gegevens in zodat KX Metaal je vraag kan bekijken.</p>
+        <p>
+          Vul de verplichte velden in. Velden met een * zijn verplicht.
+        </p>
 
         <div class="form-group">
           <label for="name">Naam *</label>
-          <input id="name" name="name" type="text"
-            autocomplete="name" required>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Je naam"
+            autocomplete="name"
+            required>
         </div>
 
         <div class="form-group">
           <label for="email">E-mailadres *</label>
-          <input id="email" name="email" type="email"
-            autocomplete="email" required>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="naam@voorbeeld.nl"
+            autocomplete="email"
+            required>
         </div>
 
         <div class="form-group">
-          <label for="subject">Onderwerp</label>
+          <label for="phone">Telefoonnummer (optioneel)</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="Je telefoonnummer"
+            autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Waar gaat je vraag over?</label>
           <select id="subject" name="subject">
             <option value="Algemene vraag">Algemene vraag</option>
             <option value="Project bespreken">Project bespreken</option>
             <option value="Offerte aanvragen">Offerte aanvragen</option>
+            <option value="Metaalbewerking">Metaalbewerking</option>
+            <option value="Metalen constructies">Metalen constructies</option>
+            <option value="Maatwerk">Maatwerk</option>
             <option value="Anders">Anders</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="message">Je bericht *</label>
-          <textarea id="message" name="message"
-            placeholder="Vertel kort waar je vraag over gaat..."
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Vertel kort wat je wilt bespreken..."
             required></textarea>
         </div>
 
-        <button class="button" type="submit">Bericht versturen →</button>
+        <button class="button" type="submit">
+          Bericht versturen →
+        </button>
 
-        <p>
-          Verstuur geen vertrouwelijke of gevoelige informatie via dit formulier.
+        <p class="form-disclaimer">
+          Verstuur geen wachtwoorden of andere vertrouwelijke gegevens
+          via dit formulier.
         </p>
       </form>
 
     </div>
   </section>
+
+  <!-- Extra informatie -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Een goede start</span>
+        <h2>Wat kun je in je bericht zetten?</h2>
+        <p>
+          Met een paar duidelijke gegevens wordt het makkelijker
+          om je vraag te begrijpen.
+        </p>
+      </div>
+
+      <div class="card-grid">
+
+        <article class="card">
+          <div class="card-content">
+            <span class="step-number">01</span>
+            <h3>Je idee</h3>
+            <p>
+              Beschrijf wat je wilt laten maken of welke technische
+              oplossing je zoekt.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <span class="step-number">02</span>
+            <h3>Je wensen</h3>
+            <p>
+              Vermeld eventuele afmetingen, materialen of andere
+              belangrijke aandachtspunten.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <span class="step-number">03</span>
+            <h3>Je vraag</h3>
+            <p>
+              Geef aan of je informatie zoekt, een project wilt
+              bespreken of een mogelijke offerte wilt aanvragen.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container">
+
     <div class="footer-grid">
+
       <div>
         <a class="logo" href="index.html">
           <span class="logo-mark">KX</span>
@@ -154,18 +261,22 @@
           <a href="diensten.html">Diensten</a>
           <a href="projecten.html">Projecten</a>
           <a href="over-ons.html">Over ons</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
 
       <div>
         <h3>Contact</h3>
-        <p>Gebruik het formulier om je vraag te versturen.</p>
+        <p>Stuur je vraag via het contactformulier.</p>
+        <a href="contact.html">Naar het formulier ↑</a>
       </div>
+
     </div>
 
     <div class="footer-bottom">
       © <span data-year>2026</span> KX Metaal. Alle rechten voorbehouden.
     </div>
+
   </div>
 </footer>
 

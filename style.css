@@ -1,20 +1,28 @@
 
 /* ========================================
-   KX METAAL — STIJL VOOR ALLE PAGINA'S
-   Kleuren: blauw, wit en donkergrijs
+   KX METAAL — MODERNE PROFESSIONELE STIJL
+   Kleuren: grijs, wit en technisch blauw
 ======================================== */
 
 :root {
   --blue: #1769aa;
   --blue-dark: #104d80;
-  --blue-light: #eaf4fc;
-  --dark: #202a35;
-  --text: #4b5563;
+  --blue-light: #eaf1f8;
+
+  --dark: #183247;
+  --text: #4b5865;
   --white: #ffffff;
-  --light: #f5f7fa;
-  --border: #e1e6ec;
+
+  /* Grijze achtergronden */
+  --light: #e5e8ec;
+  --background: #dde1e6;
+  --border: #cdd3da;
+
   --radius: 14px;
-  --shadow: 0 10px 30px rgba(24, 45, 65, 0.08);
+  --shadow: 0 8px 24px rgba(24, 45, 65, 0.08);
+  --shadow-hover: 0 16px 36px rgba(24, 45, 65, 0.14);
+
+  --transition: 0.25s ease;
 }
 
 * {
@@ -23,14 +31,16 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 95px;
 }
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--white);
+  background: var(--background);
   color: var(--dark);
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -42,6 +52,7 @@ img {
 a {
   color: var(--blue);
   text-decoration: none;
+  transition: color var(--transition);
 }
 
 a:hover {
@@ -65,15 +76,18 @@ button,
   margin-inline: auto;
 }
 
-/* HEADER EN NAVIGATIE */
+/* ========================================
+   HEADER EN NAVIGATIE
+======================================== */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .navbar {
@@ -103,10 +117,11 @@ button,
   place-items: center;
   width: 43px;
   height: 43px;
+  flex-shrink: 0;
   color: var(--white);
-  background: var(--blue);
-  border-radius: 10px;
-  font-weight: 900;
+  background: linear-gradient(135deg, #2584c9, #104d80);
+  border-radius: 11px;
+  box-shadow: 0 4px 10px rgba(23, 105, 170, 0.2);
 }
 
 .nav-links {
@@ -116,15 +131,34 @@ button,
 }
 
 .nav-links a {
+  position: relative;
   color: var(--dark);
   font-size: 0.94rem;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: color var(--transition);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--blue);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
 }
 
 .menu-toggle {
@@ -136,7 +170,9 @@ button,
   color: var(--dark);
 }
 
-/* KNOPPEN */
+/* ========================================
+   KNOPPEN
+======================================== */
 
 .button {
   display: inline-flex;
@@ -145,11 +181,15 @@ button,
   gap: 9px;
   padding: 13px 22px;
   border: 2px solid var(--blue);
-  border-radius: 8px;
-  background: var(--blue);
+  border-radius: 9px;
+  background: linear-gradient(135deg, #2581c4, #1769aa);
   color: var(--white);
   font-weight: 700;
-  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 4px 12px rgba(23, 105, 170, 0.14);
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
 }
 
 .button:hover {
@@ -157,25 +197,34 @@ button,
   border-color: var(--blue-dark);
   color: var(--white);
   transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(23, 105, 170, 0.2);
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 .button-outline {
-  background: transparent;
+  background: var(--white);
   color: var(--blue);
+  box-shadow: none;
 }
 
 .button-outline:hover {
+  background: var(--blue);
   color: var(--white);
 }
 
-/* ALGEMENE PAGINA-ONDERDELEN */
+/* ========================================
+   ALGEMENE PAGINA-ONDERDELEN
+======================================== */
 
 .section {
-  padding: 80px 0;
+  padding: 82px 0;
 }
 
 .section-light {
-  background: var(--light);
+  background: #e5e8ec;
 }
 
 .section-blue {
@@ -184,7 +233,7 @@ button,
 
 .section-heading {
   max-width: 720px;
-  margin: 0 auto 42px;
+  margin: 0 auto 45px;
   text-align: center;
 }
 
@@ -228,8 +277,8 @@ p {
 }
 
 .page-hero {
-  padding: 75px 0;
-  background: var(--blue-light);
+  padding: 80px 0;
+  background: linear-gradient(135deg, #e9edf2, #f5f7fa);
   border-bottom: 1px solid var(--border);
 }
 
@@ -243,11 +292,14 @@ p {
   font-size: clamp(2.3rem, 5vw, 3.5rem);
 }
 
-/* HOMEPAGINA */
+/* ========================================
+   HOMEPAGINA
+======================================== */
 
 .hero {
-  padding: 85px 0;
-  background: linear-gradient(120deg, #f4f8fc, #ffffff);
+  padding: 90px 0;
+  background: linear-gradient(120deg, #e1e5ea, #f1f4f7);
+  overflow: hidden;
 }
 
 .hero-grid {
@@ -259,6 +311,7 @@ p {
 
 .hero h1 {
   margin-bottom: 22px;
+  animation: fade-in-up 0.65s ease both;
 }
 
 .hero p {
@@ -278,10 +331,18 @@ p {
   min-height: 330px;
   object-fit: cover;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-hover);
+  transition: transform 0.45s ease;
 }
 
-/* KAARTEN */
+.hero-image:hover {
+  transform: scale(1.015);
+}
+
+/* ========================================
+   KAARTEN EN DIENSTEN
+======================================== */
 
 .card-grid {
   display: grid;
@@ -292,14 +353,19 @@ p {
 .card {
   overflow: hidden;
   background: var(--white);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(205, 211, 218, 0.8);
   border-radius: var(--radius);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 3px 10px rgba(24, 45, 65, 0.025);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: #b7cfe3;
 }
 
 .card-image {
@@ -307,10 +373,15 @@ p {
   height: 220px;
   object-fit: cover;
   background: var(--blue-light);
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.025);
 }
 
 .card-content {
-  padding: 25px;
+  padding: 26px;
 }
 
 .card-content h3 {
@@ -322,10 +393,20 @@ p {
 }
 
 .card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-weight: 700;
 }
 
-/* PROJECTEN */
+.card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ========================================
+   PROJECTEN
+======================================== */
 
 .project-grid {
   display: grid;
@@ -339,9 +420,17 @@ p {
   object-fit: cover;
   border-radius: var(--radius);
   background: var(--light);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
 }
 
-/* OVER ONS */
+.project-image:hover {
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   OVER ONS
+======================================== */
 
 .content-grid {
   display: grid;
@@ -355,6 +444,7 @@ p {
   min-height: 300px;
   object-fit: cover;
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .check-list {
@@ -377,7 +467,9 @@ p {
   font-weight: 800;
 }
 
-/* CONTACT EN FORMULIER */
+/* ========================================
+   CONTACT EN FORMULIER
+======================================== */
 
 .contact-grid {
   display: grid;
@@ -402,6 +494,7 @@ p {
 .contact-item strong {
   display: block;
   margin-bottom: 4px;
+  color: var(--dark);
 }
 
 .form-group {
@@ -420,16 +513,22 @@ p {
   width: 100%;
   padding: 13px 14px;
   color: var(--dark);
-  background: var(--white);
+  background: #fafbfd;
   border: 1px solid #cbd5df;
   border-radius: 8px;
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition),
+    background var(--transition);
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  outline: 3px solid rgba(23, 105, 170, 0.15);
+  outline: none;
+  background: var(--white);
   border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(23, 105, 170, 0.12);
 }
 
 .form-group textarea {
@@ -437,12 +536,14 @@ p {
   resize: vertical;
 }
 
-/* CTA */
+/* ========================================
+   CTA — OPVALLENDE CONTACTSECTIE
+======================================== */
 
 .cta {
-  padding: 60px 0;
+  padding: 65px 0;
   color: var(--white);
-  background: var(--dark);
+  background: linear-gradient(120deg, #183247, #104d80);
   text-align: center;
 }
 
@@ -454,15 +555,29 @@ p {
 .cta p {
   max-width: 650px;
   margin: 0 auto 25px;
-  opacity: 0.85;
+  opacity: 0.88;
 }
 
-/* FOOTER */
+.cta .button {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--blue-dark);
+  box-shadow: none;
+}
+
+.cta .button:hover {
+  background: #eaf1f8;
+  border-color: #eaf1f8;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
 
 .site-footer {
   padding: 45px 0 20px;
   color: var(--white);
-  background: #17212b;
+  background: #172633;
 }
 
 .footer-grid {
@@ -488,6 +603,7 @@ p {
 
 .footer-links a {
   color: #c7d0d9;
+  transition: color var(--transition);
 }
 
 .footer-links a:hover {
@@ -502,7 +618,25 @@ p {
   text-align: center;
 }
 
-/* RESPONSIVE: TABLETS EN MOBIELE TELEFOONS */
+/* ========================================
+   ANIMATIES
+======================================== */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   TABLETS EN MOBIELE TELEFOONS
+======================================== */
 
 @media (max-width: 850px) {
   .navbar {
@@ -534,6 +668,10 @@ p {
 
   .nav-links a {
     padding: 12px 0;
+  }
+
+  .nav-links a::after {
+    display: none;
   }
 
   .hero-grid,
@@ -588,9 +726,19 @@ p {
   .page-hero {
     padding: 55px 0;
   }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+
+  .card-image {
+    height: 210px;
+  }
 }
 
-/* TOEGANKELIJKHEID */
+/* ========================================
+   TOEGANKELIJKHEID
+======================================== */
 
 :focus-visible {
   outline: 3px solid #f0ad4e;
@@ -602,7 +750,8 @@ p {
   *::before,
   *::after {
     scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

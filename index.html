@@ -4,234 +4,692 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#1769aa">
-<meta name="description" content="KX Metaal — technische oplossingen en maatwerk. Robby Kuijpers, actief sinds 2021.">
-<title>KX Metaal | Techniek en maatwerk sinds 2021</title>
+<meta name="theme-color" content="#123653">
+<meta name="description" content="KX Metaal - technische berekeningen, metaalbewerking, materiaalplanning en projectvoorbereiding.">
+<title>KX Metaal | Techniek en maatwerk</title>
 <style>
-:root{--blue:#1769aa;--dark:#104c7c;--navy:#20394c;--text:#40566a;--muted:#708497;--pale:#eaf5fc;--light:#f5faff;--line:#dce8f1;--white:#fff;--shadow:0 14px 40px #19415f12;--radius:15px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--navy);line-height:1.65}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}img{max-width:100%}.container{width:min(1160px,calc(100% - 40px));margin:auto}.section{padding:82px 0}.section-light{background:var(--light)}.eyebrow{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section-heading{max-width:760px;margin-bottom:35px}.section-heading h2,.intro-copy h2,.contact-copy h2{font-size:clamp(30px,4vw,43px);line-height:1.17;letter-spacing:-1px;margin:12px 0}.section-heading p,.muted{color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 20px;border:1px solid transparent;border-radius:7px;background:var(--blue);color:#fff;font-weight:750;transition:.2s}.btn:hover{background:var(--dark);transform:translateY(-2px)}.btn-outline{background:white;color:var(--blue);border-color:#c8dce9}.btn-outline:hover{background:var(--pale);color:var(--dark)}.topbar{background:var(--dark);color:white;font-size:12px}.topbar-inner{min-height:36px;display:flex;justify-content:space-between;align-items:center;gap:12px}.topbar p{margin:0}header{position:sticky;top:0;z-index:20;background:#fffffff5;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{display:flex;min-height:76px;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}.brand-symbol{width:43px;height:43px;border-radius:8px;display:grid;place-items:center;background:var(--blue);color:white;font-weight:900}.brand strong{display:block;font-size:20px;letter-spacing:1.2px;line-height:1.2}.brand small{display:block;font-size:10px;letter-spacing:1.4px;color:var(--muted);margin-top:3px}.nav-links{display:flex;align-items:center;gap:18px}.nav-links>a:not(.btn){font-size:13px;color:var(--text);font-weight:650}.menu-toggle{display:none;padding:9px 12px;background:white;border:1px solid var(--line);border-radius:7px}.hero{position:relative;overflow:hidden;min-height:550px;display:flex;align-items:center;color:white;background:#183d59}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0f2d44f2,#113753d9 53%,#11375355),url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=2000&q=85") center/cover}.hero-content{position:relative;padding:80px 0;max-width:790px}.hero .eyebrow{color:#b8e0fb}.hero h1{font-size:clamp(42px,6.5vw,72px);line-height:1.04;letter-spacing:-2px;margin:18px 0}.hero h1 span{color:#a9d9fb}.hero p{max-width:650px;color:#e0edf6;font-size:17px;line-height:1.8}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero .btn-outline{background:transparent;color:white;border-color:#a4c6df}.hero-note{margin-top:28px;color:#d2e6f4;font-size:13px}.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.intro-image{min-height:390px;background:url("https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1100&q=85") center/cover;border-radius:var(--radius);position:relative;box-shadow:var(--shadow)}.image-caption{position:absolute;bottom:16px;left:16px;right:16px;background:#fffffff2;padding:15px;border-radius:8px;color:var(--text);font-size:13px}.image-caption strong{display:block;color:var(--navy)}.intro-copy p{color:var(--muted)}.check-list{list-style:none;padding:0}.check-list li{margin:10px 0;color:var(--text)}.check-list li:before{content:"✓";color:var(--blue);font-weight:900;margin-right:10px}.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:25px}.stat{padding:16px 12px;background:white}.stat+.stat{border-left:1px solid var(--line)}.stat strong{display:block;color:var(--blue);font-size:23px}.stat span{font-size:11px;color:var(--muted)}.service-grid,.project-grid,.knowledge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}.service-card,.project-card,.knowledge-card{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.2s}.service-card{padding:26px}.service-card:hover,.knowledge-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.service-icon{width:45px;height:45px;display:grid;place-items:center;background:var(--pale);color:var(--blue);border-radius:9px;font-size:22px}.service-card h3{margin:15px 0 7px}.service-card p,.project-copy p,.knowledge-card p{font-size:14px;color:var(--muted)}.service-note,.small-note{font-size:12px;color:var(--muted);margin-top:18px}.project-photo{height:200px;background-position:center;background-size:cover}.project-card:nth-child(1) .project-photo{background-image:url("https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80")}.project-card:nth-child(2) .project-photo{background-image:url("https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80")}.project-card:nth-child(3) .project-photo{background-image:url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80")}.project-copy{padding:21px}.project-copy h3{margin:6px 0}.project-label,.knowledge-tag{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--blue);text-transform:uppercase}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.process-step{border-top:2px solid #c7e0f1;padding-top:17px}.process-number{font-size:12px;font-weight:900;color:var(--blue)}.process-step h3{margin:8px 0}.process-step p{font-size:14px;color:var(--muted)}.about-panel{display:grid;grid-template-columns:.8fr 1.2fr;background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}.about-side{padding:38px;background:var(--dark);color:white}.about-side .eyebrow{color:#b9dff8}.about-side h3{font-size:30px;line-height:1.25}.about-side p{color:#d5e6f3}.about-copy{padding:38px}.about-copy h2{font-size:30px}.about-copy p{color:var(--muted)}.about-signature{color:var(--blue);font-weight:800}.knowledge-section{background:var(--light)}.knowledge-search{display:flex;align-items:center;gap:12px;padding:0 15px;background:white;border:1px solid var(--line);border-radius:9px;max-width:680px;margin:25px 0}.knowledge-search span{font-size:24px;color:var(--blue)}.knowledge-search input{width:100%;border:0;outline:0;padding:15px 0}.knowledge-card{padding:23px}.knowledge-card[hidden]{display:none}.knowledge-card h3{font-size:18px;line-height:1.4;margin:12px 0}.knowledge-toggle{display:flex;justify-content:space-between;width:100%;margin-top:12px;padding:12px 0 0;border:0;border-top:1px solid var(--line);background:transparent;color:var(--blue);font-weight:750;text-align:left}.knowledge-extra{font-size:14px;color:var(--muted);padding-top:12px}.knowledge-extra[hidden],#knowledgeEmpty[hidden]{display:none}.faq-list{max-width:850px}.faq-item{border-bottom:1px solid var(--line)}.faq-question{display:flex;justify-content:space-between;gap:15px;width:100%;padding:19px 0;background:transparent;border:0;text-align:left;color:var(--navy);font-weight:750}.faq-question span{color:var(--blue);font-size:22px}.faq-answer{color:var(--muted);padding:0 30px 20px 0}.faq-answer[hidden]{display:none}
-/* Calculator library */
-.calculator-toolbar{display:grid;grid-template-columns:minmax(220px,1fr) 240px;gap:12px;margin:25px 0}.tool-search,.tool-category{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--navy)}.calculator-count{color:var(--muted);font-size:13px;margin:0 0 20px}.calculator-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.calc-card{background:white;border:1px solid var(--line);border-radius:12px;padding:21px;box-shadow:0 6px 20px #19415f08;min-width:0}.calc-card[hidden]{display:none}.calc-card h3{font-size:17px;line-height:1.35;margin:8px 0}.calc-desc{color:var(--muted);font-size:13px;min-height:40px}.calc-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.calc-field{display:flex;flex-direction:column;gap:4px;min-width:0}.calc-field label{font-size:11px;font-weight:750;color:var(--text)}.calc-field input{width:100%;min-width:0;border:1px solid #d7e4ed;border-radius:6px;padding:9px;background:white;color:var(--navy)}.calc-field input:focus,.tool-search:focus,.tool-category:focus{outline:2px solid #1769aa55;border-color:var(--blue)}.calc-result{margin-top:15px;padding:13px;border-radius:8px;background:var(--pale-2);border:1px solid var(--line)}.calc-result small{display:block;color:var(--muted);font-size:11px}.calc-result output{display:block;font-size:22px;font-weight:850;color:var(--blue);overflow-wrap:anywhere}.calc-formula{font-size:11px;color:var(--muted);margin:9px 0 0;overflow-wrap:anywhere}.calc-copy{margin-top:10px;padding:7px 10px;border:1px solid #c8dce9;background:white;border-radius:6px;color:var(--blue);font-size:12px;font-weight:750}.calc-warning{font-size:11px;color:#72552c;background:#fff8e8;padding:10px;border-radius:6px;margin-top:10px}.no-calcs{padding:22px 0;color:var(--muted)}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}.contact-copy h2{margin:12px 0 18px}.contact-copy>p{color:var(--muted)}.contact-detail{border-top:1px solid var(--line);padding:14px 0}.contact-detail strong{display:block;font-size:13px}.contact-detail span{font-size:14px;color:var(--muted)}.contact-form{background:white;padding:27px;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.form-heading h3{margin:0;font-size:22px}.form-heading p{font-size:13px;color:var(--muted)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:750}.field input,.field select,.field textarea{width:100%;border:1px solid #d7e4ed;border-radius:7px;padding:11px;color:var(--navy);background:white}.field textarea{min-height:110px;resize:vertical}.form-hint{font-size:11px;color:var(--muted)}.form-status{font-size:13px;color:var(--blue-dark);overflow-wrap:anywhere}.contact-form .btn{width:100%;margin-top:8px}footer{background:#f2f8fc;border-top:1px solid var(--line);padding:30px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-inner p{font-size:12px;color:var(--muted)}.footer-links{display:flex;gap:15px;flex-wrap:wrap;font-size:12px}.footer-links a:hover{color:var(--blue)}
-@media(max-width:1000px){.nav-links{gap:10px}.nav-links>a:not(.btn){font-size:12px}.calculator-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){.container{width:calc(100% - 32px)}.section{padding:62px 0}.topbar-inner{justify-content:center;text-align:center}.topbar-inner p:first-child{display:none}.nav{min-height:68px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:white;padding:15px 22px 22px;align-items:stretch;flex-direction:column;gap:0;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-links>a:not(.btn){padding:10px 0;font-size:14px}.nav-links .btn{margin-top:9px}.hero{min-height:500px}.hero-content{padding:65px 0}.hero h1{letter-spacing:-1.3px}.intro-grid,.about-panel,.contact-grid{grid-template-columns:1fr}.intro-image{min-height:280px;order:2}.service-grid,.project-grid,.knowledge-grid{grid-template-columns:1fr}.calculator-toolbar{grid-template-columns:1fr}.calculator-grid{grid-template-columns:1fr}.calc-desc{min-height:0}.about-side,.about-copy{padding:27px}.contact-grid{gap:25px}.footer-inner{align-items:flex-start;flex-direction:column}.stats .stat{padding:12px 8px}.stats .stat strong{font-size:19px}.stats .stat span{font-size:10px}}
-@media(max-width:440px){.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-form{padding:19px}.process-grid{grid-template-columns:1fr}.hero-actions .btn{width:100%}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+:root{
+  --navy:#123653;--blue:#1769aa;--blue2:#248bd0;
+  --pale:#eaf4fb;--bg:#f4f7fa;--white:#fff;
+  --text:#203345;--muted:#64778a;--line:#dce5ed;
+  --green:#16845b;--orange:#c97821;--red:#c74646;
+  --radius:17px;--shadow:0 8px 30px #183b5510
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--bg);color:var(--text);
+font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}
+button,input,select,textarea{font:inherit}
+button,a{touch-action:manipulation}
+a{color:var(--blue);text-decoration:none}
+button{cursor:pointer}
+.topbar{background:var(--navy);color:#fff;padding:8px 5%;
+display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px}
+header{position:sticky;top:0;z-index:20;background:#ffffffef;
+backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{max-width:1450px;margin:auto;padding:13px 4%;
+display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--navy);font-weight:900;font-size:22px}
+.logo{width:43px;height:43px;background:var(--blue);color:#fff;border-radius:12px;
+display:grid;place-items:center;font-weight:900;letter-spacing:-2px}
+.navlinks{display:flex;align-items:center;gap:17px;flex-wrap:wrap}
+.navlinks a{font-size:13px;font-weight:750;color:var(--text)}
+.navlinks a:hover{color:var(--blue)}
+.menuBtn{display:none;border:1px solid var(--line);background:white;padding:9px 12px;border-radius:10px}
+.container{width:min(1300px,92%);margin:auto}
+.hero{background:linear-gradient(120deg,#102f49,#1769aa 68%,#2794d6);color:#fff;
+padding:75px 0 65px;overflow:hidden;position:relative}
+.hero:after{content:"";position:absolute;width:440px;height:440px;border:70px solid #ffffff0b;
+border-radius:50%;right:-80px;top:-100px}
+.heroGrid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:40px;position:relative;z-index:1}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:850;color:#a8ddff}
+h1{font-size:clamp(35px,5vw,62px);line-height:1.07;letter-spacing:-1.8px;margin:15px 0}
+.hero p{font-size:17px;color:#e2effa;max-width:660px}
+.heroCard{background:#ffffff12;border:1px solid #ffffff32;border-radius:24px;padding:25px;
+backdrop-filter:blur(12px)}
+.heroCard h3{margin-top:0}
+.heroStat{display:flex;align-items:center;gap:14px;border-bottom:1px solid #ffffff24;padding:13px 0}
+.heroStat:last-child{border:0}
+.heroIcon{background:#ffffff1c;padding:12px;border-radius:12px;font-size:23px}
+.btn{border:0;border-radius:10px;padding:12px 17px;font-weight:800;display:inline-flex;
+align-items:center;justify-content:center;gap:8px;transition:.18s}
+.btn:hover{transform:translateY(-1px)}
+.primary{background:var(--blue);color:#fff}
+.primary:hover{background:#10558c}
+.whiteBtn{background:white;color:var(--navy)}
+.outline{border:1px solid var(--line);background:white;color:var(--text)}
+.danger{background:#fff0f0;color:var(--red)}
+.small{font-size:12px;padding:7px 10px}
+section{padding:60px 0}
+.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}
+h2{font-size:clamp(25px,3vw,35px);color:var(--navy);letter-spacing:-.7px;line-height:1.2;margin:0 0 9px}
+h3{color:var(--navy);margin:0 0 9px}
+.lead{color:var(--muted);margin:0;max-width:760px}
+.kicker{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);font-weight:900}
+.grid{display:grid;gap:18px}
+.stats{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+padding:22px;box-shadow:var(--shadow);min-width:0}
+.statNum{font-size:29px;font-weight:900;color:var(--navy);line-height:1.3}
+.muted{color:var(--muted);font-size:13px}
+.featureGrid{grid-template-columns:repeat(3,1fr)}
+.featureIcon{width:46px;height:46px;border-radius:13px;background:var(--pale);
+display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+.featureCard{transition:.2s}
+.featureCard:hover{transform:translateY(-3px);border-color:#b3d6ef}
+.band{background:#eaf2f8}
+.workspace{display:grid;grid-template-columns:245px 1fr;gap:20px;align-items:start}
+.sidebar{position:sticky;top:95px}
+.sideBtn{width:100%;display:flex;gap:10px;align-items:center;text-align:left;
+border:0;background:transparent;color:var(--text);padding:11px 12px;border-radius:10px;
+font-weight:750;margin:2px 0}
+.sideBtn.active,.sideBtn:hover{background:var(--pale);color:var(--blue)}
+.toolGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tool{display:flex;flex-direction:column;gap:12px}
+.toolTop{display:flex;gap:12px;align-items:center}
+.toolTop .featureIcon{flex-shrink:0;margin:0}
+.fieldGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:12px;font-weight:800;color:#43596b}
+input,select,textarea{width:100%;min-width:0;padding:11px 12px;border:1px solid #d5e0e8;
+border-radius:9px;background:#fff;color:var(--text);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1769aa16}
+textarea{resize:vertical;min-height:100px}
+.result{background:var(--pale);border:1px solid #d4e9f7;border-radius:12px;padding:15px}
+.result strong{display:block;font-size:25px;color:var(--navy);overflow-wrap:anywhere}
+.result small{color:var(--muted)}
+.pill{display:inline-block;background:#edf3f7;border-radius:30px;padding:4px 9px;
+font-size:11px;font-weight:800;color:#456075}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.toolbar input{flex:1;min-width:180px}
+.hidden{display:none!important}
+.tableWrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:12px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:#f5f8fb;color:#536a7c;font-size:11px;text-transform:uppercase}
+td input{min-width:90px}
+.tag{font-size:11px;font-weight:850;background:#e4f4ed;color:#16704d;
+padding:4px 8px;border-radius:30px}
+.warning{background:#fff6e9;border:1px solid #f4d7ad;border-radius:12px;
+padding:13px 15px;color:#7d531d;font-size:12px;margin-top:16px}
+.ok{color:var(--green)}.bad{color:var(--red)}
+.progress{height:8px;background:#e6edf2;border-radius:10px;overflow:hidden}
+.progress div{height:100%;background:var(--blue);width:0;transition:width .2s}
+.task{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--line)}
+.task input[type=checkbox]{width:18px;height:18px}
+.task span{flex:1;overflow-wrap:anywhere}
+.task.done span{text-decoration:line-through;color:var(--muted)}
+.task button{border:0;background:transparent;color:var(--red)}
+.knowledgeItem{border-bottom:1px solid var(--line);padding:15px 0}
+.knowledgeItem summary{cursor:pointer;font-weight:800;color:var(--navy)}
+.knowledgeItem p{color:var(--muted);font-size:14px}
+.stepGrid{grid-template-columns:repeat(4,1fr)}
+.stepNum{font-size:28px;color:#b5d8f0;font-weight:950}
+.contactGrid{grid-template-columns:.8fr 1.2fr}
+footer{background:#102c43;color:#d9e8f4;padding:35px 0}
+footer .brand{color:white}
+footer p,footer a{color:#b7cada;font-size:13px}
+footer .footerGrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}
+.toast{position:fixed;bottom:20px;right:20px;z-index:50;background:#153a55;color:white;
+padding:13px 18px;border-radius:12px;box-shadow:var(--shadow);display:none;max-width:90%}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:20px 0}
+@media(max-width:950px){
+ .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:white;
+ padding:18px 5%;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+ .navlinks.open{display:flex;flex-direction:column;align-items:stretch}
+ .navlinks a{padding:7px}.menuBtn{display:block}
+ .heroGrid{grid-template-columns:1fr}.heroCard{max-width:600px}
+ .workspace{grid-template-columns:1fr}.sidebar{position:static;display:flex;overflow-x:auto}
+ .sideBtn{white-space:nowrap;width:auto}.stats{grid-template-columns:repeat(2,1fr)}
+ .featureGrid{grid-template-columns:repeat(2,1fr)}
+ .stepGrid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+ section{padding:42px 0}.container{width:92%}.toolGrid,.featureGrid,.contactGrid{grid-template-columns:1fr}
+ .fieldGrid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}
+ .card{padding:17px}.sectionHead{align-items:start;flex-direction:column}
+ footer .footerGrid{grid-template-columns:1fr}.hero{padding:48px 0}
+ .topbar{font-size:11px}.brand{font-size:19px}
+}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="container topbar-inner"><p>Technische oplossingen en maatwerk</p><p><a href="#contact">Een project bespreken? Neem contact op →</a></p></div></div>
-<header><div class="container nav">
-<a href="#home" class="brand" aria-label="KX Metaal home"><span class="brand-symbol">KX</span><span><strong>KX METAAL</strong><small>TECHNIEK & MAATWERK</small></span></a>
-<button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">☰ Menu</button>
-<nav class="nav-links" id="navLinks" aria-label="Hoofdnavigatie">
-<a href="#over">Over ons</a><a href="#diensten">Diensten</a><a href="#werkwijze">Werkwijze</a><a href="#projecten">Projecten</a><a href="#calculators">Calculators</a><a href="#kennisbank">Kennisbank</a><a href="#contact" class="btn">Project bespreken ↗</a>
-</nav></div></header>
-<main>
-<section class="hero" id="home"><div class="container hero-content">
-<span class="eyebrow">KX Metaal · Sinds 2021</span><h1>Techniek die werkt.<br><span>Maatwerk dat past.</span></h1>
-<p>Een technische uitdaging begint met een goed gesprek. KX Metaal denkt mee over de vraag, de mogelijkheden en een passende oplossing voor jouw project.</p>
-<div class="hero-actions"><a href="#contact" class="btn">Bespreek je project →</a><a href="#diensten" class="btn btn-outline">Ontdek de mogelijkheden</a></div>
-<div class="hero-note">Persoonlijk contact · Technisch meedenken · Sinds 2021</div>
-</div></section>
-
-<section class="section" id="over"><div class="container intro-grid">
-<div class="intro-image" role="img" aria-label="Illustratieve foto van een technische werkplaats"><div class="image-caption"><strong>Techniek met aandacht voor het project</strong>Een heldere vraag is het begin van een goede oplossing.</div></div>
-<div class="intro-copy"><span class="eyebrow">Over KX Metaal</span><h2>Persoonlijk contact. Een praktische aanpak.</h2>
-<p>KX Metaal is verbonden aan Robby Kuijpers en is actief sinds 2021. De basis van een goed project is begrijpen wat er nodig is en samen bekijken welke aanpak daarbij past.</p>
-<p>Of een vraag nu al volledig is uitgewerkt of nog in de ontwikkelfase zit: een duidelijke omschrijving helpt om de mogelijkheden te bespreken.</p>
-<ul class="check-list"><li>Rechtstreeks contact met Robby Kuijpers</li><li>Aandacht voor de technische vraag</li><li>Heldere informatie als basis voor overleg</li></ul>
-<div class="stats"><div class="stat"><strong>2021</strong><span>Actief sinds</span></div><div class="stat"><strong>1-op-1</strong><span>Persoonlijk contact</span></div><div class="stat"><strong>Op maat</strong><span>Per aanvraag bekijken</span></div></div>
-</div></div></section>
-
-<section class="section section-light" id="diensten"><div class="container"><div class="section-heading"><span class="eyebrow">Diensten</span><h2>Van technische vraag naar een passende aanpak.</h2><p>De onderstaande onderwerpen zijn mogelijke diensten. Laat de exacte werkzaamheden bevestigen door KX Metaal.</p></div>
-<div class="service-grid">
-<article class="service-card"><div class="service-icon">⚙</div><h3>Machinebouw</h3><p>Een technische machinevraag bespreken en bekijken welke uitwerking mogelijk en passend is.</p></article>
-<article class="service-card"><div class="service-icon">⌁</div><h3>Metaalwerk</h3><p>De gewenste toepassing, afmetingen en materiaalvereisten in kaart brengen voor een aanvraag.</p></article>
-<article class="service-card"><div class="service-icon">⌘</div><h3>Technische oplossingen</h3><p>Meedenken over een technische uitdaging en de informatie verzamelen die nodig is voor een beoordeling.</p></article>
-</div><p class="service-note">Controleer deze dienstomschrijvingen voordat de website wordt gepubliceerd.</p>
-</div></section>
-
-<section class="section" id="projecten"><div class="container"><div class="section-heading"><span class="eyebrow">Projecten & voorbeelden</span><h2>Laat het werk straks voor zichzelf spreken.</h2><p>Dit zijn tijdelijke sfeerbeelden, geen bevestigde projecten van KX Metaal. Vervang ze later door eigen foto's.</p></div>
-<div class="project-grid">
-<article class="project-card"><div class="project-photo"></div><div class="project-copy"><span class="project-label">Voorbeeldcategorie</span><h3>Technische constructies</h3><p>Voeg hier later een echt project, de vraag en de uiteindelijke oplossing toe.</p></div></article>
-<article class="project-card"><div class="project-photo"></div><div class="project-copy"><span class="project-label">Voorbeeldcategorie</span><h3>Technische uitwerking</h3><p>Beschrijf de aanleiding, technische aandachtspunten en uitgevoerde werkzaamheden.</p></div></article>
-<article class="project-card"><div class="project-photo"></div><div class="project-copy"><span class="project-label">Voorbeeldcategorie</span><h3>Maatwerkoplossingen</h3><p>Een plek voor foto's en informatie over een afgerond project, na goedkeuring van de klant.</p></div></article>
-</div></div></section>
-
-<section class="section section-light" id="werkwijze"><div class="container"><div class="section-heading"><span class="eyebrow">Werkwijze</span><h2>Een duidelijk begin voor ieder project.</h2><p>Een mogelijke projectaanpak. De precieze werkwijze moet met Robby worden afgestemd.</p></div>
-<div class="process-grid">
-<article class="process-step"><span class="process-number">STAP 01</span><h3>De vraag</h3><p>Omschrijf het probleem, het doel en wat je wilt bereiken.</p></article>
-<article class="process-step"><span class="process-number">STAP 02</span><h3>Informatie</h3><p>Verzamel relevante maten, tekeningen, foto's en specificaties.</p></article>
-<article class="process-step"><span class="process-number">STAP 03</span><h3>Overleg</h3><p>Bespreek de vraag en bekijk welke mogelijkheden er zijn.</p></article>
-<article class="process-step"><span class="process-number">STAP 04</span><h3>Vervolg</h3><p>Leg eventuele afspraken, planning en vervolgstappen vast.</p></article>
-</div></div></section>
-
-<section class="section"><div class="container"><div class="about-panel"><div class="about-side"><span class="eyebrow">Even voorstellen</span><h3>Robby Kuijpers</h3><p>KX Metaal</p><p>Actief sinds 2021</p></div><div class="about-copy"><span class="eyebrow">De persoon achter KX Metaal</span><h2>Direct contact met Robby.</h2><p>Bij een technische aanvraag is het prettig om rechtstreeks met de juiste persoon te kunnen overleggen. Daarom krijgt persoonlijk contact een centrale plek op deze website.</p><p>Heb je een idee, een technische vraag of informatie over een mogelijk project? Gebruik het contactformulier om de vraag duidelijk te omschrijven.</p><div class="about-signature">Robby Kuijpers · KX Metaal</div></div></div></div></section>
-
-<!-- 50 calculators -->
-<section class="section section-light" id="calculators"><div class="container">
-<div class="section-heading"><span class="eyebrow">Technische tools</span><h2>Technische calculators.</h2><p>Bereken snel eenvoudige maten, volumes, gewichten, kosten en productiegegevens. Kies een tool, vul de waarden in en bekijk direct het resultaat.</p></div>
-<div class="calculator-toolbar"><input class="tool-search" id="calcSearch" type="search" placeholder="Zoek een calculator..." aria-label="Zoek calculators"><select class="tool-category" id="calcCategory" aria-label="Filter op categorie"><option value="">Alle categorieën</option><option>Eenheden</option><option>Geometrie</option><option>Materialen</option><option>Voorraad & productie</option><option>Kosten</option><option>Verspaning</option><option>Overige techniek</option></select></div>
-<p class="calculator-count" id="calcCount" aria-live="polite">50 calculators beschikbaar</p><div class="calculator-grid" id="calculatorGrid"></div><p class="no-calcs" id="noCalcs" hidden>Geen calculators gevonden. Probeer een andere zoekterm.</p>
-<p class="small-note">Belangrijk: resultaten zijn indicatieve rekenhulpen. Controleer eenheden, materiaalgegevens, toleranties en aannames. Gebruik deze tools niet als enige basis voor constructieve, veiligheidskritische of wettelijk vereiste berekeningen.</p>
-</div></section>
-
-<section class="section knowledge-section" id="kennisbank"><div class="container"><div class="section-heading"><span class="eyebrow">Kennis & techniek</span><h2>De technische kennisbank.</h2><p>Praktische achtergrondinformatie om een technische aanvraag beter voor te bereiden.</p></div>
-<label class="knowledge-search"><span>⌕</span><input type="search" id="knowledgeSearch" placeholder="Zoek op tekeningen, materialen, offertes..." aria-label="Zoek in de kennisbank"></label>
-<div class="knowledge-grid" id="knowledgeGrid">
-<article class="knowledge-card"><span class="knowledge-tag">Projectvoorbereiding</span><h3>Wat staat er in een technische tekening?</h3><p>Een tekening kan maten, toleranties, materiaalgegevens en technische specificaties bevatten.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>Controleer of de maatvoering duidelijk is en belangrijke details zijn aangegeven. Voeg waar nodig foto's, specificaties of toelichting toe.</div></article>
-<article class="knowledge-card"><span class="knowledge-tag">Materialen</span><h3>Welk materiaal is geschikt?</h3><p>De toepassing, belasting, omgeving en gewenste afwerking spelen een rol bij de materiaalkeuze.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>Beschrijf waarvoor het onderdeel wordt gebruikt en in welke omstandigheden het werkt. De uiteindelijke materiaalkeuze hangt af van de technische eisen.</div></article>
-<article class="knowledge-card"><span class="knowledge-tag">Machinebouw</span><h3>Hoe bereid je een machinebouwproject voor?</h3><p>Een heldere omschrijving van de gewenste werking helpt om een project te beoordelen.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>Beschrijf het doel, de gewenste werking, beschikbare ruimte en eventuele bestaande tekeningen. Noteer ook welke onderdelen nog moeten worden uitgewerkt.</div></article>
-<article class="knowledge-card"><span class="knowledge-tag">Offerte aanvragen</span><h3>Welke informatie helpt bij een offerte?</h3><p>Met een duidelijke aanvraag kan een technische vraag beter worden begrepen.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>Vermeld het doel, aantallen, afmetingen, planning en technische eisen. Geef aan welke zaken nog nader bepaald moeten worden.</div></article>
-<article class="knowledge-card"><span class="knowledge-tag">Technische eisen</span><h3>Waarom zijn toleranties belangrijk?</h3><p>Toleranties beschrijven hoeveel een maat mag afwijken van de opgegeven waarde.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>De juiste toleranties hangen af van de functie van het onderdeel en de manier waarop onderdelen samenkomen. Laat kritieke maten technisch beoordelen.</div></article>
-<article class="knowledge-card"><span class="knowledge-tag">Projectinformatie</span><h3>Wat moet je meesturen bij een aanvraag?</h3><p>Tekeningen, foto's en voorbeelden kunnen helpen om de gewenste oplossing te begrijpen.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>Voeg relevante bestanden toe en vermeld waar ze betrekking op hebben. Geef aan wat al vaststaat en wat nog moet worden bepaald.</div></article>
-<article class="knowledge-card"><span class="knowledge-tag">Planning</span><h3>Hoe geef je een projectplanning aan?</h3><p>Een gewenste opleverdatum is nuttig, maar de haalbaarheid moet nog worden besproken.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>Geef aan wanneer het project bij voorkeur klaar moet zijn en of er tussenmomenten zijn. Een gewenste datum is nog geen bevestigde leverdatum.</div></article>
-<article class="knowledge-card"><span class="knowledge-tag">Afmetingen</span><h3>Welke maten zijn belangrijk?</h3><p>Afmetingen en beschikbare ruimte kunnen bepalend zijn voor een technische oplossing.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>Noteer relevante lengte-, breedte- en hoogtematen en vermeld de gebruikte eenheden. Voeg waar mogelijk een tekening of foto toe.</div></article>
-<article class="knowledge-card"><span class="knowledge-tag">Communicatie</span><h3>Hoe beschrijf je een technische uitdaging?</h3><p>Een concrete omschrijving helpt om sneller tot de kern van de vraag te komen.</p><button type="button" class="knowledge-toggle" aria-expanded="false">Lees meer <span>＋</span></button><div class="knowledge-extra" hidden>Beschrijf de huidige situatie, het doel en de belangrijkste eisen. Benoem ook beperkingen zoals beschikbare ruimte of gebruiksomstandigheden.</div></article>
-</div><p id="knowledgeEmpty" hidden>Geen artikelen gevonden. Probeer een andere zoekterm.</p>
-</div></section>
-
-<section class="section"><div class="container"><div class="section-heading"><span class="eyebrow">Veelgestelde vragen</span><h2>Veelgestelde vragen.</h2></div><div class="faq-list">
-<div class="faq-item"><button class="faq-question" aria-expanded="false">Hoe kan ik een project bespreken?<span>＋</span></button><div class="faq-answer" hidden>Gebruik het contactformulier en beschrijf je project, de gewenste oplossing en de informatie die al beschikbaar is.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false">Moet ik al een technische tekening hebben?<span>＋</span></button><div class="faq-answer" hidden>Niet altijd. Een duidelijke omschrijving en eventuele foto's kunnen een eerste gesprek ondersteunen.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false">Kan ik via deze website bestanden versturen?<span>＋</span></button><div class="faq-answer" hidden>Nog niet. Het formulier is een demo en uploadt geen bestanden naar een server.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false">Zijn de calculatorresultaten officiële technische adviezen?<span>＋</span></button><div class="faq-answer" hidden>Nee. Het zijn indicatieve berekeningen. Kritieke ontwerpen en veiligheidskwesties moeten door een vakdeskundige worden gecontroleerd.</div></div>
-</div></div></section>
-
-<section class="section section-light" id="contact"><div class="container contact-grid"><div class="contact-copy"><span class="eyebrow">Contact & aanvraag</span><h2>Vertel ons over je technische uitdaging.</h2><p>Omschrijf je idee, de toepassing of de vraag waar je mee zit.</p>
-<div class="contact-detail"><strong>Contactpersoon</strong><span>Robby Kuijpers</span></div><div class="contact-detail"><strong>Bedrijf</strong><span>KX Metaal</span></div><div class="contact-detail"><strong>Actief sinds</strong><span>2021</span></div><div class="contact-detail"><strong>E-mail</strong><span>Het officiële e-mailadres wordt nog toegevoegd.</span></div>
+<div class="topbar">
+  <span>🔩 KX Metaal · Techniek en maatwerk</span>
+  <span>Technische hulpmiddelen en projectvoorbereiding</span>
 </div>
-<form class="contact-form" id="quoteForm"><div class="form-heading"><h3>Projectaanvraag</h3><p>Vul in wat je al weet.</p></div><div class="form-grid">
-<div class="field"><label for="name">Naam *</label><input id="name" name="name" autocomplete="name" required></div>
-<div class="field"><label for="company">Bedrijf</label><input id="company" name="company" autocomplete="organization"></div>
-<div class="field"><label for="email">E-mailadres *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-<div class="field"><label for="phone">Telefoonnummer</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-<div class="field full"><label for="type">Soort aanvraag *</label><select id="type" name="type" required><option value="">Maak een keuze</option><option>Machinebouw</option><option>Metaalwerk</option><option>Technische oplossing</option><option>Bestaand onderdeel</option><option>Technisch advies</option><option>Anders / nog niet zeker</option></select></div>
-<div class="field full"><label for="title">Projectnaam</label><input id="title" name="title"></div>
-<div class="field full"><label for="goal">Wat wil je bereiken? *</label><textarea id="goal" name="goal" required placeholder="Beschrijf de toepassing, vraag en gewenste oplossing..."></textarea></div>
-<div class="field"><label for="quantity">Aantal / oplage</label><input id="quantity" name="quantity"></div>
-<div class="field"><label for="dimensions">Afmetingen</label><input id="dimensions" name="dimensions"></div>
-<div class="field full"><label for="materials">Materiaal of technische eisen</label><textarea id="materials" name="materials"></textarea></div>
-<div class="field"><label for="planning">Gewenste planning</label><input id="planning" name="planning"></div>
-<div class="field"><label for="budget">Budget (optioneel)</label><input id="budget" name="budget"></div>
-</div><p class="form-hint">Dit demoformulier verstuurt geen gegevens naar een server.</p><button class="btn" type="submit">Aanvraag voorbereiden ↗</button><div class="form-status" id="formStatus" role="status" aria-live="polite"></div></form>
-</div></section>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#home"><span class="logo">KX</span><span>KX METAAL<small style="display:block;font-size:10px;letter-spacing:2px;color:#648099">TECHNIEK & MAATWERK</small></span></a>
+    <button class="menuBtn" id="menuBtn" aria-label="Menu openen">☰ Menu</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#over">Over ons</a><a href="#diensten">Diensten</a>
+      <a href="#werkbank">Werkbank</a><a href="#planner">Zaagplanner</a>
+      <a href="#projecten">Projecten</a><a href="#kennis">Kennisbank</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container heroGrid">
+  <div>
+   <div class="eyebrow">Praktisch · Technisch · Doordacht</div>
+   <h1>Van idee naar<br>metalen oplossing.</h1>
+   <p>KX Metaal helpt technische ideeën verder met maatwerk, slimme voorbereiding en praktische hulpmiddelen voor metaalbewerking.</p>
+   <div class="actions" style="margin-top:24px">
+    <a class="btn whiteBtn" href="#contact">Bespreek een project ↗</a>
+    <a class="btn" style="border:1px solid #ffffff70;color:white" href="#werkbank">Open technische werkbank</a>
+   </div>
+  </div>
+  <div class="heroCard">
+   <h3 style="color:white">Jouw technische startpunt</h3>
+   <div class="heroStat"><span class="heroIcon">📐</span><div><b>Bereken en controleer</b><div class="muted" style="color:#d7e9f8">Maten, oppervlakken en gewichten</div></div></div>
+   <div class="heroStat"><span class="heroIcon">⚙️</span><div><b>Plan het werk</b><div class="muted" style="color:#d7e9f8">Zaaglengtes, materiaal en uren</div></div></div>
+   <div class="heroStat"><span class="heroIcon">📋</span><div><b>Houd overzicht</b><div class="muted" style="color:#d7e9f8">Projecten, taken en kostenramingen</div></div></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="grid stats">
+   <div class="card"><div class="muted">Technische hulpmiddelen</div><div class="statNum">20+</div><div class="muted">Berekeningen en planners</div></div>
+   <div class="card"><div class="muted">Werkvoorbereiding</div><div class="statNum">4</div><div class="muted">Praktische werkmodules</div></div>
+   <div class="card"><div class="muted">Projectbeheer</div><div class="statNum">Lokaal</div><div class="muted">Gegevens op dit apparaat</div></div>
+   <div class="card"><div class="muted">Gebruik</div><div class="statNum">24/7</div><div class="muted">Online via je website</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="over" class="band">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Over KX Metaal</div><h2>Techniek met aandacht voor het werk</h2>
+  <p class="lead">KX Metaal is het bedrijf van Robby Kuijpers, actief sinds 2021. De website is bedoeld als professioneel startpunt voor maatwerk, technische informatie en projectvoorbereiding.</p></div></div>
+  <div class="grid featureGrid">
+   <article class="card"><div class="featureIcon">🧰</div><h3>Praktisch maatwerk</h3><p class="muted">Ruimte om projecten, werkzaamheden en mogelijkheden helder uit te leggen.</p></article>
+   <article class="card"><div class="featureIcon">📏</div><h3>Technische voorbereiding</h3><p class="muted">Handige berekeningen om maten, hoeveelheden en materiaalbehoeften in te schatten.</p></article>
+   <article class="card"><div class="featureIcon">🤝</div><h3>Persoonlijk contact</h3><p class="muted">Een duidelijke plek om projectinformatie aan te leveren en een aanvraag voor te bereiden.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="diensten">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Mogelijkheden</div><h2>Diensten en hulpmiddelen</h2><p class="lead">Vul de beschrijvingen aan met de werkzaamheden die KX Metaal daadwerkelijk uitvoert.</p></div></div>
+  <div class="grid featureGrid">
+   <article class="card"><div class="featureIcon">🔩</div><h3>Metaalbewerking</h3><p class="muted">Ruimte voor de echte bewerkingsdiensten, materialen en technische mogelijkheden van KX Metaal.</p><a href="#contact">Bespreek een project →</a></article>
+   <article class="card"><div class="featureIcon">📐</div><h3>Technische calculaties</h3><p class="muted">Bereken oppervlakken, volumes, gewichten, snijlengtes en indicatieve kosten.</p><a href="#werkbank">Naar de werkbank →</a></article>
+   <article class="card"><div class="featureIcon">📦</div><h3>Materiaalplanning</h3><p class="muted">Maak een zaagplan en houd zicht op benodigd materiaal en reststukken.</p><a href="#planner">Open de zaagplanner →</a></article>
+  </div>
+ </div>
+</section>
+
+<section id="werkbank" class="band">
+ <div class="container">
+  <div class="sectionHead">
+   <div><div class="kicker">Technische werkbank</div><h2>Bereken, vergelijk en plan</h2><p class="lead">Kies een hulpmiddel en vul de maten in. Gebruik consistente eenheden en controleer de uitkomst voor je deze in productie gebruikt.</p></div>
+  </div>
+  <div class="workspace">
+   <aside class="card sidebar" aria-label="Calculatorcategorieën">
+    <button class="sideBtn active" data-cat="all">🔧 Alle tools</button>
+    <button class="sideBtn" data-cat="units">↔️ Eenheden</button>
+    <button class="sideBtn" data-cat="geometry">📐 Geometrie</button>
+    <button class="sideBtn" data-cat="mass">⚖️ Gewicht</button>
+    <button class="sideBtn" data-cat="production">⚙️ Productie</button>
+    <button class="sideBtn" data-cat="cost">💶 Kosten</button>
+   </aside>
+   <div>
+    <div class="toolbar"><input id="toolSearch" placeholder="Zoek een calculator..." aria-label="Zoek calculators"><select id="toolCategory" aria-label="Filter op categorie"><option value="all">Alle categorieën</option><option value="units">Eenheden</option><option value="geometry">Geometrie</option><option value="mass">Gewicht</option><option value="production">Productie</option><option value="cost">Kosten</option></select></div>
+    <div class="grid toolGrid" id="toolGrid"></div>
+    <div id="noTools" class="empty hidden">Geen tools gevonden. Probeer een andere zoekterm.</div>
+    <div class="warning">Let op: deze hulpmiddelen geven indicatieve uitkomsten. Materiaaleigenschappen, toleranties, machine-instellingen en constructieve veiligheid moeten door een deskundige worden gecontroleerd. Gebruik dit niet als enige basis voor veiligheidskritische beslissingen.</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="planner">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Werkvoorbereiding</div><h2>Zaagplanner en zaaglijst</h2><p class="lead">Bereken hoeveel standaardstaven nodig zijn voor één maat onderdelen. De planner houdt rekening met de zaagsnede, maar optimaliseert geen gemengde lengtes.</p></div></div>
+  <div class="grid toolGrid">
+   <div class="card">
+    <h3>Instellingen</h3>
+    <div class="fieldGrid">
+     <div class="field"><label for="stockLength">Standaard staaflengte (mm)</label><input id="stockLength" type="number" min="1" value="6000"></div>
+     <div class="field"><label for="partLength">Lengte per onderdeel (mm)</label><input id="partLength" type="number" min="1" value="450"></div>
+     <div class="field"><label for="partCount">Aantal onderdelen</label><input id="partCount" type="number" min="1" value="20"></div>
+     <div class="field"><label for="kerf">Zaagsnede per snede (mm)</label><input id="kerf" type="number" min="0" step=".1" value="3"></div>
+    </div>
+    <button class="btn primary" id="runCut" style="margin-top:17px">Bereken zaagplan</button>
+   </div>
+   <div class="card">
+    <h3>Resultaat</h3>
+    <div class="result"><small>Benodigde standaardstaven</small><strong id="cutBars">—</strong><small id="cutSummary">Vul de maten in en bereken het plan.</small></div>
+    <div class="grid" style="grid-template-columns:repeat(2,1fr);margin-top:12px">
+     <div class="result"><small>Onderdelen per staaf</small><strong id="cutPerBar">—</strong></div>
+     <div class="result"><small>Geschat restmateriaal</small><strong id="cutWaste">—</strong></div>
+    </div>
+    <div class="actions" style="margin-top:12px"><button class="btn outline" id="exportCut">Exporteer zaaglijst CSV</button></div>
+   </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+   <h3>Zaaglijst</h3><div class="tableWrap"><table><thead><tr><th>Onderdeel</th><th>Lengte</th><th>Aantal</th><th>Totaal lengte</th></tr></thead><tbody id="cutTable"><tr><td colspan="4">Voer een berekening uit.</td></tr></tbody></table></div>
+  </div>
+ </div>
+</section>
+
+<section class="band" id="raming">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Calculatie</div><h2>Projectkostenraming</h2><p class="lead">Maak een eerste inschatting van materiaal-, arbeids- en machinekosten. Vul alleen kosten in die van toepassing zijn.</p></div></div>
+  <div class="grid toolGrid">
+   <div class="card">
+    <div class="fieldGrid">
+     <div class="field"><label for="materialCost">Materiaalkosten (€)</label><input id="materialCost" type="number" min="0" step=".01" value="120"></div>
+     <div class="field"><label for="laborHours">Arbeidsuren</label><input id="laborHours" type="number" min="0" step=".25" value="3"></div>
+     <div class="field"><label for="laborRate">Tarief per arbeidsuur (€)</label><input id="laborRate" type="number" min="0" step=".5" value="55"></div>
+     <div class="field"><label for="machineHours">Machine-uren</label><input id="machineHours" type="number" min="0" step=".25" value="1"></div>
+     <div class="field"><label for="machineRate">Tarief per machine-uur (€)</label><input id="machineRate" type="number" min="0" step=".5" value="40"></div>
+     <div class="field"><label for="overhead">Opslag / overhead (%)</label><input id="overhead" type="number" min="0" step=".5" value="10"></div>
+     <div class="field"><label for="margin">Marge op kostprijs (%)</label><input id="margin" type="number" min="0" max="500" step=".5" value="15"></div>
+     <div class="field"><label for="quantity">Aantal stuks</label><input id="quantity" type="number" min="1" step="1" value="1"></div>
+    </div>
+   </div>
+   <div class="card">
+    <h3>Indicatieve berekening</h3>
+    <div class="result"><small>Raming totaal, exclusief btw</small><strong id="quoteTotal">€ 0,00</strong></div>
+    <div class="grid" style="grid-template-columns:repeat(2,1fr);margin-top:12px">
+     <div class="result"><small>Kostprijs totaal</small><strong id="quoteCost">€ 0,00</strong></div>
+     <div class="result"><small>Prijs per stuk</small><strong id="quoteUnit">€ 0,00</strong></div>
+    </div>
+    <hr><div class="muted" id="quoteBreakdown"></div>
+    <button class="btn primary" id="saveEstimate" style="margin-top:15px">Bewaar raming bij projecten</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="projecten">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Overzicht</div><h2>Projecten en taken</h2><p class="lead">Houd projecten en actiepunten bij op dit apparaat. De gegevens worden niet automatisch naar andere apparaten of gebruikers verstuurd.</p></div></div>
+  <div class="grid toolGrid">
+   <div class="card">
+    <h3>Nieuw project</h3>
+    <form id="projectForm">
+     <div class="field"><label for="projectName">Projectnaam</label><input id="projectName" required maxlength="100" placeholder="Bijv. Frame op maat"></div>
+     <div class="field" style="margin-top:12px"><label for="projectClient">Klant / afdeling (optioneel)</label><input id="projectClient" maxlength="100" placeholder="Naam klant"></div>
+     <div class="field" style="margin-top:12px"><label for="projectDate">Streefdatum (optioneel)</label><input id="projectDate" type="date"></div>
+     <div class="field" style="margin-top:12px"><label for="projectNotes">Notities</label><textarea id="projectNotes" maxlength="2000" placeholder="Maten, materiaal, aandachtspunten..."></textarea></div>
+     <button class="btn primary" style="margin-top:13px">Project toevoegen</button>
+    </form>
+   </div>
+   <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><h3>Projectoverzicht</h3><span class="pill" id="projectCount">0 projecten</span></div>
+    <div id="projectList"><div class="empty">Je hebt nog geen projecten toegevoegd.</div></div>
+    <div class="actions" style="margin-top:14px"><button class="btn outline small" id="exportProjects">Exporteer projecten JSON</button><button class="btn danger small" id="clearProjects">Wis lokale projecten</button></div>
+   </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+   <div class="sectionHead"><div><h3 style="margin:0">Actielijst</h3><p class="muted">Voeg taken toe en vink ze af als ze klaar zijn.</p></div></div>
+   <form id="taskForm" class="toolbar"><input id="taskInput" required maxlength="180" placeholder="Nieuwe taak, bijv. materiaal controleren"><button class="btn primary">Taak toevoegen</button></form>
+   <div class="progress"><div id="taskProgress"></div></div><p class="muted" id="taskSummary">0 taken</p>
+   <div id="taskList"></div>
+  </div>
+ </div>
+</section>
+
+<section class="band" id="materialen">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Materiaalgegevens</div><h2>Referentiewaarden</h2><p class="lead">Voorbeeldwaarden voor een snelle schatting. Werkelijke legeringen en materiaalspecificaties kunnen afwijken.</p></div></div>
+  <div class="card tableWrap">
+   <table><thead><tr><th>Materiaal</th><th>Indicatieve dichtheid</th><th>Eenheid</th><th>Opmerking</th></tr></thead>
+   <tbody>
+    <tr><td>Staal</td><td>7850</td><td>kg/m³</td><td>Algemene referentiewaarde</td></tr>
+    <tr><td>Roestvast staal</td><td>8000</td><td>kg/m³</td><td>Afhankelijk van de soort</td></tr>
+    <tr><td>Aluminium</td><td>2700</td><td>kg/m³</td><td>Afhankelijk van de legering</td></tr>
+    <tr><td>Koper</td><td>8960</td><td>kg/m³</td><td>Referentiewaarde</td></tr>
+    <tr><td>Messing</td><td>8500</td><td>kg/m³</td><td>Afhankelijk van de samenstelling</td></tr>
+   </tbody></table>
+  </div>
+ </div>
+</section>
+
+<section id="kennis">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Kennisbank</div><h2>Technische basiskennis</h2><p class="lead">Korte uitleg bij een aantal begrippen. Controleer technische gegevens altijd aan de hand van de juiste materiaal- en machinedocumentatie.</p></div></div>
+  <div class="card">
+   <input id="knowledgeSearch" placeholder="Zoek in de kennisbank..." aria-label="Zoek kennisbankartikelen">
+   <div id="knowledgeList">
+    <details class="knowledgeItem"><summary>Wat is dichtheid?</summary><p>Dichtheid geeft aan hoeveel massa zich in een bepaald volume bevindt. De gebruikelijke eenheid is kg/m³. De waarde hangt onder andere af van materiaalsoort en legering.</p></details>
+    <details class="knowledgeItem"><summary>Wat is een zaagsnede?</summary><p>De zaagsnede is het materiaal dat door het zaagblad wordt verwijderd. Bij het plannen van onderdelen moet dit verlies worden meegenomen.</p></details>
+    <details class="knowledgeItem"><summary>Wat is een tolerantie?</summary><p>Een tolerantie beschrijft de toegestane afwijking van een maat. Gebruik de specificaties op de technische tekening en de relevante norm; neem niet zomaar algemene waarden aan.</p></details>
+    <details class="knowledgeItem"><summary>Wat is snijsnelheid?</summary><p>Snijsnelheid is de snelheid waarmee het snijgereedschap ten opzichte van het materiaal beweegt, vaak uitgedrukt in meter per minuut. De geschikte waarde hangt af van materiaal, gereedschap en proces.</p></details>
+    <details class="knowledgeItem"><summary>Wat is voedingssnelheid?</summary><p>Voedingssnelheid beschrijft hoe snel het gereedschap door het materiaal beweegt. De berekening is afhankelijk van onder andere toerental, tanden en voeding per tand.</p></details>
+    <details class="knowledgeItem"><summary>Wat is materiaalbenutting?</summary><p>Materiaalbenutting is het aandeel van het ingekochte materiaal dat in bruikbare onderdelen terechtkomt. Zaagverlies, reststukken en bewerkingsmarge beïnvloeden de benutting.</p></details>
+    <details class="knowledgeItem"><summary>Wat hoort in een goede offerte?</summary><p>Leg de omschrijving, aantallen, materiaal, toleranties, afwerking, planning, prijsbasis, geldigheidsduur en leveringsvoorwaarden vast. Vermeld aannames duidelijk.</p></details>
+    <details class="knowledgeItem"><summary>Waarom materiaalgewichten controleren?</summary><p>Dichtheidswaarden zijn benaderingen en werkelijke afmetingen kunnen afwijken. Controleer ook of de berekening rekening houdt met gaten, uitsparingen, coatings en andere details.</p></details>
+    <details class="knowledgeItem"><summary>Waarom zijn calculatorresultaten indicatief?</summary><p>Een eenvoudige formule houdt niet automatisch rekening met alle procesfactoren, normen, toleranties of veiligheidsmarges. Controleer de uitkomst voordat je deze gebruikt voor productie of constructieve toepassingen.</p></details>
+   </div>
+ </div>
+</section>
+
+<section class="band" id="werkwijze">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Werkwijze</div><h2>Van aanvraag naar uitvoering</h2></div></div>
+  <div class="grid stepGrid">
+   <div class="card"><div class="stepNum">01</div><h3>Bespreken</h3><p class="muted">Breng wensen, gebruik, aantallen en planning in kaart.</p></div>
+   <div class="card"><div class="stepNum">02</div><h3>Voorbereiden</h3><p class="muted">Verzamel tekeningen, maten, materiaalkeuze en eisen.</p></div>
+   <div class="card"><div class="stepNum">03</div><h3>Ramen</h3><p class="muted">Maak een gecontroleerde inschatting van tijd en materiaal.</p></div>
+   <div class="card"><div class="stepNum">04</div><h3>Afstemmen</h3><p class="muted">Bevestig de definitieve afspraken rechtstreeks met KX Metaal.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="sectionHead"><div><div class="kicker">Contact</div><h2>Bespreek een project</h2><p class="lead">Vul de aanvraag in en download een tekstbestand om te bewaren of te versturen. Dit formulier verzendt nog niet automatisch naar KX Metaal.</p></div></div>
+  <div class="grid contactGrid">
+   <div class="card">
+    <h3>Projectinformatie</h3>
+    <p class="muted">Een duidelijke aanvraag helpt om de vraag goed te begrijpen.</p>
+    <hr>
+    <p>📋 Omschrijving en aantallen</p><p>📐 Maten en tekeningen</p><p>🔩 Materiaal en afwerking</p><p>🗓️ Gewenste planning</p>
+    <div class="warning">Voeg hier de gecontroleerde bedrijfsgegevens, het zakelijke e-mailadres en eventuele telefooninformatie toe voordat de website officieel wordt gebruikt.</div>
+   </div>
+   <form class="card" id="contactForm">
+    <div class="fieldGrid">
+     <div class="field"><label for="cName">Naam *</label><input id="cName" required maxlength="100"></div>
+     <div class="field"><label for="cCompany">Bedrijf</label><input id="cCompany" maxlength="120"></div>
+     <div class="field"><label for="cEmail">E-mailadres *</label><input id="cEmail" type="email" required maxlength="150"></div>
+     <div class="field"><label for="cPhone">Telefoon</label><input id="cPhone" type="tel" maxlength="40"></div>
+    </div>
+    <div class="field" style="margin-top:13px"><label for="cTitle">Projecttitel *</label><input id="cTitle" required maxlength="150"></div>
+    <div class="field" style="margin-top:13px"><label for="cType">Type aanvraag</label><select id="cType"><option>Algemene aanvraag</option><option>Metaalbewerking</option><option>Onderdeel op maat</option><option>Materiaalvraag</option><option>Technische vraag</option><option>Anders</option></select></div>
+    <div class="field" style="margin-top:13px"><label for="cDetails">Omschrijving, maten, materiaal en aantallen *</label><textarea id="cDetails" required maxlength="5000"></textarea></div>
+    <div class="field" style="margin-top:13px"><label for="cPlanning">Gewenste planning</label><input id="cPlanning" maxlength="150" placeholder="Bijv. gewenste leverweek"></div>
+    <button class="btn primary" style="margin-top:16px">Download aanvraag als tekstbestand</button>
+    <p class="muted">Je gegevens worden door deze demo niet naar een server verstuurd.</p>
+   </form>
+  </div>
+ </div>
+</section>
 </main>
-<footer><div class="container footer-inner"><div class="brand"><span class="brand-symbol">KX</span><span><strong>KX METAAL</strong><small>TECHNIEK & MAATWERK</small><p>Robby Kuijpers · Actief sinds 2021</p></span></div><div class="footer-links"><a href="#over">Over ons</a><a href="#diensten">Diensten</a><a href="#calculators">Calculators</a><a href="#kennisbank">Kennisbank</a><a href="#contact">Contact</a></div><p>© <span id="year"></span> KX Metaal</p></div></footer>
+
+<footer>
+ <div class="container footerGrid">
+  <div><div class="brand"><span class="logo">KX</span>KX METAAL</div><p>Techniek, maatwerk en praktische werkvoorbereiding.</p><p>Website voor KX Metaal. Controleer alle bedrijfsgegevens voordat je deze officieel publiceert.</p></div>
+  <div><b>Website</b><p><a href="#over">Over ons</a></p><p><a href="#diensten">Diensten</a></p><p><a href="#contact">Contact</a></p></div>
+  <div><b>Hulpmiddelen</b><p><a href="#werkbank">Technische werkbank</a></p><p><a href="#planner">Zaagplanner</a></p><p><a href="#kennis">Kennisbank</a></p></div>
+ </div>
+ <div class="container" style="border-top:1px solid #ffffff22;margin-top:25px;padding-top:18px">
+  <small>© <span id="year"></span> KX Metaal · Technische berekeningen zijn indicatief.</small>
+ </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-(() => {
 "use strict";
-const $ = (s, root=document) => root.querySelector(s);
-const $$ = (s, root=document) => [...root.querySelectorAll(s)];
-const menuToggle=$("#menuToggle"),navLinks=$("#navLinks");
-menuToggle.addEventListener("click",()=>{const open=navLinks.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(open));menuToggle.textContent=open?"✕ Sluiten":"☰ Menu"});
-$$(".nav-links a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");menuToggle.textContent="☰ Menu"}));
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const money = n => new Intl.NumberFormat("nl-NL",{style:"currency",currency:"EUR"}).format(Number.isFinite(n)?n:0);
+const num = n => new Intl.NumberFormat("nl-NL",{maximumFractionDigits:3}).format(n);
+const val = id => Number($("#"+id).value);
+const safe = n => Number.isFinite(n) ? n : 0;
+function toast(message){
+ const t=$("#toast");t.textContent=message;t.style.display="block";
+ clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.style.display="none",3000);
+}
+function downloadFile(filename,content,type="text/plain;charset=utf-8"){
+ const blob=new Blob(["\ufeff",content],{type});
+ const url=URL.createObjectURL(blob);const a=document.createElement("a");
+ a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function csvCell(v){return '"'+String(v??"").replaceAll('"','""')+'"';}
+$("#year").textContent=new Date().getFullYear();
+$("#menuBtn").addEventListener("click",()=>$("#navlinks").classList.toggle("open"));
+$$(".navlinks a").forEach(a=>a.addEventListener("click",()=>$("#navlinks").classList.remove("open")));
 
-const calculators = [
-{id:1,t:"Millimeter naar centimeter",c:"Eenheden",d:"Deel een lengte in millimeters door tien.",f:[["mm","Lengte", "mm",125]],u:"cm",formula:"cm = mm ÷ 10",fn:v=>v.mm/10},
-{id:2,t:"Centimeter naar millimeter",c:"Eenheden",d:"Zet centimeters om naar millimeters.",f:[["cm","Lengte","cm",12.5]],u:"mm",formula:"mm = cm × 10",fn:v=>v.cm*10},
-{id:3,t:"Meter naar millimeter",c:"Eenheden",d:"Zet meters om naar millimeters.",f:[["m","Lengte","m",1.25]],u:"mm",formula:"mm = m × 1000",fn:v=>v.m*1000},
-{id:4,t:"Millimeter naar meter",c:"Eenheden",d:"Zet millimeters om naar meters.",f:[["mm","Lengte","mm",1250]],u:"m",formula:"m = mm ÷ 1000",fn:v=>v.mm/1000},
-{id:5,t:"Inch naar millimeter",c:"Eenheden",d:"Reken inches om met 25,4 mm per inch.",f:[["inch","Lengte","inch",2]],u:"mm",formula:"mm = inch × 25,4",fn:v=>v.inch*25.4},
-{id:6,t:"Millimeter naar inch",c:"Eenheden",d:"Reken millimeters om naar inches.",f:[["mm","Lengte","mm",50.8]],u:"inch",formula:"inch = mm ÷ 25,4",fn:v=>v.mm/25.4},
-{id:7,t:"Kilogram naar gram",c:"Eenheden",d:"Zet kilogram om naar gram.",f:[["kg","Massa","kg",2.5]],u:"g",formula:"g = kg × 1000",fn:v=>v.kg*1000},
-{id:8,t:"Gram naar kilogram",c:"Eenheden",d:"Zet gram om naar kilogram.",f:[["g","Massa","g",2500]],u:"kg",formula:"kg = g ÷ 1000",fn:v=>v.g/1000},
-{id:9,t:"Celsius naar Fahrenheit",c:"Eenheden",d:"Temperatuurconversie.",f:[["c","Temperatuur","°C",20]],u:"°F",formula:"°F = (°C × 9/5) + 32",fn:v=>v.c*9/5+32},
-{id:10,t:"Fahrenheit naar Celsius",c:"Eenheden",d:"Temperatuurconversie.",f:[["f","Temperatuur","°F",68]],u:"°C",formula:"°C = (°F − 32) × 5/9",fn:v=>(v.f-32)*5/9},
-{id:11,t:"Oppervlakte rechthoek",c:"Geometrie",d:"Bereken de vlakke oppervlakte.",f:[["l","Lengte","mm",500],["b","Breedte","mm",200]],u:"mm²",formula:"oppervlakte = lengte × breedte",fn:v=>v.l*v.b},
-{id:12,t:"Omtrek rechthoek",c:"Geometrie",d:"Bereken de totale buitenomtrek.",f:[["l","Lengte","mm",500],["b","Breedte","mm",200]],u:"mm",formula:"omtrek = 2 × (lengte + breedte)",fn:v=>2*(v.l+v.b)},
-{id:13,t:"Oppervlakte cirkel",c:"Geometrie",d:"Bereken de oppervlakte op basis van de diameter.",f:[["d","Diameter","mm",100]],u:"mm²",formula:"A = π × (diameter ÷ 2)²",fn:v=>Math.PI*(v.d/2)**2},
-{id:14,t:"Omtrek cirkel",c:"Geometrie",d:"Bereken de omtrek van een cirkel.",f:[["d","Diameter","mm",100]],u:"mm",formula:"omtrek = π × diameter",fn:v=>Math.PI*v.d},
-{id:15,t:"Oppervlakte driehoek",c:"Geometrie",d:"Bereken de oppervlakte met basis en hoogte.",f:[["b","Basis","mm",100],["h","Hoogte","mm",60]],u:"mm²",formula:"A = basis × hoogte ÷ 2",fn:v=>v.b*v.h/2},
-{id:16,t:"Volume kubus",c:"Geometrie",d:"Bereken het volume van een kubus.",f:[["a","Zijlengte","mm",100]],u:"mm³",formula:"V = zijde³",fn:v=>v.a**3},
-{id:17,t:"Volume balk",c:"Geometrie",d:"Bereken het volume van een rechthoekige balk.",f:[["l","Lengte","mm",200],["b","Breedte","mm",100],["h","Hoogte","mm",50]],u:"mm³",formula:"V = lengte × breedte × hoogte",fn:v=>v.l*v.b*v.h},
-{id:18,t:"Volume cilinder",c:"Geometrie",d:"Bereken het volume van een massieve cilinder.",f:[["d","Diameter","mm",50],["l","Lengte","mm",200]],u:"mm³",formula:"V = π × (d ÷ 2)² × lengte",fn:v=>Math.PI*(v.d/2)**2*v.l},
-{id:19,t:"Doorsnede buis",c:"Geometrie",d:"Bereken de materiaaldoorsnede van een ronde buis.",f:[["buiten","Buitendiameter","mm",60],["binnen","Binnendiameter","mm",50]],u:"mm²",formula:"A = π × (D² − d²) ÷ 4",fn:v=>Math.PI*(v.buiten**2-v.binnen**2)/4,valid:v=>v.binnen<v.buiten},
-{id:20,t:"Materiaalvolume buis per meter",c:"Geometrie",d:"Bereken het volume van de buiswand per meter lengte.",f:[["buiten","Buitendiameter","mm",60],["binnen","Binnendiameter","mm",50],["l","Lengte","m",1]],u:"mm³",formula:"V = π × (D² − d²) ÷ 4 × lengte in mm",fn:v=>Math.PI*(v.buiten**2-v.binnen**2)/4*v.l*1000,valid:v=>v.binnen<v.buiten},
-{id:21,t:"Volume plaat",c:"Materialen",d:"Bereken het volume van een vlakke plaat.",f:[["l","Lengte","mm",1000],["b","Breedte","mm",500],["d","Dikte","mm",5]],u:"mm³",formula:"V = lengte × breedte × dikte",fn:v=>v.l*v.b*v.d},
-{id:22,t:"Massa plaat",c:"Materialen",d:"Schat de massa op basis van afmetingen en dichtheid.",f:[["l","Lengte","mm",1000],["b","Breedte","mm",500],["d","Dikte","mm",5],["rho","Dichtheid","kg/m³",7850]],u:"kg",formula:"massa = volume in m³ × dichtheid",fn:v=>v.l*v.b*v.d*1e-9*v.rho},
-{id:23,t:"Massa ronde staaf",c:"Materialen",d:"Schat de massa van een massieve ronde staaf.",f:[["d","Diameter","mm",30],["l","Lengte","mm",1000],["rho","Dichtheid","kg/m³",7850]],u:"kg",formula:"massa = π × (d ÷ 2)² × lengte × dichtheid",fn:v=>Math.PI*(v.d/2)**2*v.l*1e-9*v.rho},
-{id:24,t:"Massa rechthoekige staaf",c:"Materialen",d:"Schat de massa van een rechthoekige staaf.",f:[["l","Lengte","mm",1000],["b","Breedte","mm",30],["h","Hoogte","mm",20],["rho","Dichtheid","kg/m³",7850]],u:"kg",formula:"massa = lengte × breedte × hoogte × dichtheid",fn:v=>v.l*v.b*v.h*1e-9*v.rho},
-{id:25,t:"Dichtheid berekenen",c:"Materialen",d:"Bereken dichtheid uit massa en volume.",f:[["m","Massa","kg",7.85],["v","Volume","m³",.001]],u:"kg/m³",formula:"dichtheid = massa ÷ volume",fn:v=>v.m/v.v,valid:v=>v.v>0},
-{id:26,t:"Massa uit volume",c:"Materialen",d:"Bereken massa uit volume en dichtheid.",f:[["v","Volume","m³",.001],["rho","Dichtheid","kg/m³",7850]],u:"kg",formula:"massa = volume × dichtheid",fn:v=>v.v*v.rho},
-{id:27,t:"Materiaalprijs op gewicht",c:"Kosten",d:"Bereken kosten op basis van massa en prijs per kilogram.",f:[["m","Massa","kg",12.5],["p","Prijs per kg","€/kg",4.2]],u:"€",formula:"kosten = massa × prijs per kg",fn:v=>v.m*v.p,money:true},
-{id:28,t:"Materiaal inclusief afvalpercentage",c:"Materialen",d:"Tel een gekozen afvalpercentage bij de benodigde hoeveelheid op.",f:[["m","Benodigde massa","kg",20],["p","Afvalpercentage","%",8]],u:"kg",formula:"totaal = massa × (1 + afvalpercentage ÷ 100)",fn:v=>v.m*(1+v.p/100)},
-{id:29,t:"Aantal delen uit voorraad",c:"Voorraad & productie",d:"Schat hoeveel delen uit een staaflengte passen.",f:[["s","Voorraadlengte","mm",6000],["l","Deellengte","mm",500],["k","Zaagsnede per deel","mm",3]],u:"stuks",formula:"vloer(voorraad ÷ (deellengte + zaagsnede))",fn:v=>Math.floor(v.s/(v.l+v.k)),valid:v=>v.l+v.k>0},
-{id:30,t:"Restlengte voorraad",c:"Voorraad & productie",d:"Bereken de restlengte na het maximaal zagen van gelijke delen.",f:[["s","Voorraadlengte","mm",6000],["l","Deellengte","mm",500],["k","Zaagsnede per deel","mm",3]],u:"mm",formula:"voorraad − aantal delen × (deellengte + zaagsnede)",fn:v=>v.s-Math.floor(v.s/(v.l+v.k))*(v.l+v.k),valid:v=>v.l+v.k>0},
-{id:31,t:"Totale zaaglengte",c:"Voorraad & productie",d:"Bereken de som van gelijke lengtes, zonder zaagsnede.",f:[["l","Lengte per deel","mm",350],["n","Aantal delen","stuks",12]],u:"mm",formula:"totale lengte = lengte per deel × aantal",fn:v=>v.l*v.n},
-{id:32,t:"Massa van een serie",c:"Voorraad & productie",d:"Bereken de totale massa van identieke onderdelen.",f:[["m","Massa per stuk","kg",2.4],["n","Aantal stuks","stuks",25]],u:"kg",formula:"totale massa = massa per stuk × aantal",fn:v=>v.m*v.n},
-{id:33,t:"Productietijd serie",c:"Voorraad & productie",d:"Schat de totale tijd voor een serie.",f:[["t","Tijd per stuk","min",8],["n","Aantal stuks","stuks",25]],u:"uur",formula:"uren = minuten per stuk × aantal ÷ 60",fn:v=>v.t*v.n/60},
-{id:34,t:"Machinekosten per uur",c:"Kosten",d:"Bereken machinekosten voor een gekozen aantal uren.",f:[["u","Draaiuren","uur",3.5],["p","Uurtarief","€/uur",65]],u:"€",formula:"machinekosten = uren × uurtarief",fn:v=>v.u*v.p,money:true},
-{id:35,t:"Arbeidskosten",c:"Kosten",d:"Bereken arbeidskosten op basis van uren en tarief.",f:[["u","Arbeidsuren","uur",4],["p","Uurtarief","€/uur",45]],u:"€",formula:"arbeidskosten = uren × tarief",fn:v=>v.u*v.p,money:true},
-{id:36,t:"Materiaalkosten",c:"Kosten",d:"Bereken materiaalprijs voor een aantal eenheden.",f:[["n","Aantal","stuks",20],["p","Prijs per stuk","€/stuk",7.5]],u:"€",formula:"materiaalkosten = aantal × prijs per stuk",fn:v=>v.n*v.p,money:true},
-{id:37,t:"Totale projectkosten",c:"Kosten",d:"Tel materiaal-, arbeids- en machinekosten op.",f:[["m","Materiaalkosten","€",150],["a","Arbeidskosten","€",180],["k","Machinekosten","€",75],["o","Overige kosten","€",25]],u:"€",formula:"totaal = materiaal + arbeid + machine + overig",fn:v=>v.m+v.a+v.k+v.o,money:true},
-{id:38,t:"Verkoopprijs met opslag",c:"Kosten",d:"Bereken een prijs met een opslagpercentage op de kostprijs.",f:[["k","Kostprijs","€",250],["p","Opslagpercentage","%",20]],u:"€",formula:"prijs = kostprijs × (1 + opslag ÷ 100)",fn:v=>v.k*(1+v.p/100),money:true},
-{id:39,t:"Prijs na korting",c:"Kosten",d:"Bereken een prijs na procentuele korting.",f:[["p","Oorspronkelijke prijs","€",250],["k","Korting","%",10]],u:"€",formula:"prijs na korting = prijs × (1 − korting ÷ 100)",fn:v=>v.p*(1-v.k/100),money:true},
-{id:40,t:"Freesvoeding",c:"Verspaning",d:"Schat de tafelvoeding op basis van tandvoeding, tanden en toerental.",f:[["fz","Tandvoeding","mm/tand",.08],["z","Aantal tanden","tanden",4],["n","Toerental","rpm",1800]],u:"mm/min",formula:"voeding = tandvoeding × tanden × rpm",fn:v=>v.fz*v.z*v.n},
-{id:41,t:"Boorbewerkingstijd",c:"Verspaning",d:"Benader de boortijd met diepte en voeding per minuut.",f:[["d","Boorweg","mm",25],["f","Voeding","mm/min",100]],u:"min",formula:"tijd = boorweg ÷ voeding",fn:v=>v.d/v.f,valid:v=>v.f>0},
-{id:42,t:"Snijsnelheid",c:"Verspaning",d:"Bereken de omtreksnelheid van een draaiend gereedschap.",f:[["d","Diameter","mm",20],["n","Toerental","rpm",1500]],u:"m/min",formula:"Vc = π × diameter × rpm ÷ 1000",fn:v=>Math.PI*v.d*v.n/1000},
-{id:43,t:"Toerental uit snijsnelheid",c:"Verspaning",d:"Bereken een theoretisch toerental.",f:[["v","Snijsnelheid","m/min",120],["d","Diameter","mm",20]],u:"rpm",formula:"rpm = 1000 × Vc ÷ (π × diameter)",fn:v=>1000*v.v/(Math.PI*v.d),valid:v=>v.d>0},
-{id:44,t:"Snijsnelheid uit toerental",c:"Verspaning",d:"Alternatieve invoer voor snijsnelheid.",f:[["n","Toerental","rpm",1500],["d","Diameter","mm",20]],u:"m/min",formula:"Vc = π × diameter × rpm ÷ 1000",fn:v=>Math.PI*v.d*v.n/1000},
-{id:45,t:"Omtrek steekcirkel",c:"Overige techniek",d:"Bereken de omtrek van een steekcirkel.",f:[["d","Steekcirkeldiameter","mm",100]],u:"mm",formula:"omtrek = π × diameter",fn:v=>Math.PI*v.d},
-{id:46,t:"Afstand tussen boutgaten",c:"Overige techniek",d:"Bereken de rechte afstand tussen naburige gaten op een gelijk verdeelde steekcirkel.",f:[["d","Steekcirkeldiameter","mm",100],["n","Aantal gaten","stuks",6]],u:"mm",formula:"koorde = diameter × sin(π ÷ aantal gaten)",fn:v=>v.d*Math.sin(Math.PI/v.n),valid:v=>v.n>=2},
-{id:47,t:"Gelijkmatige gatafstand",c:"Overige techniek",d:"Bereken de afstand tussen de eerste en laatste positie.",f:[["l","Totale afstand","mm",500],["n","Aantal gaten","stuks",6]],u:"mm",formula:"afstand = totale afstand ÷ (aantal gaten − 1)",fn:v=>v.l/(v.n-1),valid:v=>v.n>=2},
-{id:48,t:"Totale laslengte",c:"Overige techniek",d:"Tel identieke laslengtes bij elkaar op; dit berekent geen lassterkte.",f:[["l","Lengte per las","mm",120],["n","Aantal lassen","stuks",8]],u:"mm",formula:"totale laslengte = lengte per las × aantal",fn:v=>v.l*v.n},
-{id:49,t:"Procentueel verschil",c:"Overige techniek",d:"Bereken het absolute verschil als percentage van het gemiddelde.",f:[["a","Waarde A", "eenheden",100],["b","Waarde B","eenheden",110]],u:"%",formula:"verschil ÷ gemiddelde × 100",fn:v=>Math.abs(v.a-v.b)/((Math.abs(v.a)+Math.abs(v.b))/2)*100,valid:v=>(Math.abs(v.a)+Math.abs(v.b))>0},
-{id:50,t:"Prijs per geproduceerd stuk",c:"Kosten",d:"Verdeel de totale kosten over het aantal geproduceerde stukken.",f:[["t","Totale kosten","€",750],["n","Aantal stuks","stuks",50]],u:"€/stuk",formula:"prijs per stuk = totale kosten ÷ aantal",fn:v=>v.t/v.n,valid:v=>v.n>0,money:true}
+/* CALCULATOR ENGINE */
+const tools=[
+{id:"mmcm",cat:"units",icon:"↔️",title:"Millimeter naar centimeter",desc:"Zet mm om naar cm.",fields:[["mm","Millimeter",1000]],calc:v=>v.mm/10,unit:"cm"},
+{id:"cmmm",cat:"units",icon:"↔️",title:"Centimeter naar millimeter",desc:"Zet cm om naar mm.",fields:[["cm","Centimeter",1000]],calc:v=>v.cm*10,unit:"mm"},
+{id:"mmmet",cat:"units",icon:"↔️",title:"Millimeter naar meter",desc:"Zet mm om naar meter.",fields:[["mm","Millimeter",100000]],calc:v=>v.mm/1000,unit:"m"},
+{id:"metmm",cat:"units",icon:"↔️",title:"Meter naar millimeter",desc:"Zet m om naar mm.",fields:[["m","Meter",100]],calc:v=>v.m*1000,unit:"mm"},
+{id:"inchmm",cat:"units",icon:"↔️",title:"Inch naar millimeter",desc:"1 inch = 25,4 mm.",fields:[["inch","Inch",10000]],calc:v=>v.inch*25.4,unit:"mm"},
+{id:"mmInch",cat:"units",icon:"↔️",title:"Millimeter naar inch",desc:"Zet mm om naar inch.",fields:[["mm","Millimeter",100000]],calc:v=>v.mm/25.4,unit:"inch"},
+{id:"kggram",cat:"units",icon:"⚖️",title:"Kilogram naar gram",desc:"Massa omrekenen.",fields:[["kg","Kilogram",100000]],calc:v=>v.kg*1000,unit:"g"},
+{id:"gramkg",cat:"units",icon:"⚖️",title:"Gram naar kilogram",desc:"Massa omrekenen.",fields:[["g","Gram",100000]],calc:v=>v.g/1000,unit:"kg"},
+{id:"m2cm2",cat:"units",icon:"↔️",title:"Vierkante meter naar cm²",desc:"Oppervlakte omrekenen.",fields:[["m2","Vierkante meter",100000]],calc:v=>v.m2*10000,unit:"cm²"},
+{id:"lmm3",cat:"units",icon:"↔️",title:"Liter naar cm³",desc:"Volume omrekenen.",fields:[["l","Liter",100000]],calc:v=>v.l*1000,unit:"cm³"},
+{id:"rectarea",cat:"geometry",icon:"📐",title:"Oppervlakte rechthoek",desc:"Lengte × breedte.",fields:[["l","Lengte (mm)",100000],["b","Breedte (mm)",100000]],calc:v=>v.l*v.b,unit:"mm²"},
+{id:"rectdiag",cat:"geometry",icon:"📐",title:"Diagonaal rechthoek",desc:"Bereken de diagonaal.",fields:[["l","Lengte (mm)",100000],["b","Breedte (mm)",100000]],calc:v=>Math.hypot(v.l,v.b),unit:"mm"},
+{id:"circlearea",cat:"geometry",icon:"⭕",title:"Oppervlakte cirkel",desc:"π × straal².",fields:[["r","Straal (mm)",100000]],calc:v=>Math.PI*v.r*v.r,unit:"mm²"},
+{id:"circum",cat:"geometry",icon:"⭕",title:"Omtrek cirkel",desc:"2 × π × straal.",fields:[["r","Straal (mm)",100000]],calc:v=>2*Math.PI*v.r,unit:"mm"},
+{id:"cylvol",cat:"geometry",icon:"🧪",title:"Volume cilinder",desc:"Volume op basis van straal en lengte.",fields:[["r","Straal (mm)",100000],["l","Lengte (mm)",100000]],calc:v=>Math.PI*v.r*v.r*v.l,unit:"mm³"},
+{id:"boxvol",cat:"geometry",icon:"📦",title:"Volume blok",desc:"Lengte × breedte × hoogte.",fields:[["l","Lengte (mm)",100000],["b","Breedte (mm)",100000],["h","Hoogte (mm)",100000]],calc:v=>v.l*v.b*v.h,unit:"mm³"},
+{id:"triArea",cat:"geometry",icon:"📐",title:"Oppervlakte driehoek",desc:"Basis × hoogte / 2.",fields:[["b","Basis (mm)",100000],["h","Hoogte (mm)",100000]],calc:v=>v.b*v.h/2,unit:"mm²"},
+{id:"platekg",cat:"mass",icon:"⚖️",title:"Gewicht staalplaat",desc:"Schat het gewicht van een plaat.",fields:[["l","Lengte (mm)",100000],["b","Breedte (mm)",100000],["t","Dikte (mm)",10000]],calc:v=>v.l*v.b*v.t*7850/1e9,unit:"kg"},
+{id:"alplate",cat:"mass",icon:"⚖️",title:"Gewicht aluminiumplaat",desc:"Schatting met 2700 kg/m³.",fields:[["l","Lengte (mm)",100000],["b","Breedte (mm)",100000],["t","Dikte (mm)",10000]],calc:v=>v.l*v.b*v.t*2700/1e9,unit:"kg"},
+{id:"rodkg",cat:"mass",icon:"⚖️",title:"Gewicht ronde stang",desc:"Gewicht van een massieve ronde stang.",fields:[["d","Diameter (mm)",10000],["l","Lengte (mm)",100000]],calc:v=>Math.PI*(v.d/2)**2*v.l*7850/1e9,unit:"kg"},
+{id:"tubeKg",cat:"mass",icon:"⚖️",title:"Gewicht buis",desc:"Benadering met binnen- en buitendiameter.",fields:[["od","Buitendiameter (mm)",10000],["id","Binnendiameter (mm)",9999],["l","Lengte (mm)",100000]],calc:v=>Math.PI/4*(v.od*v.od-v.id*v.id)*v.l*7850/1e9,unit:"kg",check:v=>v.id>=0&&v.od>v.id},
+{id:"steelVolume",cat:"mass",icon:"⚖️",title:"Gewicht staalvolume",desc:"Volume in cm³ × dichtheid.",fields:[["volume","Volume (cm³)",100000]],calc:v=>v.volume*7.85/1000,unit:"kg"},
+{id:"density",cat:"mass",icon:"⚖️",title:"Massa uit volume en dichtheid",desc:"Massa = volume × dichtheid.",fields:[["volume","Volume (m³)",100000],["density","Dichtheid (kg/m³)",100000]],calc:v=>v.volume*v.density,unit:"kg"},
+{id:"cutloss",cat:"production",icon:"🪚",title:"Zaagverlies",desc:"Totale breedte van de zaagsneden.",fields:[["cuts","Aantal sneden",10000],["kerf","Zaagsnede (mm)",1000]],calc:v=>v.cuts*v.kerf,unit:"mm"},
+{id:"partsper",cat:"production",icon:"🪚",title:"Onderdelen per staaf",desc:"Inclusief zaagverlies per onderdeel.",fields:[["stock","Staaflengte (mm)",100000],["part","Onderdeellengte (mm)",100000],["kerf","Zaagsnede (mm)",1000]],calc:v=>Math.max(0,Math.floor((v.stock+v.kerf)/(v.part+v.kerf))),unit:"stuks",check:v=>v.part>0&&v.stock>0},
+{id:"prodtime",cat:"production",icon:"⏱️",title:"Productietijd",desc:"Insteltijd + cyclustijd × aantal.",fields:[["setup","Insteltijd (min)",100000],["cycle","Cyclustijd per stuk (min)",100000],["qty","Aantal stuks",100000]],calc:v=>(v.setup+v.cycle*v.qty)/60,unit:"uur"},
+{id:"feed",cat:"production",icon:"⚙️",title:"Voedingssnelheid",desc:"Toerental × tanden × voeding per tand.",fields:[["rpm","Toerental (rpm)",100000],["teeth","Aantal tanden",100],["feed","Voeding per tand (mm)",100]],calc:v=>v.rpm*v.teeth*v.feed,unit:"mm/min"},
+{id:"cutSpeed",cat:"production",icon:"⚙️",title:"Snijsnelheid",desc:"Bereken m/min uit diameter en toerental.",fields:[["d","Diameter (mm)",10000],["rpm","Toerental (rpm)",100000]],calc:v=>Math.PI*v.d*v.rpm/1000,unit:"m/min"},
+{id:"drillTime",cat:"production",icon:"⏱️",title:"Boortijd",desc:"Diepte gedeeld door voeding per minuut.",fields:[["depth","Boordiepte (mm)",100000],["feed","Voeding (mm/min)",100000],["qty","Aantal gaten",100000]],calc:v=>v.depth/v.feed*v.qty/60,unit:"uur",check:v=>v.feed>0},
+{id:"pricePer",cat:"cost",icon:"💶",title:"Prijs per onderdeel",desc:"Totale kosten gedeeld door aantal.",fields:[["total","Totale kosten (€)",100000],["qty","Aantal stuks",100000]],calc:v=>v.total/v.qty,unit:"€/stuk",check:v=>v.qty>0},
+{id:"matCost",cat:"cost",icon:"💶",title:"Materiaalkosten",desc:"Gewicht × prijs per kilogram.",fields:[["weight","Gewicht (kg)",100000],["price","Prijs per kg (€)",100000]],calc:v=>v.weight*v.price,unit:"€"},
+{id:"wasteCost",cat:"cost",icon:"💶",title:"Kosten materiaalverlies",desc:"Materiaalwaarde × verliespercentage.",fields:[["cost","Materiaalkosten (€)",100000],["waste","Verlies (%)",100]],calc:v=>v.cost*v.waste/100,unit:"€"},
+{id:"laborCost",cat:"cost",icon:"💶",title:"Arbeidskosten",desc:"Uren × uurtarief.",fields:[["hours","Arbeidsuren",100000],["rate","Tarief per uur (€)",100000]],calc:v=>v.hours*v.rate,unit:"€"},
+{id:"discount",cat:"cost",icon:"💶",title:"Korting berekenen",desc:"Bereken korting en nieuwe prijs.",fields:[["price","Oorspronkelijke prijs (€)",100000],["discount","Korting (%)",100]],calc:v=>v.price*(1-v.discount/100),unit:"€",note:"Uitkomst is de prijs na korting."},
+{id:"marginCalc",cat:"cost",icon:"💶",title:"Opslag op kostprijs",desc:"Bereken verkoopprijs met opslagpercentage.",fields:[["cost","Kostprijs (€)",100000],["margin","Opslag (%)",1000]],calc:v=>v.cost*(1+v.margin/100),unit:"€"},
+{id:"percent",cat:"cost",icon:"💶",title:"Percentage van een bedrag",desc:"Bereken een percentage van een waarde.",fields:[["amount","Bedrag (€)",100000],["percent","Percentage (%)",1000]],calc:v=>v.amount*v.percent/100,unit:"€"},
+{id:"boltcircle",cat:"geometry",icon:"⭕",title:"Boutcirkel",desc:"Afstand tussen tegenoverliggende boutposities op een cirkel.",fields:[["pcd","Boutcirkel diameter (mm)",100000],["n","Aantal gelijk verdeelde bouten",1000]],calc:v=>Math.PI*v.pcd/v.n,unit:"mm",check:v=>v.n>0},
+{id:"tolerance",cat:"geometry",icon:"📏",title:"Tolerantiegrenzen",desc:"Bepaal minimum en maximum uit nominale maat en tolerantie.",fields:[["nom","Nominale maat (mm)",100000],["plus","Boventolerantie (mm)",10000],["minus","Onder tolerantie (mm)",10000]],calc:v=>v.nom+v.plus,unit:"mm",note:"De uitkomst is de maximummaat. Minimum = nominaal − ondertolerantie."},
+{id:"thermal",cat:"geometry",icon:"🌡️",title:"Thermische uitzetting",desc:"Benadering: lengte × uitzettingscoëfficiënt × temperatuurverschil.",fields:[["length","Lengte (mm)",100000],["alpha","Coëfficiënt (µm/m·K)",100],["delta","Temperatuurverschil (°C)",1000]],calc:v=>v.length*v.alpha*1e-6*v.delta,unit:"mm"},
+{id:"plateArea",cat:"geometry",icon:"📐",title:"Plaatoppervlak in m²",desc:"Bereken het oppervlak van een plaat.",fields:[["l","Lengte (mm)",100000],["b","Breedte (mm)",100000]],calc:v=>v.l*v.b/1e6,unit:"m²"},
+{id:"tubeArea",cat:"geometry",icon:"📐",title:"Buitenoppervlak buis",desc:"Cilindrisch buitenoppervlak, zonder kopse kanten.",fields:[["d","Buitendiameter (mm)",100000],["l","Lengte (mm)",100000]],calc:v=>Math.PI*v.d*v.l/1e6,unit:"m²"},
+{id:"ratio",cat:"cost",icon:"📊",title:"Verschil in procenten",desc:"Verschil ten opzichte van de beginwaarde.",fields:[["start","Beginwaarde",100000],["end","Nieuwe waarde",100000]],calc:v=>v.start===0?0:(v.end-v.start)/Math.abs(v.start)*100,unit:"%"},
+{id:"stockValue",cat:"cost",icon:"📦",title:"Voorraadwaarde",desc:"Aantal × prijs per stuk.",fields:[["qty","Aantal stuks",1000000],["price","Prijs per stuk (€)",100000]],calc:v=>v.qty*v.price,unit:"€"},
+{id:"speedConvert",cat:"units",icon:"↔️",title:"m/min naar mm/min",desc:"Snelheid omrekenen.",fields:[["speed","Snelheid (m/min)",100000]],calc:v=>v.speed*1000,unit:"mm/min"},
+{id:"kgton",cat:"units",icon:"↔️",title:"Kilogram naar ton",desc:"Massa omrekenen.",fields:[["kg","Kilogram",1000000]],calc:v=>v.kg/1000,unit:"ton"},
+{id:"minhour",cat:"units",icon:"⏱️",title:"Minuten naar uren",desc:"Tijd omrekenen.",fields:[["min","Minuten",100000]],calc:v=>v.min/60,unit:"uur"},
+{id:"hourmin",cat:"units",icon:"⏱️",title:"Uren naar minuten",desc:"Tijd omrekenen.",fields:[["hours","Uren",100000]],calc:v=>v.hours*60,unit:"min"},
+{id:"tubeWall",cat:"geometry",icon:"📐",title:"Buiswanddikte",desc:"Buitendiameter minus binnendiameter gedeeld door twee.",fields:[["od","Buitendiameter (mm)",10000],["id","Binnendiameter (mm)",9999]],calc:v=>(v.od-v.id)/2,unit:"mm",check:v=>v.od>v.id&&v.id>=0},
+{id:"rodArea",cat:"geometry",icon:"⭕",title:"Doorsnede ronde staaf",desc:"Oppervlakte van een cirkelvormige doorsnede.",fields:[["d","Diameter (mm)",100000]],calc:v=>Math.PI*v.d*v.d/4,unit:"mm²"},
+{id:"boxSurface",cat:"geometry",icon:"📦",title:"Oppervlak gesloten blok",desc:"Totale oppervlakte van zes zijden.",fields:[["l","Lengte (mm)",100000],["b","Breedte (mm)",100000],["h","Hoogte (mm)",100000]],calc:v=>2*(v.l*v.b+v.l*v.h+v.b*v.h),unit:"mm²"},
+{id:"power",cat:"production",icon:"⚡",title:"Elektrisch vermogen",desc:"Vermogen = spanning × stroom bij een eenvoudige DC-schatting.",fields:[["voltage","Spanning (V)",100000],["current","Stroom (A)",100000]],calc:v=>v.voltage*v.current,unit:"W",note:"Bij wisselstroom en driefasige systemen kunnen aanvullende factoren nodig zijn."},
+{id:"weldLength",cat:"production",icon:"⚙️",title:"Totale laslengte",desc:"Aantal gelijke lassen × lengte per las.",fields:[["length","Lengte per las (mm)",100000],["qty","Aantal lassen",100000]],calc:v=>v.length*v.qty,unit:"mm"},
+{id:"timePer",cat:"production",icon:"⏱️",title:"Tijd per onderdeel",desc:"Totale tijd gedeeld door geproduceerde aantallen.",fields:[["time","Totale tijd (min)",100000],["qty","Aantal onderdelen",100000]],calc:v=>v.time/v.qty,unit:"min/stuk",check:v=>v.qty>0},
+{id:"wastePct",cat:"production",icon:"📦",title:"Materiaalbenutting",desc:"Gebruikte lengte als percentage van de totale lengte.",fields:[["used","Gebruikte lengte (mm)",1000000],["total","Totale lengte (mm)",1000000]],calc:v=>100*v.used/v.total,unit:"%",check:v=>v.total>0},
+{id:"rounding",cat:"units",icon:"🔢",title:"Afronden naar stapmaat",desc:"Rond een waarde af op een gekozen stap.",fields:[["value","Waarde",100000],["step","Stapmaat (> 0)",100000]],calc:v=>Math.round(v.value/v.step)*v.step,unit:"eenheid",check:v=>v.step>0}
 ];
-
-const calcGrid=$("#calculatorGrid"),calcSearch=$("#calcSearch"),calcCategory=$("#calcCategory"),calcCount=$("#calcCount"),noCalcs=$("#noCalcs");
-const fmt=(n,money=false)=>Number.isFinite(n)?(money?"€ ":"")+new Intl.NumberFormat("nl-NL",{maximumFractionDigits:4}).format(n):"—";
-function renderCalculators(){
- const query=calcSearch.value.trim().toLocaleLowerCase("nl"),cat=calcCategory.value;
- const list=calculators.filter(c=>(!cat||c.c===cat)&&(c.t+" "+c.c+" "+c.d+" "+c.formula).toLocaleLowerCase("nl").includes(query));
- calcGrid.innerHTML="";
- list.forEach(c=>{
-  const card=document.createElement("article");card.className="calc-card";card.dataset.id=c.id;
-  card.innerHTML=`<span class="knowledge-tag">${c.c} · ${String(c.id).padStart(2,"0")}</span><h3>${c.t}</h3><p class="calc-desc">${c.d}</p><div class="calc-fields"></div><div class="calc-result"><small>Resultaat</small><output>—</output><small class="result-unit">${c.u}</small></div><p class="calc-formula">Formule: ${c.formula}</p><p class="calc-warning" hidden>Controleer de invoerwaarden. Bij deze waarden kan geen geldige berekening worden gemaakt.</p><button type="button" class="calc-copy">Resultaat kopiëren</button>`;
-  const fields=card.querySelector(".calc-fields");
-  c.f.forEach(([key,label,unit,def])=>{
-   const wrap=document.createElement("div");wrap.className="calc-field";
-   const lab=document.createElement("label");lab.textContent=`${label} (${unit})`;lab.htmlFor=`calc-${c.id}-${key}`;
-   const input=document.createElement("input");input.type="number";input.step="any";input.id=lab.htmlFor;input.value=def;input.dataset.key=key;input.setAttribute("aria-label",lab.textContent);
+const catNames={units:"Eenheden",geometry:"Geometrie",mass:"Gewicht",production:"Productie",cost:"Kosten"};
+function renderTools(){
+ const q=$("#toolSearch").value.trim().toLowerCase(),cat=$("#toolCategory").value;
+ const list=tools.filter(t=>(cat==="all"||t.cat===cat)&&(t.title+" "+t.desc+" "+catNames[t.cat]).toLowerCase().includes(q));
+ $("#toolGrid").replaceChildren();$("#noTools").classList.toggle("hidden",list.length>0);
+ list.forEach(t=>{
+  const card=document.createElement("article");card.className="card tool";card.dataset.id=t.id;
+  const top=document.createElement("div");top.className="toolTop";
+  const ico=document.createElement("div");ico.className="featureIcon";ico.textContent=t.icon;
+  const heading=document.createElement("div");const h=document.createElement("h3");h.textContent=t.title;
+  const tag=document.createElement("span");tag.className="pill";tag.textContent=catNames[t.cat];
+  heading.append(h,tag);top.append(ico,heading);
+  const desc=document.createElement("p");desc.className="muted";desc.textContent=t.desc;
+  const fields=document.createElement("div");fields.className="fieldGrid";
+  t.fields.forEach(([id,label,max])=>{
+   const wrap=document.createElement("div");wrap.className="field";
+   const lab=document.createElement("label");lab.textContent=label;lab.htmlFor=t.id+"-"+id;
+   const input=document.createElement("input");input.type="number";input.step="any";input.min="0";
+   input.id=t.id+"-"+id;input.dataset.key=id;input.value=id==="density"?"7850":id==="alpha"?"12":id==="n"?"4":id==="qty"?"1":id==="step"?"1":id==="rpm"?"1000":id==="teeth"?"4":id==="feed"?"0.1":id==="od"?"40":id==="id"?"30":id==="d"?"20":id==="l"?"1000":id==="b"?"500":id==="h"?"100":id==="t"?"5":id==="r"?"50":id==="part"?"450":id==="stock"?"6000":id==="kerf"?"3":id==="volume"?"1":id==="nom"?"100":id==="plus"?"0.2":id==="minus"?"0.2":id==="start"?"100":id==="end"?"110":id==="length"?"1000":id==="total"?"6000":id==="used"?"5000":id==="price"?"10":id==="rate"?"55":id==="hours"?"2":id==="cycle"?"2":id==="setup"?"15":id==="depth"?"20":id==="current"?"2":id==="voltage"?"230":"10";
    wrap.append(lab,input);fields.append(wrap);
   });
-  const update=()=>{
-   const values={};let good=true;
-   fields.querySelectorAll("input").forEach(i=>{const n=i.value.trim()===""?NaN:Number(i.value);values[i.dataset.key]=n;if(!Number.isFinite(n))good=false;});
-   if(good&&c.valid&&!c.valid(values))good=false;
-   let result=NaN;
-   if(good){try{result=c.fn(values);if(!Number.isFinite(result))good=false;}catch{good=false;}}
-   card.querySelector("output").textContent=good?fmt(result,c.money):"Controleer invoer";
-   card.querySelector(".result-unit").textContent=good?c.u:"";
-   card.querySelector(".calc-warning").hidden=good;
-   card.dataset.result=good?`${c.t}: ${fmt(result,c.money)} ${c.u}`:"";
-  };
-  fields.addEventListener("input",update);
-  card.querySelector(".calc-copy").addEventListener("click",async e=>{
-   if(!card.dataset.result){e.currentTarget.textContent="Geen geldig resultaat";return;}
-   try{await navigator.clipboard.writeText(card.dataset.result);e.currentTarget.textContent="Gekopieerd ✓";}
-   catch{const ta=document.createElement("textarea");ta.value=card.dataset.result;document.body.append(ta);ta.select();document.execCommand("copy");ta.remove();e.currentTarget.textContent="Gekopieerd ✓";}
-   setTimeout(()=>e.currentTarget.textContent="Resultaat kopiëren",1600);
-  });
-  update();calcGrid.append(card);
+  const result=document.createElement("div");result.className="result";
+  const small=document.createElement("small");small.textContent="Resultaat";
+  const strong=document.createElement("strong");strong.textContent="—";
+  const sub=document.createElement("small");sub.textContent="Pas de invoer aan om te berekenen.";
+  result.append(small,strong,sub);
+  const btn=document.createElement("button");btn.className="btn outline";btn.textContent="Kopieer resultaat";
+  let last="";
+  function calc(){
+   const v={};let valid=true;
+   t.fields.forEach(([id])=>{const x=fields.querySelector('[data-key="'+id+'"]');v[id]=Number(x.value);if(x.value.trim()===""||!Number.isFinite(v[id]))valid=false;});
+   if(t.check&&!t.check(v))valid=false;
+   if(!valid){strong.textContent="Controleer invoer";sub.textContent="Vul geldige maten en positieve noemers in.";last="";return;}
+   const n=t.calc(v);if(!Number.isFinite(n)){strong.textContent="Niet berekenbaar";last="";return;}
+   strong.textContent=num(n)+" "+t.unit;sub.textContent=t.note||"Indicatieve uitkomst · controleer voor gebruik.";last=t.title+": "+num(n)+" "+t.unit;
+  }
+  fields.addEventListener("input",calc);
+  btn.addEventListener("click",async()=>{if(!last){toast("Bereken eerst een geldige uitkomst.");return;}try{await navigator.clipboard.writeText(last);toast("Resultaat gekopieerd.");}catch{const ta=document.createElement("textarea");ta.value=last;document.body.append(ta);ta.select();document.execCommand("copy");ta.remove();toast("Resultaat gekopieerd.");}});
+  card.append(top,desc,fields,result,btn);$("#toolGrid").append(card);calc();
  });
- calcCount.textContent=`${list.length} van ${calculators.length} calculators weergegeven`;
- noCalcs.hidden=list.length!==0;
 }
-calcSearch.addEventListener("input",renderCalculators);calcCategory.addEventListener("change",renderCalculators);renderCalculators();
+$("#toolSearch").addEventListener("input",renderTools);
+$("#toolCategory").addEventListener("change",()=>{$$(".sideBtn").forEach(b=>b.classList.toggle("active",b.dataset.cat===$("#toolCategory").value));renderTools();});
+$$(".sideBtn").forEach(b=>b.addEventListener("click",()=>{$("#toolCategory").value=b.dataset.cat;$$(".sideBtn").forEach(x=>x.classList.toggle("active",x===b));renderTools();}));
+renderTools();
 
-// Kennisbank zoeken.
-const knowledgeSearch=$("#knowledgeSearch"),knowledgeCards=$$(".knowledge-card"),knowledgeEmpty=$("#knowledgeEmpty");
-knowledgeSearch.addEventListener("input",()=>{const q=knowledgeSearch.value.trim().toLocaleLowerCase("nl");let count=0;knowledgeCards.forEach(card=>{const show=card.textContent.toLocaleLowerCase("nl").includes(q);card.hidden=!show;if(show)count++;});knowledgeEmpty.hidden=count>0;});
-$("#knowledgeGrid").addEventListener("click",e=>{const b=e.target.closest(".knowledge-toggle");if(!b)return;const box=b.nextElementSibling,opening=box.hidden;box.hidden=!opening;b.setAttribute("aria-expanded",String(opening));b.innerHTML=opening?'Lees minder <span>−</span>':'Lees meer <span>＋</span>';});
-$$(".faq-question").forEach(b=>b.addEventListener("click",()=>{const a=b.nextElementSibling,opening=a.hidden;a.hidden=!opening;b.setAttribute("aria-expanded",String(opening));b.querySelector("span").textContent=opening?"−":"＋";}));
+/* ZAAGPLANNER */
+let lastCut=null;
+function calculateCut(){
+ const stock=val("stockLength"),part=val("partLength"),qty=val("partCount"),kerf=val("kerf");
+ if(stock<=0||part<=0||qty<1||kerf<0||![stock,part,qty,kerf].every(Number.isFinite)){
+  toast("Vul geldige positieve maten en aantallen in.");return;
+ }
+ const per=Math.floor((stock+kerf)/(part+kerf));
+ if(per<1){toast("Het onderdeel past niet in de standaardstaaf.");return;}
+ const bars=Math.ceil(qty/per);
+ const fullCutsPerBar=Math.min(per,Math.max(0,Math.floor((stock+kerf)/(part+kerf))));
+ const used=Math.min(stock,fullCutsPerBar*part+Math.max(0,fullCutsPerBar-1)*kerf);
+ const lastParts=qty-(bars-1)*per;
+ const lastUsed=lastParts*part+Math.max(0,lastParts-1)*kerf;
+ const totalWaste=bars*stock-qty*part-Math.max(0,qty-bars)*kerf;
+ lastCut={stock,part,qty,kerf,per,bars,waste:Math.max(0,totalWaste),lastParts};
+ $("#cutBars").textContent=bars+" staven";
+ $("#cutPerBar").textContent=per+" stuks";
+ $("#cutWaste").textContent=num(Math.max(0,totalWaste))+" mm";
+ $("#cutSummary").textContent=qty+" onderdelen van "+part+" mm uit staven van "+stock+" mm; zaagsnede "+kerf+" mm.";
+ $("#cutTable").replaceChildren();
+ const tr=document.createElement("tr");
+ [ "Onderdeel op maat",part+" mm",qty, num(qty*part)+" mm"].forEach(x=>{const td=document.createElement("td");td.textContent=x;tr.append(td);});
+ $("#cutTable").append(tr);
+}
+$("#runCut").addEventListener("click",calculateCut);
+["stockLength","partLength","partCount","kerf"].forEach(id=>$("#"+id).addEventListener("change",calculateCut));
+$("#exportCut").addEventListener("click",()=>{
+ if(!lastCut){calculateCut();if(!lastCut)return;}
+ const c=lastCut;const csv=[["Onderdeel","Staaflengte mm","Onderdeellengte mm","Aantal","Zaagsnede mm","Staven","Geschat restmateriaal mm"],["Onderdeel op maat",c.stock,c.part,c.qty,c.kerf,c.bars,num(c.waste)]].map(r=>r.map(csvCell).join(";")).join("\r\n");
+ downloadFile("kx-metaal-zaaglijst.csv",csv,"text/csv;charset=utf-8");
+});
+calculateCut();
 
-// Dit formulier is een demo: er wordt niets naar een server verzonden.
-$("#quoteForm").addEventListener("submit",e=>{e.preventDefault();if(!e.currentTarget.reportValidity())return;const data=new FormData(e.currentTarget);const lines=[["Naam","name"],["Bedrijf","company"],["E-mailadres","email"],["Telefoonnummer","phone"],["Soort aanvraag","type"],["Projectnaam","title"],["Projectomschrijving","goal"],["Aantal","quantity"],["Afmetingen","dimensions"],["Materiaal en eisen","materials"],["Planning","planning"],["Budget","budget"]].map(([label,key])=>`${label}: ${data.get(key)||"Niet ingevuld"}`);const text=lines.join("\n\n");const blob=new Blob([text],{type:"text/plain;charset=utf-8"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="KX-Metaal-projectaanvraag.txt";a.click();URL.revokeObjectURL(url);$("#formStatus").textContent="Je aanvraag is als tekstbestand gedownload. Deze is niet verstuurd naar KX Metaal.";});
-$("#year").textContent=new Date().getFullYear();
-})();
+/* PROJECTRAMING */
+function calculateEstimate(){
+ const material=val("materialCost"),lh=val("laborHours"),lr=val("laborRate"),mh=val("machineHours"),mr=val("machineRate"),oh=val("overhead"),margin=val("margin"),qty=val("quantity");
+ const inputs=[material,lh,lr,mh,mr,oh,margin,qty];
+ if(!inputs.every(Number.isFinite)||inputs.some(v=>v<0)||qty<1||margin>500){
+  $("#quoteBreakdown").textContent="Controleer de invoer. Aantallen moeten minimaal 1 zijn.";
+  return null;
+ }
+ const base=material+lh*lr+mh*mr;
+ const overhead=base*oh/100;
+ const cost=base+overhead;
+ const total=cost*(1+margin/100);
+ $("#quoteCost").textContent=money(cost);
+ $("#quoteTotal").textContent=money(total);
+ $("#quoteUnit").textContent=money(total/qty);
+ $("#quoteBreakdown").textContent="Materiaal: "+money(material)+" · Arbeid: "+money(lh*lr)+" · Machine: "+money(mh*mr)+" · Overhead: "+money(overhead)+". Alle bedragen exclusief btw; dit is geen definitieve offerte.";
+ return {material,lh,lr,mh,mr,oh,margin,qty,base,overhead,cost,total,unit:total/qty};
+}
+["materialCost","laborHours","laborRate","machineHours","machineRate","overhead","margin","quantity"].forEach(id=>$("#"+id).addEventListener("input",calculateEstimate));
+$("#saveEstimate").addEventListener("click",()=>{
+ const e=calculateEstimate();if(!e)return;
+ const p=load("kxProjects",[]);
+ p.push({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),name:"Kostenraming "+new Date().toLocaleDateString("nl-NL"),client:"",date:"",notes:"Indicatieve raming: totaal "+money(e.total)+" excl. btw; "+e.qty+" stuks; kostprijs "+money(e.cost)+".",created:Date.now()});
+ save("kxProjects",p);renderProjects();toast("Raming toegevoegd aan projecten.");
+});
+calculateEstimate();
+
+/* LOKALE OPSLAG */
+function load(key,fallback){try{const raw=localStorage.getItem(key);return raw?JSON.parse(raw):fallback;}catch{return fallback;}}
+function save(key,data){try{localStorage.setItem(key,JSON.stringify(data));}catch{toast("Opslaan mislukt. Mogelijk is browseropslag uitgeschakeld.");}}
+let projects=load("kxProjects",[]);
+let tasks=load("kxTasks",[]);
+function renderProjects(){
+ $("#projectCount").textContent=projects.length+" projecten";
+ const list=$("#projectList");list.replaceChildren();
+ if(!projects.length){const d=document.createElement("div");d.className="empty";d.textContent="Je hebt nog geen projecten toegevoegd.";list.append(d);return;}
+ projects.forEach(p=>{
+  const card=document.createElement("div");card.style.cssText="border-top:1px solid var(--line);padding:15px 0";
+  const row=document.createElement("div");row.style.cssText="display:flex;justify-content:space-between;gap:12px;align-items:start";
+  const left=document.createElement("div");const h=document.createElement("b");h.textContent=p.name;
+  const detail=document.createElement("div");detail.className="muted";detail.textContent=[p.client,p.date?"Streefdatum: "+p.date:"",p.notes].filter(Boolean).join(" · ");
+  left.append(h,detail);const del=document.createElement("button");del.className="btn danger small";del.textContent="Verwijder";
+  del.addEventListener("click",()=>{if(confirm("Dit project verwijderen?")){projects=projects.filter(x=>x.id!==p.id);save("kxProjects",projects);renderProjects();}});
+  row.append(left,del);card.append(row);list.append(card);
+ });
+}
+$("#projectForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ projects.unshift({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),name:$("#projectName").value.trim(),client:$("#projectClient").value.trim(),date:$("#projectDate").value,notes:$("#projectNotes").value.trim(),created:Date.now()});
+ save("kxProjects",projects);renderProjects();e.target.reset();toast("Project opgeslagen op dit apparaat.");
+});
+function renderTasks(){
+ const list=$("#taskList");list.replaceChildren();
+ const done=tasks.filter(t=>t.done).length;
+ $("#taskSummary").textContent=done+" van "+tasks.length+" taken afgerond";
+ $("#taskProgress").style.width=(tasks.length?done/tasks.length*100:0)+"%";
+ if(!tasks.length){const d=document.createElement("div");d.className="empty";d.textContent="Nog geen taken toegevoegd.";list.append(d);return;}
+ tasks.forEach(task=>{
+  const row=document.createElement("div");row.className="task"+(task.done?" done":"");
+  const check=document.createElement("input");check.type="checkbox";check.checked=task.done;check.setAttribute("aria-label","Taak afgerond");
+  check.addEventListener("change",()=>{task.done=check.checked;save("kxTasks",tasks);renderTasks();});
+  const label=document.createElement("span");label.textContent=task.text;
+  const del=document.createElement("button");del.textContent="Verwijder";del.className="small";
+  del.addEventListener("click",()=>{tasks=tasks.filter(t=>t.id!==task.id);save("kxTasks",tasks);renderTasks();});
+  row.append(check,label,del);list.append(row);
+ });
+}
+$("#taskForm").addEventListener("submit",e=>{
+ e.preventDefault();const text=$("#taskInput").value.trim();if(!text)return;
+ tasks.push({id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),text,done:false});
+ save("kxTasks",tasks);renderTasks();$("#taskInput").value="";
+});
+$("#exportProjects").addEventListener("click",()=>downloadFile("kx-metaal-projecten.json",JSON.stringify({projects,tasks,exportedAt:new Date().toISOString()},null,2),"application/json"));
+$("#clearProjects").addEventListener("click",()=>{if(confirm("Alle lokale projecten verwijderen? Dit kan niet ongedaan worden gemaakt.")){projects=[];save("kxProjects",projects);renderProjects();}});
+renderProjects();renderTasks();
+
+/* KENNISBANK ZOEKEN */
+$("#knowledgeSearch").addEventListener("input",()=>{
+ const q=$("#knowledgeSearch").value.toLowerCase().trim();
+ $$("#knowledgeList details").forEach(d=>d.classList.toggle("hidden",!d.textContent.toLowerCase().includes(q)));
+});
+
+/* CONTACTAANVRAAG DOWNLOAD */
+$("#contactForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const data={
+  naam:$("#cName").value.trim(),bedrijf:$("#cCompany").value.trim(),
+  email:$("#cEmail").value.trim(),telefoon:$("#cPhone").value.trim(),
+  titel:$("#cTitle").value.trim(),type:$("#cType").value,
+  omschrijving:$("#cDetails").value.trim(),planning:$("#cPlanning").value.trim(),
+  aangemaakt:new Date().toLocaleString("nl-NL")
+ };
+ const body=[
+  "KX METAAL — PROJECTAANVRAAG","==========================",
+  ...Object.entries(data).map(([k,v])=>k.toUpperCase()+": "+v)
+ ].join("\r\n\r\n");
+ downloadFile("kx-metaal-aanvraag.txt",body);
+ toast("Aanvraagbestand gedownload. Verstuur het zelf naar KX Metaal.");
+});
 </script>
 </body>
 </html>

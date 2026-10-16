@@ -5,137 +5,286 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#1769aa">
-  <meta name="description" content="Bekijk de diensten en mogelijkheden van KX Metaal. Neem contact op om jouw project te bespreken.">
+  <meta name="description" content="Ontdek de mogelijkheden van KX Metaal voor metaalbewerking, constructies en maatwerk. Bespreek jouw project of vraag informatie aan.">
+  <meta property="og:title" content="Diensten | KX Metaal">
+  <meta property="og:description" content="Ontdek de mogelijkheden voor jouw metaalproject bij KX Metaal.">
+  <meta property="og:type" content="website">
   <title>Diensten | KX Metaal</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
 <header class="site-header">
   <div class="container navbar">
-    <a class="logo" href="index.html">
+
+    <a class="logo" href="index.html" aria-label="KX Metaal home">
       <span class="logo-mark">KX</span>
       <span>KX Metaal</span>
     </a>
 
-    <button class="menu-toggle" type="button" aria-label="Menu openen"
-      aria-expanded="false" aria-controls="main-navigation">
+    <button class="menu-toggle"
+      type="button"
+      aria-label="Menu openen"
+      aria-expanded="false"
+      aria-controls="main-navigation">
       ☰ Menu
     </button>
 
     <nav class="nav-links" id="main-navigation" aria-label="Hoofdnavigatie">
       <a href="index.html">Home</a>
-      <a href="diensten.html">Diensten</a>
+      <a href="diensten.html" class="active" aria-current="page">Diensten</a>
       <a href="projecten.html">Projecten</a>
       <a href="over-ons.html">Over ons</a>
-      <a class="button" href="contact.html">Contact</a>
+      <a class="button" href="contact.html">Contact opnemen →</a>
     </nav>
+
   </div>
 </header>
 
 <main>
+
+  <!-- INTRODUCTIE -->
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">Wat we doen</span>
-      <h1>Diensten van KX Metaal</h1>
+
+      <span class="eyebrow">KX METAAL · ONZE MOGELIJKHEDEN</span>
+
+      <h1>Techniek en metaalwerk op maat</h1>
+
       <p class="lead">
-        Ontdek de mogelijkheden voor jouw metaalproject.
-        Samen bekijken we welke oplossing bij jouw wensen past.
+        Ieder project begint met een idee. Ontdek de mogelijke
+        richtingen voor jouw project en neem contact op om te
+        bespreken wat KX Metaal voor je kan betekenen.
       </p>
+
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="button" href="contact.html">
+          Bespreek jouw project →
+        </a>
+        <a class="button button-outline" href="projecten.html">
+          Bekijk projecten
+        </a>
+      </div>
+
     </div>
   </section>
 
+  <!-- DIENSTEN -->
   <section class="section">
     <div class="container">
+
       <div class="section-heading">
+        <span class="eyebrow">Wat we doen</span>
         <h2>Waar kunnen we je mee helpen?</h2>
         <p>
-          Onderstaande onderwerpen zijn voorbeelden en kunnen later
-          worden aangepast aan de daadwerkelijke werkzaamheden van KX Metaal.
+          Bekijk deze mogelijke werkzaamheden en bespreek
+          welke aanpak aansluit bij jouw wensen.
         </p>
       </div>
 
       <div class="card-grid">
+
         <article class="card">
-          <img class="card-image"
-            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
-            alt="Metaalbewerking in een werkplaats" loading="lazy">
+          <img
+            class="card-image"
+            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=85"
+            alt="Metaalbewerking in een werkplaats"
+            loading="lazy"
+            decoding="async">
+
           <div class="card-content">
+            <span class="eyebrow">01 · Bewerking</span>
             <h3>Metaalbewerking</h3>
             <p>
-              Bekijk de mogelijkheden voor het bewerken van metaal
-              voor verschillende toepassingen.
+              Ontdek de mogelijkheden voor het bewerken van
+              metalen onderdelen en materialen voor uiteenlopende
+              toepassingen.
             </p>
-            <a class="card-link" href="contact.html">Informeer naar de mogelijkheden →</a>
+            <a class="card-link" href="contact.html">
+              Informeer naar de mogelijkheden →
+            </a>
           </div>
         </article>
 
         <article class="card">
-          <img class="card-image"
-            src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=800&q=80"
-            alt="Metalen constructie" loading="lazy">
+          <img
+            class="card-image"
+            src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=800&q=85"
+            alt="Metalen constructie in een werkplaats"
+            loading="lazy"
+            decoding="async">
+
           <div class="card-content">
-            <h3>Constructies</h3>
+            <span class="eyebrow">02 · Constructie</span>
+            <h3>Metalen constructies</h3>
             <p>
-              Bespreek de mogelijkheden voor metalen onderdelen
-              en constructies die bij jouw project passen.
+              Bespreek je ideeën voor metalen onderdelen of
+              constructies en onderzoek welke oplossing
+              geschikt kan zijn voor jouw project.
             </p>
-            <a class="card-link" href="contact.html">Bespreek je project →</a>
+            <a class="card-link" href="contact.html">
+              Bespreek je constructie →
+            </a>
           </div>
         </article>
 
         <article class="card">
-          <img class="card-image"
-            src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80"
-            alt="Technisch maatwerk" loading="lazy">
+          <img
+            class="card-image"
+            src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=85"
+            alt="Technische werkzaamheden en gereedschap"
+            loading="lazy"
+            decoding="async">
+
           <div class="card-content">
+            <span class="eyebrow">03 · Persoonlijk</span>
             <h3>Maatwerk</h3>
             <p>
-              Heb je een specifieke wens? Neem contact op om
-              te bespreken welke oplossing mogelijk is.
+              Heb je een specifieke technische vraag of een
+              bijzonder idee? Bespreek je wensen om te ontdekken
+              welke mogelijkheden er zijn.
             </p>
-            <a class="card-link" href="contact.html">Stel je vraag →</a>
+            <a class="card-link" href="contact.html">
+              Bespreek jouw idee →
+            </a>
           </div>
         </article>
+
       </div>
     </div>
   </section>
 
+  <!-- WERKWIJZE -->
   <section class="section section-light">
-    <div class="container content-grid">
-      <div>
-        <span class="eyebrow">Een nieuw project?</span>
-        <h2>Vertel ons wat je nodig hebt</h2>
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="eyebrow">Van idee naar plan</span>
+        <h2>Hoe begin je aan jouw project?</h2>
         <p>
-          Ieder project begint met een idee of een vraag.
-          Neem contact op om je plannen en de mogelijkheden te bespreken.
+          Met een duidelijke vraag kun je de eerste stap
+          zetten naar een passende technische oplossing.
         </p>
-        <a class="button" href="contact.html">Neem contact op →</a>
       </div>
 
-      <img class="content-image"
-        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
-        alt="Werkzaamheden in een werkplaats" loading="lazy">
+      <div class="card-grid">
+
+        <article class="card">
+          <div class="card-content">
+            <span class="eyebrow">STAP 01</span>
+            <h3>Vertel je idee</h3>
+            <p>
+              Beschrijf wat je wilt laten maken, aanpassen
+              of onderzoeken.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <span class="eyebrow">STAP 02</span>
+            <h3>Bespreek de wensen</h3>
+            <p>
+              Geef aan wat belangrijk is voor jouw project,
+              zoals het materiaal, de toepassing en de afmetingen
+              als die al bekend zijn.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <span class="eyebrow">STAP 03</span>
+            <h3>Verken de mogelijkheden</h3>
+            <p>
+              Bespreek welke vervolgstappen en oplossingen
+              mogelijk zijn voor jouw situatie.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
     </div>
   </section>
+
+  <!-- PROJECTEN -->
+  <section class="section">
+    <div class="container content-grid">
+
+      <div>
+        <span class="eyebrow">Inspiratie</span>
+        <h2>Benieuwd naar het werk?</h2>
+
+        <p>
+          Bekijk de projectenpagina voor voorbeelden en
+          aanvullende informatie. Zo kun je ontdekken welke
+          soorten werk op de website worden gepresenteerd.
+        </p>
+
+        <a class="button" href="projecten.html">
+          Bekijk de projecten →
+        </a>
+      </div>
+
+      <img
+        class="content-image"
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
+        alt="Werkzaamheden in een industriële omgeving"
+        loading="lazy"
+        decoding="async">
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="cta">
+    <div class="container">
+
+      <span class="eyebrow">JOUW PROJECT · ONZE CONTACTPAGINA</span>
+
+      <h2>Een idee voor metaalwerk?</h2>
+
+      <p>
+        Neem contact op met KX Metaal en vertel wat je wilt
+        realiseren. Dan kun je bespreken welke mogelijkheden
+        er voor jouw project zijn.
+      </p>
+
+      <a class="button" href="contact.html">
+        Bespreek je project →
+      </a>
+
+    </div>
+  </section>
+
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
+
     <div class="footer-grid">
+
       <div>
-        <a class="logo" href="index.html">
+        <a class="logo" href="index.html" aria-label="KX Metaal home">
           <span class="logo-mark">KX</span>
           <span>KX Metaal</span>
         </a>
-        <p>Techniek, metaalwerk en oplossingen op maat.</p>
+
+        <p>
+          Techniek, metaalwerk en oplossingen op maat.
+        </p>
       </div>
 
       <div>
         <h3>Pagina's</h3>
+
         <div class="footer-links">
           <a href="index.html">Home</a>
+          <a href="diensten.html">Diensten</a>
           <a href="projecten.html">Projecten</a>
           <a href="over-ons.html">Over ons</a>
           <a href="contact.html">Contact</a>
@@ -144,14 +293,21 @@
 
       <div>
         <h3>Contact</h3>
-        <p>Wil je een project bespreken?</p>
+
+        <p>
+          Wil je een idee of technisch project bespreken?
+        </p>
+
         <a href="contact.html">Stel je vraag →</a>
       </div>
+
     </div>
 
     <div class="footer-bottom">
-      © <span data-year>2026</span> KX Metaal. Alle rechten voorbehouden.
+      © <span data-year>2026</span> KX Metaal.
+      Alle rechten voorbehouden.
     </div>
+
   </div>
 </footer>
 
